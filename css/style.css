@@ -20,8 +20,8 @@ body {
 
 header {
   width: 100%;
-  height: 130px;
-  background-color: #333;
+  height: 100px;
+  background-color: #eee;
 }
 header .inner {
   height: 100%;
@@ -48,7 +48,7 @@ header .inner .header_menu > ul li {
 }
 header .inner .header_menu > ul li a {
   font-size: 17px;
-  color: #eee;
+  color: #000;
 }
 header .inner .header_menu > ul li .sub_menu {
   width: 100%;
@@ -56,14 +56,138 @@ header .inner .header_menu > ul li .sub_menu {
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #333;
+  background-color: #eee;
+  display: none;
 }
 header .inner .header_menu > ul li .sub_menu li {
   margin: 30px 0px;
 }
 header .inner .header_menu > ul li .sub_menu li a {
   font-size: 14px;
-  color: #eee;
+  color: #000;
+}
+header .inner .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  width: 120px;
+  z-index: 5;
+}
+header .inner .logo a {
+  width: 100%;
+}
+header .inner .logo a img {
+  width: 100%;
+}
+header .inner .header_sns {
+  position: absolute;
+  top: 50%;
+  right: 130px;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 20px;
+}
+header .inner .header_sns li a {
+  font-size: 20px;
+  color: #000;
+}
+header .inner #header_btn {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  display: none;
+}
+header .inner #header_btn::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header .inner #header_btn span {
+  position: absolute;
+  text-indent: -999999px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  top: 50%;
+  margin-top: -2px;
+}
+header .inner #header_btn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+header .inner #btn_menu {
+  display: none;
+  width: 300px;
+  height: 90vh;
+  background-color: #eee;
+  position: fixed;
+  top: 10vh;
+  left: 0px;
+  z-index: 4;
+  padding: 40px 30px;
+}
+header .inner #btn_menu > ul li {
+  height: 80px;
+  line-height: 80px;
+}
+header .inner #btn_menu > ul li a {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+header .inner #btn_menu > ul li .btn_sub_menu li a {
+  font-weight: normal;
+  font-size: 18px;
+  display: none;
+}
+header .inner #btn_menu > ul .btn_menu_fold {
+  display: flex;
+  justify-content: flex-start;
+}
+header .inner #btn_menu > ul .btn_menu_fold i {
+  line-height: 83px;
+  font-size: 14px;
+  color: #aaa;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 1100px) {
+  header .inner .header_menu {
+    display: none;
+  }
+  header .inner .logo a img {
+    width: 80%;
+  }
+  header .inner .header_sns {
+    right: 35px;
+    gap: 15px;
+  }
+  header .inner .header_sns li a {
+    font-size: 18px;
+  }
+  header .inner #header_btn {
+    display: block;
+  }
+  header .inner #btn_menu {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
