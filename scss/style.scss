@@ -29,11 +29,12 @@ header {
 		padding: 0px 100px;
 		position: relative;
 		.header_menu {
-			// width: 400px;
+			width: 400px;
 			height: 100%;
 			position: relative;
 			// background-color: #eee;
 			> ul {
+				height: 100%;
 				position: absolute;
 				top: 50%;
 				left: 0;
@@ -45,23 +46,37 @@ header {
 					position: relative;
 					width: 100px;
 					text-align: center;
+					height: 50px;
+					line-height: 50px;
 					a {
+						font-family: 'Forum', 'Lato';
 						font-size: 17px;
 						color: #000;
 					}
 					.sub_menu {
 						width: 100%;
 						position: absolute;
-						top: 30px;
+						top: 60px;
 						left: 50%;
 						transform: translateX(-50%);
 						background-color: #eee;
 						display: none;
 						li {
-							margin: 30px 0px;
+							// height: 40px;
+							line-height: 50px;
+							text-align: center;
+							// margin-bottom: 20px;
+							transition: all 0.1s;
+							font-family: 'Forum', 'Lato';
 							a {
 								font-size: 14px;
 								color: #000;
+							}
+							&:hover {
+								background-color: #333;
+								a {
+									color: #eee;
+								}
 							}
 						}
 					}
@@ -93,10 +108,16 @@ header {
 				a {
 					font-size: 20px;
 					color: #000;
+					transition: all 0.2s;
+				}
+				&:hover {
+					a {
+						color: #ccc;
+					}
 				}
 			}
 		}
-		#header_btn {
+		#header_left_btn {
 			position: absolute;
 			top: 50%;
 			left: 30px;
@@ -113,7 +134,7 @@ header {
 				position: absolute;
 				top: 0;
 				left: 0;
-				// transition: ;
+				transition: all 0.5s;
 			}
 			span {
 				position: absolute;
@@ -124,6 +145,7 @@ header {
 				background-color: #000;
 				top: 50%;
 				margin-top: -2px;
+				transition: all 0.5s;
 			}
 			&::after {
 				content: '';
@@ -132,20 +154,38 @@ header {
 				height: 2px;
 				background-color: #000;
 				position: absolute;
-				bottom: 0;
+				bottom: 1px;
 				left: 0;
+				transition: all 0.5s;
+			}
+			&.on {
+				&::before {
+					top: 50%;
+					margin-top: -1px;
+					transform: rotate(45deg);
+				}
+				span {
+					transform: translatex(-100%);
+					opacity: 0;
+				}
+				&:after {
+					bottom: 50%;
+					margin-bottom: -1px;
+					transform: rotate(-45deg);
+				}
 			}
 		}
-		#btn_menu {
+		#left_btn_menu {
 			display: none;
 			width: 300px;
 			height: 90vh;
 			background-color: #eee;
 			position: fixed;
 			top: 10vh;
-			left: 0px;
+			left: -300px;
 			z-index: 4;
 			padding: 40px 30px;
+			transition: all 1s;
 			> ul {
 				li {
 					height: 80px;
@@ -157,6 +197,7 @@ header {
 						font-size: 20px;
 						color: #333;
 						// border-bottom: 1px solid #ccc;
+						font-family: 'Forum', 'Lato';
 					}
 					.btn_sub_menu {
 						li {
@@ -164,11 +205,12 @@ header {
 								font-weight: normal;
 								font-size: 18px;
 								display: none;
+								font-family: 'Forum', 'Lato';
 							}
 						}
 					}
 				}
-				.btn_menu_fold {
+				.btn_fold {
 					display: flex;
 					justify-content: flex-start;
 					i {
@@ -176,6 +218,7 @@ header {
 						font-size: 14px;
 						color: #aaa;
 						margin-left: auto;
+						cursor: pointer;
 					}
 				}
 			}
@@ -205,11 +248,14 @@ header {
 					}
 				}
 			}
-			#header_btn {
+			#header_left_btn {
 				display: block;
 			}
-			#btn_menu {
-				display: block;
+			#left_btn_menu {
+				&.on {
+					display: block;
+					left: 0;
+				}
 			}
 		}
 	}

@@ -30,10 +30,12 @@ header .inner {
   position: relative;
 }
 header .inner .header_menu {
+  width: 400px;
   height: 100%;
   position: relative;
 }
 header .inner .header_menu > ul {
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 0;
@@ -45,26 +47,38 @@ header .inner .header_menu > ul li {
   position: relative;
   width: 100px;
   text-align: center;
+  height: 50px;
+  line-height: 50px;
 }
 header .inner .header_menu > ul li a {
+  font-family: "Forum", "Lato";
   font-size: 17px;
   color: #000;
 }
 header .inner .header_menu > ul li .sub_menu {
   width: 100%;
   position: absolute;
-  top: 30px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #eee;
   display: none;
 }
 header .inner .header_menu > ul li .sub_menu li {
-  margin: 30px 0px;
+  line-height: 50px;
+  text-align: center;
+  transition: all 0.1s;
+  font-family: "Forum", "Lato";
 }
 header .inner .header_menu > ul li .sub_menu li a {
   font-size: 14px;
   color: #000;
+}
+header .inner .header_menu > ul li .sub_menu li:hover {
+  background-color: #333;
+}
+header .inner .header_menu > ul li .sub_menu li:hover a {
+  color: #eee;
 }
 header .inner .logo {
   position: absolute;
@@ -91,8 +105,12 @@ header .inner .header_sns {
 header .inner .header_sns li a {
   font-size: 20px;
   color: #000;
+  transition: all 0.2s;
 }
-header .inner #header_btn {
+header .inner .header_sns li:hover a {
+  color: #ccc;
+}
+header .inner #header_left_btn {
   position: absolute;
   top: 50%;
   left: 30px;
@@ -101,7 +119,7 @@ header .inner #header_btn {
   height: 23px;
   display: none;
 }
-header .inner #header_btn::before {
+header .inner #header_left_btn::before {
   content: "";
   display: block;
   width: 100%;
@@ -110,8 +128,9 @@ header .inner #header_btn::before {
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 0.5s;
 }
-header .inner #header_btn span {
+header .inner #header_left_btn span {
   position: absolute;
   text-indent: -999999px;
   display: block;
@@ -120,52 +139,72 @@ header .inner #header_btn span {
   background-color: #000;
   top: 50%;
   margin-top: -2px;
+  transition: all 0.5s;
 }
-header .inner #header_btn::after {
+header .inner #header_left_btn::after {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
   background-color: #000;
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   left: 0;
+  transition: all 0.5s;
 }
-header .inner #btn_menu {
+header .inner #header_left_btn.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+header .inner #header_left_btn.on span {
+  transform: translatex(-100%);
+  opacity: 0;
+}
+header .inner #header_left_btn.on:after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+header .inner #left_btn_menu {
   display: none;
   width: 300px;
   height: 90vh;
   background-color: #eee;
   position: fixed;
   top: 10vh;
-  left: 0px;
+  left: -300px;
   z-index: 4;
   padding: 40px 30px;
+  transition: all 1s;
 }
-header .inner #btn_menu > ul li {
+header .inner #left_btn_menu > ul li {
   height: 80px;
   line-height: 80px;
 }
-header .inner #btn_menu > ul li a {
+header .inner #left_btn_menu > ul li a {
   display: block;
   font-weight: bold;
   font-size: 20px;
   color: #333;
+  font-family: "Forum", "Lato";
 }
-header .inner #btn_menu > ul li .btn_sub_menu li a {
+header .inner #left_btn_menu > ul li .btn_sub_menu li a {
   font-weight: normal;
   font-size: 18px;
   display: none;
+  font-family: "Forum", "Lato";
 }
-header .inner #btn_menu > ul .btn_menu_fold {
+header .inner #left_btn_menu > ul .btn_fold {
   display: flex;
   justify-content: flex-start;
 }
-header .inner #btn_menu > ul .btn_menu_fold i {
+header .inner #left_btn_menu > ul .btn_fold i {
   line-height: 83px;
   font-size: 14px;
   color: #aaa;
   margin-left: auto;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1100px) {
@@ -182,11 +221,12 @@ header .inner #btn_menu > ul .btn_menu_fold i {
   header .inner .header_sns li a {
     font-size: 18px;
   }
-  header .inner #header_btn {
+  header .inner #header_left_btn {
     display: block;
   }
-  header .inner #btn_menu {
+  header .inner #left_btn_menu.on {
     display: block;
+    left: 0;
   }
 }
 
