@@ -18,29 +18,6 @@ $('.header_slide').hover(
 // 	leftMenu.classList.toggle('on');
 // });
 
-$('#header_left_btn').click(function () {
-	$(this).toggleClass('on');
-});
-
-$(function () {
-	$('#left_btn_menu').toggle('slide', {
-		direction: 'left',
-	});
-});
-
-// $('#header_left_btn').click(
-// 	function () {
-// 		$(this).toggleClass('on');
-// 	},
-// 	function () {
-// 		$('#left_btn_menu').slideToggle({ direction: 'left' });
-// 	}
-// );
-
-// $('#left_btn_menu').$(function () {
-// 	$('#left_btn_menu').slideToggle({ direction: 'left' });
-// });
-
-// $(function () {
-// 	$('#left_btn_menu').toggleClass('on').slideToggle({ direction: 'left' });
+// $('#left_btn_menu').toggle('slide', {
+// 	direction: 'left',
 // });
