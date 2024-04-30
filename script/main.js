@@ -46,12 +46,12 @@ leftBtn.addEventListener('click', (e) => {
 });
 
 // 모바일 버전 서브 메뉴 클릭 이벤트
-$('.btn_fold').click(
-	function () {
-		// $('.btn_sub_menu').stop().slideDown();
-		console.log('ㅇㅇㅇ');
-	},
-	function () {
-		$('.btn_sub_menu').stop().slideUp();
-	}
-);
+// $('.btn_fold').click(
+// 	function () {
+// 		// $('.btn_sub_menu').stop().slideDown();
+// 		console.log('ㅇㅇㅇ');
+// 	},
+// 	function () {
+// 		$('.btn_sub_menu').stop().slideUp();
+// 	}
+// );
