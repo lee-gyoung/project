@@ -45,13 +45,11 @@ leftBtn.addEventListener('click', (e) => {
 	leftMenu.classList.toggle('on');
 });
 
-// 모바일 버전 서브 메뉴 클릭 이벤트
-// $('.btn_fold').click(
-// 	function () {
-// 		// $('.btn_sub_menu').stop().slideDown();
-// 		console.log('ㅇㅇㅇ');
-// 	},
-// 	function () {
-// 		$('.btn_sub_menu').stop().slideUp();
+// let chevBtn = document.querySelectorAll('.chevron_btn');
+// chevBtn.addEventListener('click', () => {
+// 	if () {
+// 		toggleBtn.classList.add('hide');
+// 	} else {
+// 		toggleBtn.classList.remove('hide');
 // 	}
-// );
+// });

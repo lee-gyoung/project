@@ -21,7 +21,7 @@ body {
 header {
   width: 100%;
   height: 100px;
-  background-color: #eee;
+  background-color: #ddd;
 }
 header .inner {
   height: 100%;
@@ -51,6 +51,9 @@ header .inner .header_menu > ul li {
   line-height: 50px;
 }
 header .inner .header_menu > ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
   font-family: "Forum", "Lato";
   font-size: 17px;
   color: #000;
@@ -62,7 +65,7 @@ header .inner .header_menu > ul li .sub_menu {
   top: 60px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #eee;
+  background-color: #ddd;
   display: none;
 }
 header .inner .header_menu > ul li .sub_menu li {
@@ -79,7 +82,10 @@ header .inner .header_menu > ul li .sub_menu li:hover {
   background-color: #333;
 }
 header .inner .header_menu > ul li .sub_menu li:hover a {
-  color: #eee;
+  color: #ddd;
+}
+header .inner .header_menu > ul li:hover a {
+  color: #aaa;
 }
 header .inner .logo {
   position: absolute;
@@ -171,7 +177,7 @@ header .inner #left_btn_menu {
   display: none;
   width: 300px;
   height: 90vh;
-  background-color: #eee;
+  background-color: #ddd;
   position: fixed;
   top: 100px;
   left: -300px;
@@ -196,20 +202,30 @@ header .inner #left_btn_menu > ul li a {
   font-family: "Forum", "Lato";
   transition: all 0.1s;
 }
+header .inner #left_btn_menu > ul li:hover .chevron_btn::before {
+  color: #ddd;
+}
 header .inner #left_btn_menu > ul li:hover a {
   background-color: #333;
-  color: #eee;
+  color: #ddd;
 }
 header .inner #left_btn_menu > ul .btn_fold {
   display: flex;
   flex-wrap: wrap;
 }
-header .inner #left_btn_menu > ul .btn_fold i {
-  line-height: 80px;
-  font-size: 14px;
-  color: #aaa;
-  cursor: pointer;
-  text-indent: -40px;
+header .inner #left_btn_menu > ul .btn_fold .chevron_btn::before {
+  content: "\f078";
+  font-family: fontAwesome;
+  position: absolute;
+  right: 27px;
+  color: #333;
+}
+header .inner #left_btn_menu > ul .btn_fold .chevron_btn.hide::before {
+  content: "\f077";
+  font-family: fontAwesome;
+  position: absolute;
+  right: 27px;
+  color: #333;
 }
 header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu {
   width: 300px;
@@ -224,6 +240,12 @@ header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu li a {
   font-weight: normal;
   font-size: 18px;
   font-family: "Forum", "Lato";
+  background-color: #eee;
+  color: #333;
+}
+header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu li:hover a {
+  background-color: #333;
+  color: #eee;
 }
 header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu.on {
   display: block;

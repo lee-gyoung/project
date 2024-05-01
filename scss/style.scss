@@ -20,8 +20,7 @@ body {
 header {
 	width: 100%;
 	height: 100px;
-	// background-color: #333;
-	background-color: #eee;
+	background-color: #ddd;
 	.inner {
 		height: 100%;
 		margin: 0 auto;
@@ -31,7 +30,6 @@ header {
 			width: 400px;
 			height: 100%;
 			position: relative;
-			// background-color: #eee;
 			> ul {
 				height: 100%;
 				position: absolute;
@@ -47,6 +45,9 @@ header {
 					height: 50px;
 					line-height: 50px;
 					a {
+						display: block;
+						width: 100%;
+						height: 100%;
 						font-family: 'Forum', 'Lato';
 						font-size: 17px;
 						color: #000;
@@ -58,13 +59,11 @@ header {
 						top: 60px;
 						left: 50%;
 						transform: translateX(-50%);
-						background-color: #eee;
+						background-color: #ddd;
 						display: none;
 						li {
-							// height: 40px;
 							line-height: 50px;
 							text-align: center;
-							// margin-bottom: 20px;
 							transition: all 0.1s;
 							font-family: 'Forum', 'Lato';
 							a {
@@ -74,9 +73,14 @@ header {
 							&:hover {
 								background-color: #333;
 								a {
-									color: #eee;
+									color: #ddd;
 								}
 							}
+						}
+					}
+					&:hover {
+						a {
+							color: #aaa;
 						}
 					}
 				}
@@ -178,7 +182,7 @@ header {
 			display: none;
 			width: 300px;
 			height: 90vh;
-			background-color: #eee;
+			background-color: #ddd;
 			position: fixed;
 			top: 100px;
 			left: -300px;
@@ -189,7 +193,6 @@ header {
 				text-indent: 30px;
 				li {
 					width: 100%;
-					// height: 80px;
 					line-height: 80px;
 					a {
 						width: 100%;
@@ -202,28 +205,54 @@ header {
 						transition: all 0.1s;
 					}
 					&:hover {
+						.chevron_btn {
+							&::before {
+								color: #ddd;
+							}
+						}
 						a {
 							background-color: #333;
-							color: #eee;
+							color: #ddd;
 						}
 					}
 				}
 				.btn_fold {
 					display: flex;
-					// position: relative;
 					flex-wrap: wrap;
-					i {
-						line-height: 80px;
-						font-size: 14px;
-						color: #aaa;
-						cursor: pointer;
-						text-indent: -40px;
-						// position: absolute;
-						// right: 25px;
+					// i {
+					// 	line-height: 80px;
+					// 	font-size: 14px;
+					// 	color: #aaa;
+					// 	cursor: pointer;
+					// 	text-indent: -40px;
+					// 	// position: absolute;
+					// 	// right: 25px;
+					// 	transition: all 0.3s ease;
+					// 	transform-origin: center left;
+					// 	&.on {
+					// 		transform: rotate(180deg);
+					// 	}
+					// }
+					.chevron_btn {
+						&::before {
+							content: '\f078';
+							font-family: fontAwesome;
+							position: absolute;
+							right: 27px;
+							color: #333;
+						}
+						&.hide {
+							&::before {
+								content: '\f077';
+								font-family: fontAwesome;
+								position: absolute;
+								right: 27px;
+								color: #333;
+							}
+						}
 					}
 					.btn_sub_menu {
 						width: 300px;
-						// display: block;
 						display: none;
 						li {
 							height: 80px;
@@ -232,23 +261,21 @@ header {
 								height: 100%;
 								font-weight: normal;
 								font-size: 18px;
-								// display: none;
 								font-family: 'Forum', 'Lato';
+								background-color: #eee;
+								color: #333;
+							}
+							&:hover {
+								a {
+									background-color: #333;
+									color: #eee;
+								}
 							}
 						}
 						&.on {
 							display: block;
 						}
 					}
-					// &:hover {
-					// 	.btn_sub_menu {
-					// 		li {
-					// 			a {
-					// 				display: block;
-					// 			}
-					// 		}
-					// 	}
-					// }
 				}
 			}
 			&.on {
