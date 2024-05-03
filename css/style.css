@@ -22,9 +22,10 @@ header {
   width: 100%;
   height: 100px;
   background-color: rgba(255, 255, 255, 0.7);
-  position: absolute;
+  position: fixed;
 }
 header .inner {
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   padding: 0px 100px;
@@ -66,7 +67,7 @@ header .inner .header_menu > ul li .sub_menu {
   top: 60px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ddd;
+  background-color: rgba(255, 255, 255, 0.7);
   display: none;
 }
 header .inner .header_menu > ul li .sub_menu li {
@@ -80,13 +81,13 @@ header .inner .header_menu > ul li .sub_menu li a {
   color: #000;
 }
 header .inner .header_menu > ul li .sub_menu li:hover {
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 header .inner .header_menu > ul li .sub_menu li:hover a {
-  color: #ddd;
+  color: #333;
 }
 header .inner .header_menu > ul li:hover a {
-  color: #aaa;
+  color: #333;
 }
 header .inner .logo {
   position: absolute;
@@ -116,7 +117,7 @@ header .inner .header_sns li a {
   transition: all 0.2s;
 }
 header .inner .header_sns li:hover a {
-  color: #ccc;
+  color: #555;
 }
 header .inner #header_left_btn {
   position: absolute;
@@ -178,7 +179,7 @@ header .inner #left_btn_menu {
   display: none;
   width: 300px;
   height: 90vh;
-  background-color: #ddd;
+  background-color: rgba(255, 255, 255, 0.7);
   position: fixed;
   top: 100px;
   left: -300px;
@@ -199,7 +200,7 @@ header .inner #left_btn_menu > ul li a {
   display: block;
   font-weight: bold;
   font-size: 20px;
-  color: #333;
+  color: #000;
   font-family: "Forum", "Lato";
   transition: all 0.1s;
 }
@@ -219,14 +220,14 @@ header .inner #left_btn_menu > ul .btn_fold .chevron_btn::before {
   font-family: fontAwesome;
   position: absolute;
   right: 27px;
-  color: #333;
+  color: #000;
 }
 header .inner #left_btn_menu > ul .btn_fold .chevron_btn.hide::before {
   content: "\f077";
   font-family: fontAwesome;
   position: absolute;
   right: 27px;
-  color: #333;
+  color: #000;
 }
 header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu {
   width: 300px;
@@ -241,12 +242,12 @@ header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu li a {
   font-weight: normal;
   font-size: 18px;
   font-family: "Forum", "Lato";
-  background-color: #eee;
-  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
 }
 header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu li:hover a {
-  background-color: #333;
-  color: #eee;
+  background-color: #ccc;
+  color: #333;
 }
 header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu.on {
   display: block;
@@ -255,8 +256,16 @@ header .inner #left_btn_menu.on {
   left: 0;
 }
 
+main .inner {
+  width: 100%;
+}
 main .inner img {
   width: 100%;
+  object-fit: cover;
+}
+main .main_scroll_box {
+  width: 100%;
+  margin: 50px auto;
 }
 
 @media screen and (max-width: 1000px) {

@@ -44,12 +44,3 @@ leftBtn.addEventListener('click', (e) => {
 	leftBtn.classList.toggle('on');
 	leftMenu.classList.toggle('on');
 });
-
-// let chevBtn = document.querySelectorAll('.chevron_btn');
-// chevBtn.addEventListener('click', () => {
-// 	if () {
-// 		toggleBtn.classList.add('hide');
-// 	} else {
-// 		toggleBtn.classList.remove('hide');
-// 	}
-// });

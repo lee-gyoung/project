@@ -21,8 +21,9 @@ header {
 	width: 100%;
 	height: 100px;
 	background-color: rgba(255, 255, 255, 0.7);
-	position: absolute;
+	position: fixed;
 	.inner {
+		width: 100%;
 		height: 100%;
 		margin: 0 auto;
 		padding: 0px 100px;
@@ -60,7 +61,8 @@ header {
 						top: 60px;
 						left: 50%;
 						transform: translateX(-50%);
-						background-color: #ddd;
+						// background-color: #fff;
+						background-color: rgba(255, 255, 255, 0.7);
 						display: none;
 						li {
 							line-height: 50px;
@@ -72,16 +74,17 @@ header {
 								color: #000;
 							}
 							&:hover {
-								background-color: #333;
+								// background-color: #aaa;
+								background-color: rgba(0, 0, 0, 0.5);
 								a {
-									color: #ddd;
+									color: #333;
 								}
 							}
 						}
 					}
 					&:hover {
 						a {
-							color: #aaa;
+							color: #333;
 						}
 					}
 				}
@@ -116,7 +119,7 @@ header {
 				}
 				&:hover {
 					a {
-						color: #ccc;
+						color: #555;
 					}
 				}
 			}
@@ -183,7 +186,8 @@ header {
 			display: none;
 			width: 300px;
 			height: 90vh;
-			background-color: #ddd;
+			// background-color: #fff;
+			background-color: rgba(255, 255, 255, 0.7);
 			position: fixed;
 			top: 100px;
 			left: -300px;
@@ -201,7 +205,7 @@ header {
 						display: block;
 						font-weight: bold;
 						font-size: 20px;
-						color: #333;
+						color: #000;
 						font-family: 'Forum', 'Lato';
 						transition: all 0.1s;
 					}
@@ -240,7 +244,7 @@ header {
 							font-family: fontAwesome;
 							position: absolute;
 							right: 27px;
-							color: #333;
+							color: #000;
 						}
 						&.hide {
 							&::before {
@@ -248,7 +252,7 @@ header {
 								font-family: fontAwesome;
 								position: absolute;
 								right: 27px;
-								color: #333;
+								color: #000;
 							}
 						}
 					}
@@ -263,13 +267,13 @@ header {
 								font-weight: normal;
 								font-size: 18px;
 								font-family: 'Forum', 'Lato';
-								background-color: #eee;
-								color: #333;
+								background-color: rgba(255, 255, 255, 0.7);
+								color: #000;
 							}
 							&:hover {
 								a {
-									background-color: #333;
-									color: #eee;
+									background-color: #ccc;
+									color: #333;
 								}
 							}
 						}
@@ -286,10 +290,25 @@ header {
 	}
 }
 main {
+	// width: 100%;
+	// height: 100vh;
+	// background-image: url(../img/main-crop.jpg);
+	// background-repeat: no-repeat;
+	// background-position: center;
+	// background-size: cover;
+	// background-attachment: fixed;
 	.inner {
+		width: 100%;
+		// background-image: url(../img/main-crop.jpg);
 		img {
 			width: 100%;
+			// height: 100vh;
+			object-fit: cover;
 		}
+	}
+	.main_scroll_box {
+		width: 100%;
+		margin: 50px auto;
 	}
 }
 
