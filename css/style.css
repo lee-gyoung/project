@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
 * {
   margin: 0px;
@@ -19,10 +20,12 @@ body {
 }
 
 header {
+  opacity: 1;
   width: 100%;
   height: 100px;
   background-color: rgba(255, 255, 255, 0.7);
   position: fixed;
+  z-index: 10;
 }
 header .inner {
   width: 100%;
@@ -94,7 +97,7 @@ header .inner .logo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -45%);
-  width: 120px;
+  width: 110px;
   z-index: 5;
 }
 header .inner .logo a {
@@ -256,16 +259,69 @@ header .inner #left_btn_menu.on {
   left: 0;
 }
 
+main {
+  width: 100%;
+}
 main .inner {
   width: 100%;
+  height: 1000vh;
+  position: relative;
 }
-main .inner img {
+main .inner::before {
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/main-crop.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+  opacity: 0.4;
 }
-main .main_scroll_box {
+main .inner #main_page {
   width: 100%;
-  margin: 50px auto;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+main .inner #main_page:before {
+  width: 100%;
+  height: 100vh;
+  content: "";
+  display: block;
+  background-image: url(../img/배경\ 텍스쳐.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+}
+main .inner #main_page::after {
+  width: 100%;
+  height: 100vh;
+  content: "";
+  display: block;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: cover;
+}
+main .inner #main_page img {
+  position: absolute;
+  top: -30px;
+  right: 400px;
+  z-index: 10;
+  height: 100vh;
+  width: 30%;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 1000px) {
@@ -287,6 +343,9 @@ main .main_scroll_box {
   }
   header .inner #left_btn_menu {
     display: block;
+  }
+  main .inner #main_page::before {
+    background-size: contain;
   }
 }
 

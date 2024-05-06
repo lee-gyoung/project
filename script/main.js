@@ -44,3 +44,10 @@ leftBtn.addEventListener('click', (e) => {
 	leftBtn.classList.toggle('on');
 	leftMenu.classList.toggle('on');
 });
+
+var swiper = new Swiper('.mySwiper', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+});
