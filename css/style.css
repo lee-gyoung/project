@@ -17,6 +17,9 @@ a {
 
 body {
   font-family: "Forum", "Lato", "Noto Sans KR";
+  background-image: url(../img/main-crop\ opacity.jpg);
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 header {
@@ -262,47 +265,36 @@ header .inner #left_btn_menu.on {
 main {
   width: 100%;
 }
-main .inner {
+main .main_page {
   width: 100%;
-  height: 1000vh;
+  height: 100vh;
   position: relative;
 }
-main .inner::before {
-  width: 100%;
-  height: 100%;
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: url(../img/main-crop.jpg);
-  background-repeat: repeat;
-  background-size: contain;
-  opacity: 0.4;
-}
-main .inner #main_page {
+main .main_page #main_page_scroll {
   width: 100%;
   height: 100vh;
   background-color: #fff;
   position: absolute;
   top: 0px;
-  right: 0px;
+  left: 0px;
 }
-main .inner #main_page:before {
+main .main_page #main_page_scroll:before {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   content: "";
   display: block;
   background-image: url(../img/배경\ 텍스쳐.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   left: 0px;
   opacity: 0.7;
 }
-main .inner #main_page::after {
+main .main_page #main_page_scroll::after {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   content: "";
   display: block;
   background-image: url(../img/logo.svg);
@@ -314,14 +306,30 @@ main .inner #main_page::after {
   transform: translateX(-50%);
   background-size: cover;
 }
-main .inner #main_page img {
-  position: absolute;
-  top: -30px;
-  right: 400px;
-  z-index: 10;
+main #main_slide {
+  width: 50%;
+  height: calc(100vh - 100px);
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+}
+main #main_slide .main_slide_pics {
+  width: 100%;
+  height: 100%;
+}
+main #main_slide .main_slide_pics .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+main #main_slide .main_slide_pics .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .main_slide_cons {
+  width: 50%;
   height: 100vh;
-  width: 30%;
-  object-fit: contain;
+  background-color: lightpink;
 }
 
 @media screen and (max-width: 1000px) {

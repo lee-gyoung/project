@@ -45,9 +45,15 @@ leftBtn.addEventListener('click', (e) => {
 	leftMenu.classList.toggle('on');
 });
 
-var swiper = new Swiper('.mySwiper', {
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+// 좌측 슬라이드
+var swiper = new Swiper('#main_slide', {
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	centeredSlides: true,
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: true,
 	},
 });
