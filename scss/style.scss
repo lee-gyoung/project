@@ -15,9 +15,10 @@ a {
 }
 body {
 	font-family: 'Forum', 'Lato', 'Noto Sans KR';
-	background-image: url(../img/main-crop\ opacity.jpg);
-	background-repeat: repeat;
-	background-size: contain;
+	// background-image: url(../img/main-crop\ opacity.jpg);
+	// background-repeat: repeat-y;
+	// background-size: contain;
+	// background-color: darkolivegreen;
 }
 
 header {
@@ -58,7 +59,7 @@ header {
 						height: 100%;
 						font-family: 'Forum', 'Lato';
 						font-size: 17px;
-						color: #000;
+						color: #333;
 						text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 					}
 					.sub_menu {
@@ -284,6 +285,7 @@ header {
 
 main {
 	width: 100%;
+	position: relative;
 	.main_page {
 		width: 100%;
 		height: 100vh;
@@ -325,32 +327,36 @@ main {
 			}
 		}
 	}
-	#main_slide {
-		// display: flex;
-		width: 50%;
-		height: calc(100vh - 100px);
-		position: relative;
-		bottom: 0px;
-		left: 0px;
-		.main_slide_pics {
-			width: 100%;
+	.main_slide {
+		width: 100%;
+		height: calc(100vh - 95px);
+		display: flex;
+		#main_slide_left {
+			width: 50%;
 			height: 100%;
-			.swiper-slide {
-				width: 100%;
-				height: 100%;
-				img {
-					// display: block;
+			position: relative;
+			overflow: hidden;
+			.main_slide_pics {
+				.swiper-slide {
 					width: 100%;
 					height: 100%;
-					object-fit: cover;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: contain;
+					}
 				}
 			}
 		}
-	}
-	.main_slide_cons {
-		width: 50%;
-		height: 100vh;
-		background-color: lightpink;
+		#main_slide_right {
+			width: 50%;
+			height: 100%;
+			.main_slide_cons {
+				width: 100%;
+				height: 100%;
+				background-color: lightpink;
+			}
+		}
 	}
 }
 

@@ -46,14 +46,15 @@ leftBtn.addEventListener('click', (e) => {
 });
 
 // 좌측 슬라이드
-var swiper = new Swiper('#main_slide', {
+var swiper = new Swiper('#main_slide_left', {
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
+		loop: true,
 	},
 	centeredSlides: true,
 	autoplay: {
 		delay: 3000,
-		disableOnInteraction: true,
+		disableOnInteraction: false,
 	},
 });
