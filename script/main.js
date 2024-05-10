@@ -50,9 +50,9 @@ var swiper = new Swiper('#main_slide_left', {
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
-		loop: true,
 	},
 	centeredSlides: true,
+	loop: true,
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: false,
