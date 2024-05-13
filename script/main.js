@@ -47,14 +47,37 @@ leftBtn.addEventListener('click', (e) => {
 
 // 좌측 슬라이드
 var swiper = new Swiper('#main_slide_left', {
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
 	},
 	centeredSlides: true,
 	loop: true,
 	autoplay: {
-		delay: 3000,
+		delay: 4000,
 		disableOnInteraction: true,
 	},
 });
+
+// 우측 슬라이드
+// var swipers = new Swiper('#main_slide_right', {
+// 	direction: 'vertical',
+// 	slidesPerView: 'auto',
+// 	// spaceBetween: 30,
+// 	mousewheel: true,
+// 	freeMode: true,
+// 	// pagination: {
+// 	// 	el: '.pagination-right',
+// 	// 	clickable: true,
+// 	// },
+// 	scrollbar: {
+// 		el: '.swiper-scrollbar',
+// 	},
+// });
+
+// 해당 페이지 도달하면 스크롤 내려가게끔 수정 필요,
+// 마우스가 어디에 있든 슬라이드 움직일 수 있게하면 좋을듯
+// 스크롤 종료 시 다음 페이지로 넘어갈 수 있게
+
+// 스크롤 이벤트
+let slides = document.querySelectorAll('.main_slide');
