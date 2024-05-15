@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 * {
 	margin: 0px;
@@ -15,11 +16,11 @@ a {
 	color: #ccc;
 }
 body {
-	font-family: 'Playfair Display', 'Forum', 'Lato', 'Noto Sans KR';
+	font-family: 'Lora', 'Playfair Display', 'Forum', 'Lato', 'Noto Sans KR';
 	// background-image: url(../img/main-crop\ opacity.jpg);
 	// background-repeat: repeat-y;
 	// background-size: contain;
-	// background-color: darkolivegreen;
+	// background-color: brown;
 }
 
 header {
@@ -59,9 +60,11 @@ header {
 						display: block;
 						width: 100%;
 						height: 100%;
-						font-family: 'Forum', 'Lato';
+						font-family: 'Lora', 'Forum', 'Lato';
+						font-weight: 400;
 						font-size: 17px;
-						color: #333;
+						// font-style: italic;
+						color: #000;
 						text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 					}
 					.sub_menu {
@@ -77,23 +80,23 @@ header {
 							line-height: 50px;
 							text-align: center;
 							transition: all 0.1s;
-							font-family: 'Forum', 'Lato';
 							a {
 								font-size: 14px;
 								color: #000;
+								font-family: 'Lora';
 							}
 							&:hover {
 								// background-color: #aaa;
-								background-color: rgba(0, 0, 0, 0.5);
+								background-color: rgba(0, 0, 0, 0.8);
 								a {
-									color: #333;
+									color: #ccc;
 								}
 							}
 						}
 					}
 					&:hover {
 						a {
-							color: #333;
+							color: #666;
 						}
 					}
 				}
@@ -124,11 +127,11 @@ header {
 				a {
 					font-size: 20px;
 					color: #000;
-					transition: all 0.2s;
+					transition: all 0.1s;
 				}
 				&:hover {
 					a {
-						color: #555;
+						color: #666;
 					}
 				}
 			}
@@ -212,21 +215,22 @@ header {
 						width: 100%;
 						height: 100%;
 						display: block;
-						font-weight: bold;
+						font-weight: 500;
+						// font-style: italic;
 						font-size: 20px;
 						color: #000;
-						font-family: 'Forum', 'Lato';
+						font-family: 'Lora', 'Playfair Display', 'Forum', 'Lato';
 						transition: all 0.1s;
 					}
 					&:hover {
 						.chevron_btn {
 							&::before {
-								color: #ddd;
+								color: #eee;
 							}
 						}
 						a {
-							background-color: #333;
-							color: #ddd;
+							background-color: rgba(0, 0, 0, 0.8);
+							color: #fff;
 						}
 					}
 				}
@@ -259,16 +263,16 @@ header {
 							a {
 								width: 100%;
 								height: 100%;
-								font-weight: normal;
+								font-weight: 400;
 								font-size: 18px;
-								font-family: 'Forum', 'Lato';
+								font-family: 'Lora';
 								background-color: rgba(255, 255, 255, 0.7);
 								color: #000;
 							}
 							&:hover {
 								a {
-									background-color: #ccc;
-									color: #333;
+									background-color: rgba(0, 0, 0, 0.7);
+									color: #fff;
 								}
 							}
 						}
@@ -295,7 +299,6 @@ main {
 		#main_page_scroll {
 			width: 100%;
 			height: 100vh;
-			background-color: #fff;
 			position: absolute;
 			top: 0px;
 			left: 0px;
@@ -311,7 +314,7 @@ main {
 				position: relative;
 				bottom: 0px;
 				left: 0px;
-				opacity: 0.7;
+				opacity: 0.9;
 				animation: texture 1.2s cubic-bezier(0.37, 0.57, 0.58, 0.76);
 			}
 			&::after {
@@ -353,7 +356,15 @@ main {
 			}
 			.swiper-button-next,
 			.swiper-button-prev {
-				color: #333;
+				width: auto;
+				height: auto;
+				&::after {
+					display: none;
+				}
+				i {
+					color: #666;
+					font-size: 27px;
+				}
 			}
 		}
 		#main_slide_right {
@@ -391,10 +402,12 @@ main {
 			margin: 200px auto;
 			h2 {
 				text-align: center;
-				font-family: 'Playfair Display';
-				font-weight: 600;
-				font-size: 24px;
-				color: #333;
+				font-family: 'Lora';
+				font-weight: 500;
+				font-size: 27px;
+				font-style: italic;
+				color: #000;
+				margin-bottom: 25px;
 			}
 			ul {
 				width: 100%;
@@ -403,30 +416,55 @@ main {
 				align-items: center;
 				justify-content: center;
 				li {
-					position: relative;
 					width: 350px;
-					height: 350px;
-					border: 1px solid #ddd;
+					height: 450px;
 					margin: 10px;
-					img {
-						position: absolute;
+					a {
 						width: 100%;
 						height: 100%;
-						object-fit: cover;
-					}
-					.products {
-						transition: all 0.2s;
-					}
-					.colors {
-						opacity: 0;
-						transition: all 0.2s;
-					}
-					&:hover {
-						.colors {
-							opacity: 1;
+						display: block;
+						.img_wrap {
+							width: 100%;
+							height: 350px;
+							position: relative;
+							margin-bottom: 20px;
+							img {
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								border: 1px solid #ddd;
+							}
+							.products {
+								transition: all 0.2s;
+							}
+							.colors {
+								opacity: 0;
+								transition: all 0.2s;
+							}
 						}
-						.products {
-							opacity: 0;
+						.info {
+							width: 100%;
+							height: 50px;
+							text-align: center;
+							p {
+								font: 15px/1 'Noto Sans KR';
+								color: #000;
+							}
+							span {
+								font: 13px/35px 'Noto Sans KR';
+								color: #333;
+							}
+						}
+						&:hover {
+							.img_wrap {
+								.colors {
+									opacity: 1;
+								}
+								.products {
+									opacity: 0;
+								}
+							}
 						}
 					}
 				}

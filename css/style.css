@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -17,7 +18,7 @@ a {
 }
 
 body {
-  font-family: "Playfair Display", "Forum", "Lato", "Noto Sans KR";
+  font-family: "Lora", "Playfair Display", "Forum", "Lato", "Noto Sans KR";
 }
 
 header {
@@ -60,9 +61,10 @@ header .inner .header_menu > ul li a {
   display: block;
   width: 100%;
   height: 100%;
-  font-family: "Forum", "Lato";
+  font-family: "Lora", "Forum", "Lato";
+  font-weight: 400;
   font-size: 17px;
-  color: #333;
+  color: #000;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 header .inner .header_menu > ul li .sub_menu {
@@ -78,20 +80,20 @@ header .inner .header_menu > ul li .sub_menu li {
   line-height: 50px;
   text-align: center;
   transition: all 0.1s;
-  font-family: "Forum", "Lato";
 }
 header .inner .header_menu > ul li .sub_menu li a {
   font-size: 14px;
   color: #000;
+  font-family: "Lora";
 }
 header .inner .header_menu > ul li .sub_menu li:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 header .inner .header_menu > ul li .sub_menu li:hover a {
-  color: #333;
+  color: #ccc;
 }
 header .inner .header_menu > ul li:hover a {
-  color: #333;
+  color: #666;
 }
 header .inner .logo {
   position: absolute;
@@ -118,10 +120,10 @@ header .inner .header_sns {
 header .inner .header_sns li a {
   font-size: 20px;
   color: #000;
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 header .inner .header_sns li:hover a {
-  color: #555;
+  color: #666;
 }
 header .inner #header_left_btn {
   position: absolute;
@@ -202,18 +204,18 @@ header .inner #left_btn_menu > ul li a {
   width: 100%;
   height: 100%;
   display: block;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 20px;
   color: #000;
-  font-family: "Forum", "Lato";
+  font-family: "Lora", "Playfair Display", "Forum", "Lato";
   transition: all 0.1s;
 }
 header .inner #left_btn_menu > ul li:hover .chevron_btn::before {
-  color: #ddd;
+  color: #eee;
 }
 header .inner #left_btn_menu > ul li:hover a {
-  background-color: #333;
-  color: #ddd;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
 }
 header .inner #left_btn_menu > ul .btn_fold {
   display: flex;
@@ -243,15 +245,15 @@ header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu li {
 header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu li a {
   width: 100%;
   height: 100%;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
-  font-family: "Forum", "Lato";
+  font-family: "Lora";
   background-color: rgba(255, 255, 255, 0.7);
   color: #000;
 }
 header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu li:hover a {
-  background-color: #ccc;
-  color: #333;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
 }
 header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu.on {
   display: block;
@@ -272,7 +274,6 @@ main .main_page {
 main .main_page #main_page_scroll {
   width: 100%;
   height: 100vh;
-  background-color: #fff;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -289,7 +290,7 @@ main .main_page #main_page_scroll:before {
   position: relative;
   bottom: 0px;
   left: 0px;
-  opacity: 0.7;
+  opacity: 0.9;
   animation: texture 1.2s cubic-bezier(0.37, 0.57, 0.58, 0.76);
 }
 main .main_page #main_page_scroll::after {
@@ -329,7 +330,17 @@ main .main_slide #main_slide_left .main_slide_pics .swiper-slide img {
 }
 main .main_slide #main_slide_left .swiper-button-next,
 main .main_slide #main_slide_left .swiper-button-prev {
-  color: #333;
+  width: auto;
+  height: auto;
+}
+main .main_slide #main_slide_left .swiper-button-next::after,
+main .main_slide #main_slide_left .swiper-button-prev::after {
+  display: none;
+}
+main .main_slide #main_slide_left .swiper-button-next i,
+main .main_slide #main_slide_left .swiper-button-prev i {
+  color: #666;
+  font-size: 27px;
 }
 main .main_slide #main_slide_right {
   width: 50%;
@@ -365,10 +376,12 @@ main .main_product #main_product_best {
 }
 main .main_product #main_product_best h2 {
   text-align: center;
-  font-family: "Playfair Display";
-  font-weight: 600;
-  font-size: 24px;
-  color: #333;
+  font-family: "Lora";
+  font-weight: 500;
+  font-size: 27px;
+  font-style: italic;
+  color: #000;
+  margin-bottom: 25px;
 }
 main .main_product #main_product_best ul {
   width: 100%;
@@ -378,29 +391,52 @@ main .main_product #main_product_best ul {
   justify-content: center;
 }
 main .main_product #main_product_best ul li {
-  position: relative;
   width: 350px;
-  height: 350px;
-  border: 1px solid #ddd;
+  height: 450px;
   margin: 10px;
 }
-main .main_product #main_product_best ul li img {
+main .main_product #main_product_best ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+main .main_product #main_product_best ul li a .img_wrap {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  margin-bottom: 20px;
+}
+main .main_product #main_product_best ul li a .img_wrap img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 1px solid #ddd;
 }
-main .main_product #main_product_best ul li .products {
+main .main_product #main_product_best ul li a .img_wrap .products {
   transition: all 0.2s;
 }
-main .main_product #main_product_best ul li .colors {
+main .main_product #main_product_best ul li a .img_wrap .colors {
   opacity: 0;
   transition: all 0.2s;
 }
-main .main_product #main_product_best ul li:hover .colors {
+main .main_product #main_product_best ul li a .info {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+main .main_product #main_product_best ul li a .info p {
+  font: 15px/1 "Noto Sans KR";
+  color: #000;
+}
+main .main_product #main_product_best ul li a .info span {
+  font: 13px/35px "Noto Sans KR";
+  color: #333;
+}
+main .main_product #main_product_best ul li a:hover .img_wrap .colors {
   opacity: 1;
 }
-main .main_product #main_product_best ul li:hover .products {
+main .main_product #main_product_best ul li a:hover .img_wrap .products {
   opacity: 0;
 }
 
