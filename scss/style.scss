@@ -333,13 +333,22 @@ main {
 				animation: logo 2s ease-out;
 			}
 			.scroll_btn {
-				width: 100%;
-				height: 100%;
-				background-image: url('../img/scroll btn 170x240.png');
-				background-position: center center;
-				background-repeat: no-repeat;
-				background-size: 80px 120px;
+				width: 67px;
+				height: 95px;
 				position: absolute;
+				bottom: 40px;
+				left: 48%;
+				z-index: 15;
+				animation: btn 1.5s 0.5s infinite alternate;
+				cursor: pointer;
+				opacity: 0;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+				&:hover {
+					animation-play-state: paused;
+				}
 			}
 		}
 	}
@@ -528,6 +537,16 @@ main {
 	}
 	90% {
 		opacity: 1;
+	}
+}
+@keyframes btn {
+	0% {
+		opacity: 0.1;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
 	}
 }
 
