@@ -66,18 +66,54 @@ setInterval(function () {
 }, 3900);
 
 // 비주얼 파트 로고 교체 이벤트
-// let green = url('../img/visual part/2green.png');
-// let pink = url('../img/visual part/3pink.png');
-// let blue = url('../img/visual part/4blue.png');
+// $(document).ready(function () {
+// 	$(window).scroll(function () {
+// 		$('#visual_logo').each(function (i) {
+// 			var bottom_of_element = $(this).offset().top + $(this).outerHeight() / 1;
+// 			var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-// $('.click').click(function() {
-// 	$('img.class').fadeOut(300, function(){
-// 	   $(this).attr('src','new_src.png').bind('onreadystatechange load', function(){
-// 		  if (this.complete) $(this).fadeIn(300);
-// 	   });
+// 			if (bottom_of_window > bottom_of_element) {
+// 				$(this).animate({ opacity: '1' }, 1000);
+// 			}
+// 		});
 // 	});
-//  });
+// });
 
-window.on('scroll', function () {});
-$('.main_visual');
-$('#visual_logo').attr({ src: '../img/visual part/2green.png' });
+// $('#visual_logo').attr({ src: '../img/visual part/2green.png' });
+
+$(window).scroll(function () {
+	var height = $(window).scrollTop();
+	// console.log(height);
+	// if (height > 2500) {
+	// 	let vi = document.querySelector('#visual_logo');
+	// 	vi.setAttribute('src', './img/visual part/2green.png');
+	// } else {
+	// 	let vi = document.querySelector('#visual_logo');
+	// 	vi.setAttribute('src', './img/visual part/1w.png');
+	// 	console.log(height);
+	// }
+});
+
+// 베스트 아이템
+
+let sections = document.querySelectorAll('main .scroll_event');
+let sections_array = Array.from(sections);
+console.log(sections_array);
+console.log(sections[1].offsetTop);
+console.log(sections[2].offsetTop);
+
+let position_array = [];
+for (let el of sections_array) {
+	position_array.push(el.offsetTop);
+}
+
+window.addEventListener('scroll', () => {
+	let scroll =
+		window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
+	sections_array.map((el, index) => {
+		if (scroll >= 1450) {
+			sections_array[index].classList.add('on');
+		}
+	});
+});
