@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
@@ -19,6 +18,7 @@ a {
 
 body {
   font-family: "Lora", "Playfair Display", "Forum", "Lato", "Noto Sans KR";
+  transition: background 1s;
 }
 
 header {
@@ -185,7 +185,7 @@ header .inner #left_btn_menu {
   display: none;
   width: 300px;
   height: 90vh;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.4);
   position: fixed;
   top: 100px;
   left: -300px;
@@ -283,7 +283,7 @@ main .main_page #main_page_scroll:before {
   height: 100%;
   content: "";
   display: block;
-  background-image: url(../참고용\ 이미지/2.jpg);
+  background-image: url(../img/main\ page/mainpage.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -298,7 +298,7 @@ main .main_page #main_page_scroll::after {
   height: 100%;
   content: "";
   display: block;
-  background-image: url(../img/mainpage_logo.svg);
+  background-image: url(../img/logo/mainpage_logo.svg);
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
@@ -328,7 +328,7 @@ main .main_page #main_page_scroll .scroll_btn:hover {
 }
 main .main_slide {
   width: 100%;
-  height: 91vh;
+  height: auto;
   display: flex;
   margin-bottom: 200px;
 }
@@ -358,7 +358,7 @@ main .main_slide #main_slide_left .swiper-button-prev::after {
 }
 main .main_slide #main_slide_left .swiper-button-next i,
 main .main_slide #main_slide_left .swiper-button-prev i {
-  color: #666;
+  color: #873632;
   font-size: 27px;
 }
 main .main_slide #main_slide_right {
@@ -372,7 +372,7 @@ main .main_slide #main_slide_right #right_slide_wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-60%, 50%);
 }
 main .main_slide #main_slide_right #right_slide_wrapper .right_slide_pics li {
   position: absolute;
@@ -393,7 +393,8 @@ main .main_product {
   transition: all 1s;
 }
 main .main_product #main_product_best {
-  width: 1700px;
+  padding: 0px 100px;
+  width: 100%;
   height: 100%;
   margin: 0px auto;
 }
@@ -466,19 +467,94 @@ main .main_product.on {
   opacity: 1;
   transform: translateY(0px);
 }
-main .main_visual {
+main .main_tabmenu {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 200px;
   position: relative;
-  width: 100%;
-  height: 800px;
-  background-image: url("../img/visual part/jennie bg size up.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
-main .main_contact {
+main .main_tabmenu #main_tab_new {
+  width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+}
+main .main_tabmenu #main_tab_new #tab_title h3 {
+  text-align: center;
+  font-family: "Lora";
+  font-weight: 500;
+  font-size: 27px;
+  font-style: italic;
+  color: #000;
+  margin-bottom: 40px;
+}
+main .main_tabmenu #main_tab_new #tab_title > ul {
+  width: 30%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fff;
+  margin-bottom: -1px;
+}
+main .main_tabmenu #main_tab_new #tab_title > ul li {
+  width: 30%;
+  height: 100%;
+  border: 1px solid #000;
+  text-align: center;
+  cursor: pointer;
+  font: 500 16px/50px "Lato";
+  color: #000;
+  border-bottom: none;
+}
+main .main_tabmenu #main_tab_new #tab_title > ul li.active {
+  background-color: #fff;
+}
+main .main_tabmenu #main_tab_new > ul {
+  position: absolute;
+  width: 1500px;
+  height: 100%;
+  padding: 50px 70px;
+  display: flex;
+  gap: 20px;
+}
+main .main_tabmenu #main_tab_new > ul > li {
+  display: none;
+  width: 320px;
+  height: 100%;
+}
+main .main_tabmenu #main_tab_new > ul > li a {
   width: 100%;
-  height: 50vh;
+  height: 100%;
+  display: block;
+}
+main .main_tabmenu #main_tab_new > ul > li a .tab_img {
+  width: 100%;
+  height: 320px;
+  margin-bottom: 20px;
+}
+main .main_tabmenu #main_tab_new > ul > li a .tab_img img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+}
+main .main_tabmenu #main_tab_new > ul > li a .tab_text {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+main .main_tabmenu #main_tab_new > ul > li a .tab_text p {
+  font: 14px/1 "Noto Sans KR";
+  color: #000;
+}
+main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
+  font: 13px/35px "Noto Sans KR";
+  color: #333;
+}
+main .main_tabmenu #main_tab_new > ul.active {
+  border: 1px solid #000;
+}
+main .main_tabmenu #main_tab_new > ul.active li {
+  display: block;
 }
 
 footer {
@@ -513,9 +589,38 @@ footer .inner .footer_info .footer_info_terms p {
 }
 footer .inner .footer_sns {
   float: right;
+  margin-top: 40px;
+}
+footer .inner .footer_sns ul:nth-of-type(1) {
+  height: 37px;
+  color: #fff;
+  font: 600 15px/37px "Lora";
+}
+footer .inner .footer_sns ul li a {
+  display: block;
+  height: 23px;
+  color: #fff;
+  font: normal 14px/23px "Lora";
 }
 footer .inner .footer_text {
   float: right;
+  margin-top: 40px;
+  margin-right: 80px;
+}
+footer .inner .footer_text ul li {
+  height: 23px;
+  color: #fff;
+  font: normal 14px/23px "Lora", "Noto Sans KR";
+}
+footer .inner .footer_text ul .name {
+  height: 37px;
+  color: #fff;
+  font: 600 16px/37px "Lora";
+}
+footer .inner:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 @keyframes texture {

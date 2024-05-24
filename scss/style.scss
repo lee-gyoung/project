@@ -17,15 +17,11 @@ a {
 }
 body {
 	font-family: 'Lora', 'Playfair Display', 'Forum', 'Lato', 'Noto Sans KR';
-	// background-image: url(../img/main-crop\ opacity.jpg);
-	// background-repeat: repeat-y;
-	// background-size: contain;
+	transition: background 1s;
 	// background-color: #f7f2eb;
 }
 
 header {
-	// display: none;
-	// opacity: 0;
 	width: 100%;
 	height: 100px;
 	background-color: rgba(255, 255, 255, 0.4);
@@ -64,7 +60,6 @@ header {
 						font-family: 'Lora', 'Forum', 'Lato';
 						font-weight: 400;
 						font-size: 17px;
-						// font-style: italic;
 						color: #000;
 						text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 					}
@@ -74,7 +69,6 @@ header {
 						top: 60px;
 						left: 50%;
 						transform: translateX(-50%);
-						// background-color: #fff;
 						background-color: rgba(255, 255, 255, 0.7);
 						display: none;
 						li {
@@ -87,7 +81,6 @@ header {
 								font-family: 'Lora';
 							}
 							&:hover {
-								// background-color: #aaa;
 								background-color: rgba(0, 0, 0, 0.8);
 								a {
 									color: #ccc;
@@ -199,8 +192,7 @@ header {
 			display: none;
 			width: 300px;
 			height: 90vh;
-			// background-color: #fff;
-			background-color: rgba(255, 255, 255, 0.7);
+			background-color: rgba(255, 255, 255, 0.4);
 			position: fixed;
 			top: 100px;
 			left: -300px;
@@ -217,7 +209,6 @@ header {
 						height: 100%;
 						display: block;
 						font-weight: 500;
-						// font-style: italic;
 						font-size: 20px;
 						color: #000;
 						font-family: 'Lora', 'Playfair Display', 'Forum', 'Lato';
@@ -309,10 +300,7 @@ main {
 				height: 100%;
 				content: '';
 				display: block;
-				// background-image: url(../img/배경\ 텍스쳐.png);
-				// background-color: #ffd3dd;
-				// background-image: url(../참고용\ 이미지/1.png);
-				background-image: url(../참고용\ 이미지/2.jpg);
+				background-image: url(../img/main\ page/mainpage.jpg);
 				background-size: cover;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -327,7 +315,7 @@ main {
 				height: 100%;
 				content: '';
 				display: block;
-				background-image: url(../img/mainpage_logo.svg);
+				background-image: url(../img/logo/mainpage_logo.svg);
 				background-repeat: no-repeat;
 				background-position: center center;
 				position: absolute;
@@ -359,9 +347,11 @@ main {
 	}
 	.main_slide {
 		width: 100%;
-		height: 91vh;
+		// height: 91vh;
+		height: auto;
 		display: flex;
 		margin-bottom: 200px;
+
 		#main_slide_left {
 			width: 50%;
 			height: 100%;
@@ -386,7 +376,7 @@ main {
 					display: none;
 				}
 				i {
-					color: #666;
+					color: #873632;
 					font-size: 27px;
 				}
 			}
@@ -401,7 +391,7 @@ main {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transform: translate(-50%, -50%);
+				transform: translate(-60%, 50%);
 				.right_slide_pics {
 					li {
 						position: absolute;
@@ -425,7 +415,8 @@ main {
 		transform: translateY(100px);
 		transition: all 1s;
 		#main_product_best {
-			width: 1700px;
+			padding: 0px 100px;
+			width: 100%;
 			height: 100%;
 			margin: 0px auto;
 
@@ -504,27 +495,99 @@ main {
 			transform: translateY(0px);
 		}
 	}
-	.main_visual {
+	.main_tabmenu {
+		width: 100%;
+		height: 500px;
+		margin-bottom: 200px;
 		position: relative;
-		width: 100%;
-		height: 800px;
-		background-image: url('../img/visual\ part/jennie bg size up.png');
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-
-		// img {
-		// 	opacity: 0;
-		// 	position: absolute;
-		// 	top: 200px;
-		// 	left: 50%;
-		// 	transform: translateX(-50%);
-		// }
-	}
-	.main_contact {
-		width: 100%;
-		height: 50vh;
+		#main_tab_new {
+			width: 1500px;
+			height: 100%;
+			margin: 0 auto;
+			#tab_title {
+				h3 {
+					text-align: center;
+					font-family: 'Lora';
+					font-weight: 500;
+					font-size: 27px;
+					font-style: italic;
+					color: #000;
+					margin-bottom: 40px;
+				}
+				> ul {
+					width: 30%;
+					height: 50px;
+					display: flex;
+					justify-content: center;
+					gap: 10px;
+					background-color: #fff;
+					margin-bottom: -1px;
+					li {
+						width: 30%;
+						height: 100%;
+						border: 1px solid #000;
+						text-align: center;
+						cursor: pointer;
+						font: 500 16px/50px 'Lato';
+						color: #000;
+						border-bottom: none;
+						&.active {
+							background-color: #fff;
+						}
+					}
+				}
+			}
+			> ul {
+				position: absolute;
+				width: 1500px;
+				height: 100%;
+				padding: 50px 70px;
+				display: flex;
+				// border: 1px solid #000;
+				gap: 20px;
+				// opacity: 0;
+				> li {
+					display: none;
+					width: 320px;
+					height: 100%;
+					a {
+						width: 100%;
+						height: 100%;
+						display: block;
+						.tab_img {
+							width: 100%;
+							height: 320px;
+							margin-bottom: 20px;
+							img {
+								width: 100%;
+								height: 100%;
+								border: 1px solid #ddd;
+							}
+						}
+						.tab_text {
+							width: 100%;
+							height: 50px;
+							text-align: center;
+							p {
+								font: 14px/1 'Noto Sans KR';
+								color: #000;
+							}
+							span {
+								font: 13px/35px 'Noto Sans KR';
+								color: #333;
+							}
+						}
+					}
+				}
+				&.active {
+					// opacity: 1;
+					border: 1px solid #000;
+					li {
+						display: block;
+					}
+				}
+			}
+		}
 	}
 }
 footer {
@@ -559,9 +622,45 @@ footer {
 		}
 		.footer_sns {
 			float: right;
+			margin-top: 40px;
+			ul {
+				&:nth-of-type(1) {
+					height: 37px;
+					color: #fff;
+					font: 600 15px/37px 'Lora';
+				}
+				li {
+					a {
+						display: block;
+						height: 23px;
+						color: #fff;
+						font: normal 14px/23px 'Lora';
+					}
+				}
+			}
 		}
 		.footer_text {
 			float: right;
+			margin-top: 40px;
+
+			margin-right: 80px;
+			ul {
+				li {
+					height: 23px;
+					color: #fff;
+					font: normal 14px/23px 'Lora', 'Noto Sans KR';
+				}
+				.name {
+					height: 37px;
+					color: #fff;
+					font: 600 16px/37px 'Lora';
+				}
+			}
+		}
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
 		}
 	}
 }

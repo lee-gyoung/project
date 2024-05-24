@@ -26,6 +26,7 @@
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script defer src="./script/main.js"></script>
+		<script defer src="./script/jqurey_function.js"></script>
 	</head>
 	<body>
 		<header>
@@ -53,7 +54,7 @@
 				</nav>
 				<h1 class="logo">
 					<a href="./index.html">
-						<img src="./img/header_logo.png" alt="portre 로고"
+						<img src="./img/logo/header_logo.png" alt="portre 로고"
 					/></a>
 				</h1>
 				<ul class="header_sns">
@@ -67,7 +68,6 @@
 							<i class="fa-solid fa-comment"></i>
 						</a>
 					</li>
-					<!-- <li><a href="#"></a></li> -->
 				</ul>
 				<a href="#" id="header_left_btn">
 					<span>menu</span>
@@ -78,7 +78,6 @@
 						<li><a href="#">Contact</a></li>
 						<li class="btn_fold">
 							<a href="#">Shop</a>
-							<!-- <i class="fa-solid fa-chevron-down"></i> -->
 							<div class="chevron_btn"></div>
 							<ul class="btn_sub_menu">
 								<li><a href="#">Nail</a></li>
@@ -88,7 +87,6 @@
 						</li>
 						<li class="btn_fold">
 							<a href="#">Community</a>
-							<!-- <i class="fa-solid fa-chevron-down"></i> -->
 							<div class="chevron_btn"></div>
 							<ul class="btn_sub_menu">
 								<li><a href="#">Event</a></li>
@@ -104,7 +102,7 @@
 				<section id="main_page_scroll">
 					<div class="scroll_btn">
 						<a href="#main_slide">
-							<img id="scrBtn" src="./img/w.png" alt="" />
+							<img id="scrBtn" src="./img/main page/scroll btn w.png" alt="" />
 						</a>
 					</div>
 				</section>
@@ -270,12 +268,183 @@
 					</ul>
 				</section>
 			</div>
-			<div class="main_visual scroll_event">
-				<!-- <img
-					id="visual_logo"
-					src="./img/visual part/1w.png"
-					alt="My scene of the day"
-				/> -->
+			<div class="main_tabmenu scroll_event">
+				<section id="main_tab_new">
+					<div id="tab_title">
+						<h3>NEW PRODUCT</h3>
+						<ul>
+							<li class="active">
+								<div data-tab="#tab_fragrance">Fragrance</div>
+							</li>
+							<li>
+								<div data-tab="#tab_nail">Nail</div>
+							</li>
+							<li>
+								<div data-tab="#tab_lip">Lip</div>
+							</li>
+						</ul>
+					</div>
+					<ul id="tab_fragrance" class="active">
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/fragrance/tab1.jpg"
+										alt="롱테이크 바질 앤 베티버"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>롱 테이크</p>
+									<span>바질 앤 베티버</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/fragrance/tab2.jpg"
+										alt="롱테이크 블랙티 앤 피그"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>롱 테이크</p>
+									<span>블랙티 앤 피그</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/fragrance/tab3.jpg"
+										alt="애프터 블로우 오 드 퍼퓸 자스민 머스크"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>애프터 블로우 오 드 퍼퓸</p>
+									<span>자스민 머스크</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/fragrance/tab4.jpg"
+										alt="애프터 블로우 오 드 퍼퓸 텐더 우드"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>애프터 블로우 오 드 퍼퓸</p>
+									<span>텐더 우드</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul id="tab_nail">
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/nail/tab1.png"
+										alt="네일 누보 주스 넥타린"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>네일 누보 주스</p>
+									<span>넥타린</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/nail/tab2.png"
+										alt="네일 누보 주스 에뚜알"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>네일 누보 주스</p>
+									<span>에뚜알</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/nail/tab3.png"
+										alt="네일 누보 주스 르 씨엘"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>네일 누보 주스</p>
+									<span>르 씨엘</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/nail/tab4.png"
+										alt="네일 누보 주스 스너그"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>네일 누보 주스</p>
+									<span>스너그</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul id="tab_lip">
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/lip/모어로즈.png"
+										alt="베어 컬러 밤 모어 로즈"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>베어 컬러 밤</p>
+									<span>모어 로즈</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/lip/모어베리.png"
+										alt="베어 컬러 밤 모어 베리"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>베어 컬러 밤</p>
+									<span>모어 베리</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tab_img">
+									<img
+										src="./img/main tab/lip/모어코랄.png"
+										alt="베어 컬러 밤 모어 코랄"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>베어 컬러 밤</p>
+									<span>모어 코랄</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</section>
 			</div>
 			<div class="main_contact scroll_event"></div>
 		</main>
@@ -284,7 +453,7 @@
 				<section class="footer_info">
 					<h2 class="footer_info_logo">
 						<a href="./index.html">
-							<img src="./img/header_logo w.png" alt="portre 로고"
+							<img src="./img/logo/header_logo w.png" alt="portre 로고"
 						/></a>
 					</h2>
 					<div class="footer_info_terms">
@@ -310,7 +479,7 @@
 				</section>
 				<section class="footer_text">
 					<ul>
-						<li>Customer Center</li>
+						<li class="name">Customer Center</li>
 						<li>1577-7905</li>
 						<li></li>
 						<li>10:00-17:00</li>
