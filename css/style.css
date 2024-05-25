@@ -423,12 +423,14 @@ main .main_product #main_product_best ul li a {
   width: 100%;
   height: 100%;
   display: block;
+  pointer-events: none;
 }
 main .main_product #main_product_best ul li a .img_wrap {
   width: 100%;
   height: 350px;
   position: relative;
   margin-bottom: 20px;
+  pointer-events: auto;
 }
 main .main_product #main_product_best ul li a .img_wrap img {
   position: absolute;
@@ -444,24 +446,26 @@ main .main_product #main_product_best ul li a .img_wrap .colors {
   opacity: 0;
   transition: all 0.2s;
 }
+main .main_product #main_product_best ul li a .img_wrap:hover .colors {
+  opacity: 1;
+}
+main .main_product #main_product_best ul li a .img_wrap:hover .products {
+  opacity: 0;
+}
 main .main_product #main_product_best ul li a .info {
   width: 100%;
   height: 50px;
   text-align: center;
 }
 main .main_product #main_product_best ul li a .info p {
+  pointer-events: auto;
   font: 15px/1 "Noto Sans KR";
   color: #000;
 }
 main .main_product #main_product_best ul li a .info span {
+  pointer-events: auto;
   font: 13px/35px "Noto Sans KR";
   color: #333;
-}
-main .main_product #main_product_best ul li a:hover .img_wrap .colors {
-  opacity: 1;
-}
-main .main_product #main_product_best ul li a:hover .img_wrap .products {
-  opacity: 0;
 }
 main .main_product.on {
   opacity: 1;
@@ -472,6 +476,9 @@ main .main_tabmenu {
   height: 500px;
   margin-bottom: 200px;
   position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s;
 }
 main .main_tabmenu #main_tab_new {
   width: 1500px;
@@ -493,13 +500,14 @@ main .main_tabmenu #main_tab_new #tab_title > ul {
   display: flex;
   justify-content: center;
   gap: 10px;
-  background-color: #fff;
   margin-bottom: -1px;
+  position: relative;
+  z-index: 5;
 }
 main .main_tabmenu #main_tab_new #tab_title > ul li {
   width: 30%;
   height: 100%;
-  border: 1px solid #000;
+  border: 1px solid #aaa;
   text-align: center;
   cursor: pointer;
   font: 500 16px/50px "Lato";
@@ -551,10 +559,14 @@ main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
   color: #333;
 }
 main .main_tabmenu #main_tab_new > ul.active {
-  border: 1px solid #000;
+  border: 1px solid #aaa;
 }
 main .main_tabmenu #main_tab_new > ul.active li {
   display: block;
+}
+main .main_tabmenu.on {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 footer {

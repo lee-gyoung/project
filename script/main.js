@@ -28,25 +28,43 @@ var swiper = new Swiper('#main_slide_left', {
 	},
 });
 
-// 베스트 아이템
-
+// 스크롤 페이드 인아웃 이벤트
 let sections = document.querySelectorAll('main .scroll_event');
 let sections_array = Array.from(sections);
-
 let position_array = [];
+
 for (let el of sections_array) {
 	position_array.push(el.offsetTop);
 }
-let best_item_active_scrollTop = 1450;
+let best_item_active_scrollTop = 1500;
+let new_product_active_scrollTop = 2300;
+
 window.addEventListener('scroll', () => {
 	let scroll =
 		window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-
-	sections_array.map((el, index) => {
-		if (scroll >= best_item_active_scrollTop) {
+	sections_array.forEach((el, index) => {
+		if (scroll >= best_item_active_scrollTop && index === 2) {
 			sections_array[index].classList.add('on');
+		} else if (scroll >= new_product_active_scrollTop && index === 3) {
+			sections_array[index].classList.add('on');
+		} else {
+			sections_array[index].classList.remove('on');
 		}
 	});
 });
 
-// 탭 섹션 호버 시 이미지 경로 변환
+// 탭 메뉴 클릭 이벤트
+$(document).ready(function () {
+	$('#tab_title ul li').click(function () {
+		$('#tab_title ul li').removeClass('active');
+
+		$(this).addClass('active');
+
+		let data = $(this).find('div').attr('data-tab');
+		$('#tab_fragrance, #tab_nail, #tab_lip').removeClass('active');
+		$(data).addClass('active');
+	});
+});
+
+// 대상.attr(속성이름) -> 해당 속성을 대상에서 찾아서 가져옴
+// 대상.attr(속성이름, 변경할 내용) -> 해당 속성을 찾아서 변경됨

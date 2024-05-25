@@ -439,15 +439,18 @@ main {
 					width: 350px;
 					height: 100%;
 					margin: 10px;
+
 					a {
 						width: 100%;
 						height: 100%;
 						display: block;
+						pointer-events: none;
 						.img_wrap {
 							width: 100%;
 							height: 350px;
 							position: relative;
 							margin-bottom: 20px;
+							pointer-events: auto;
 							img {
 								position: absolute;
 								width: 100%;
@@ -462,28 +465,28 @@ main {
 								opacity: 0;
 								transition: all 0.2s;
 							}
-						}
-						.info {
-							width: 100%;
-							height: 50px;
-							text-align: center;
-							p {
-								font: 15px/1 'Noto Sans KR';
-								color: #000;
-							}
-							span {
-								font: 13px/35px 'Noto Sans KR';
-								color: #333;
-							}
-						}
-						&:hover {
-							.img_wrap {
+							&:hover {
 								.colors {
 									opacity: 1;
 								}
 								.products {
 									opacity: 0;
 								}
+							}
+						}
+						.info {
+							width: 100%;
+							height: 50px;
+							text-align: center;
+							p {
+								pointer-events: auto;
+								font: 15px/1 'Noto Sans KR';
+								color: #000;
+							}
+							span {
+								pointer-events: auto;
+								font: 13px/35px 'Noto Sans KR';
+								color: #333;
 							}
 						}
 					}
@@ -500,6 +503,10 @@ main {
 		height: 500px;
 		margin-bottom: 200px;
 		position: relative;
+		opacity: 0;
+		transform: translateY(100px);
+		transition: all 1s;
+
 		#main_tab_new {
 			width: 1500px;
 			height: 100%;
@@ -520,12 +527,13 @@ main {
 					display: flex;
 					justify-content: center;
 					gap: 10px;
-					background-color: #fff;
 					margin-bottom: -1px;
+					position: relative;
+					z-index: 5;
 					li {
 						width: 30%;
 						height: 100%;
-						border: 1px solid #000;
+						border: 1px solid #aaa;
 						text-align: center;
 						cursor: pointer;
 						font: 500 16px/50px 'Lato';
@@ -543,17 +551,17 @@ main {
 				height: 100%;
 				padding: 50px 70px;
 				display: flex;
-				// border: 1px solid #000;
 				gap: 20px;
-				// opacity: 0;
 				> li {
 					display: none;
 					width: 320px;
 					height: 100%;
+
 					a {
 						width: 100%;
 						height: 100%;
 						display: block;
+
 						.tab_img {
 							width: 100%;
 							height: 320px;
@@ -568,6 +576,7 @@ main {
 							width: 100%;
 							height: 50px;
 							text-align: center;
+
 							p {
 								font: 14px/1 'Noto Sans KR';
 								color: #000;
@@ -580,13 +589,16 @@ main {
 					}
 				}
 				&.active {
-					// opacity: 1;
-					border: 1px solid #000;
+					border: 1px solid #aaa;
 					li {
 						display: block;
 					}
 				}
 			}
+		}
+		&.on {
+			opacity: 1;
+			transform: translateY(0px);
 		}
 	}
 }
