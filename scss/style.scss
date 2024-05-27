@@ -17,8 +17,6 @@ a {
 }
 body {
 	font-family: 'Lora', 'Playfair Display', 'Forum', 'Lato', 'Noto Sans KR';
-	transition: background 1s;
-	// background-color: #f7f2eb;
 }
 
 header {
@@ -347,7 +345,6 @@ main {
 	}
 	.main_slide {
 		width: 100%;
-		// height: 91vh;
 		height: auto;
 		display: flex;
 		margin-bottom: 200px;
@@ -561,15 +558,33 @@ main {
 						width: 100%;
 						height: 100%;
 						display: block;
-
+						cursor: auto;
 						.tab_img {
 							width: 100%;
 							height: 320px;
 							margin-bottom: 20px;
+							position: relative;
 							img {
+								position: absolute;
 								width: 100%;
 								height: 100%;
 								border: 1px solid #ddd;
+								cursor: pointer;
+							}
+							.products {
+								transition: all 0.2s;
+							}
+							.colors {
+								opacity: 0;
+								transition: all 0.2s;
+							}
+							&:hover {
+								.colors {
+									opacity: 1;
+								}
+								.products {
+									opacity: 0;
+								}
 							}
 						}
 						.tab_text {
@@ -580,16 +595,19 @@ main {
 							p {
 								font: 14px/1 'Noto Sans KR';
 								color: #000;
+								cursor: pointer;
 							}
 							span {
 								font: 13px/35px 'Noto Sans KR';
 								color: #333;
+								cursor: pointer;
 							}
 						}
 					}
 				}
 				&.active {
 					border: 1px solid #aaa;
+					z-index: 5;
 					li {
 						display: block;
 					}
@@ -599,6 +617,36 @@ main {
 		&.on {
 			opacity: 1;
 			transform: translateY(0px);
+		}
+	}
+	.main_contact {
+		width: 100%;
+		height: 100vh;
+		.inner {
+			width: 100%;
+			height: 100%;
+			#contact_left {
+				float: left;
+				.contact_left_img {
+					width: 50%;
+					height: 50%;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+			#contact_right {
+				float: right;
+				.contact_right_img {
+					width: 50%;
+					height: 80%;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
 		}
 	}
 }

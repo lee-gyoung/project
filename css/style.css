@@ -18,7 +18,6 @@ a {
 
 body {
   font-family: "Lora", "Playfair Display", "Forum", "Lato", "Noto Sans KR";
-  transition: background 1s;
 }
 
 header {
@@ -534,16 +533,33 @@ main .main_tabmenu #main_tab_new > ul > li a {
   width: 100%;
   height: 100%;
   display: block;
+  cursor: auto;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_img {
   width: 100%;
   height: 320px;
   margin-bottom: 20px;
+  position: relative;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_img img {
+  position: absolute;
   width: 100%;
   height: 100%;
   border: 1px solid #ddd;
+  cursor: pointer;
+}
+main .main_tabmenu #main_tab_new > ul > li a .tab_img .products {
+  transition: all 0.2s;
+}
+main .main_tabmenu #main_tab_new > ul > li a .tab_img .colors {
+  opacity: 0;
+  transition: all 0.2s;
+}
+main .main_tabmenu #main_tab_new > ul > li a .tab_img:hover .colors {
+  opacity: 1;
+}
+main .main_tabmenu #main_tab_new > ul > li a .tab_img:hover .products {
+  opacity: 0;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_text {
   width: 100%;
@@ -553,13 +569,16 @@ main .main_tabmenu #main_tab_new > ul > li a .tab_text {
 main .main_tabmenu #main_tab_new > ul > li a .tab_text p {
   font: 14px/1 "Noto Sans KR";
   color: #000;
+  cursor: pointer;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
   font: 13px/35px "Noto Sans KR";
   color: #333;
+  cursor: pointer;
 }
 main .main_tabmenu #main_tab_new > ul.active {
   border: 1px solid #aaa;
+  z-index: 5;
 }
 main .main_tabmenu #main_tab_new > ul.active li {
   display: block;
@@ -567,6 +586,36 @@ main .main_tabmenu #main_tab_new > ul.active li {
 main .main_tabmenu.on {
   opacity: 1;
   transform: translateY(0px);
+}
+main .main_contact {
+  width: 100%;
+  height: 100vh;
+}
+main .main_contact .inner {
+  width: 100%;
+  height: 100%;
+}
+main .main_contact .inner #contact_left {
+  float: left;
+}
+main .main_contact .inner #contact_left .contact_left_img {
+  width: 50%;
+  height: 50%;
+}
+main .main_contact .inner #contact_left .contact_left_img img {
+  width: 100%;
+  height: 100%;
+}
+main .main_contact .inner #contact_right {
+  float: right;
+}
+main .main_contact .inner #contact_right .contact_right_img {
+  width: 50%;
+  height: 80%;
+}
+main .main_contact .inner #contact_right .contact_right_img img {
+  width: 100%;
+  height: 100%;
 }
 
 footer {

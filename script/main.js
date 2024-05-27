@@ -47,8 +47,6 @@ window.addEventListener('scroll', () => {
 			sections_array[index].classList.add('on');
 		} else if (scroll >= new_product_active_scrollTop && index === 3) {
 			sections_array[index].classList.add('on');
-		} else {
-			sections_array[index].classList.remove('on');
 		}
 	});
 });
@@ -66,5 +64,4 @@ $(document).ready(function () {
 	});
 });
 
-// 대상.attr(속성이름) -> 해당 속성을 대상에서 찾아서 가져옴
-// 대상.attr(속성이름, 변경할 내용) -> 해당 속성을 찾아서 변경됨
+// 탭 메뉴 이미지 경로 변경
