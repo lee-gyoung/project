@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 * {
 	margin: 0px;
@@ -26,16 +27,19 @@ header {
 	position: fixed;
 	z-index: 10;
 	animation: logo 2s ease-out;
+
 	.inner {
 		width: 100%;
 		height: 100%;
 		margin: 0 auto;
 		padding: 0px 100px;
 		position: relative;
+
 		.header_menu {
 			width: 440px;
 			height: 100%;
 			position: relative;
+
 			> ul {
 				height: 100%;
 				position: absolute;
@@ -44,6 +48,7 @@ header {
 				transform: translateY(-50%);
 				display: flex;
 				align-items: center;
+
 				li {
 					position: relative;
 					width: 110px;
@@ -69,10 +74,12 @@ header {
 						transform: translateX(-50%);
 						background-color: rgba(255, 255, 255, 0.7);
 						display: none;
+
 						li {
 							line-height: 50px;
 							text-align: center;
 							transition: all 0.1s;
+
 							a {
 								font-size: 14px;
 								color: #000;
@@ -86,6 +93,7 @@ header {
 							}
 						}
 					}
+
 					&:hover {
 						a {
 							color: #666;
@@ -101,6 +109,7 @@ header {
 			transform: translate(-50%, -45%);
 			width: 110px;
 			z-index: 5;
+
 			a {
 				width: 100%;
 				img {
@@ -136,6 +145,7 @@ header {
 			width: 23px;
 			height: 23px;
 			display: none;
+
 			&::before {
 				content: '';
 				display: block;
@@ -498,12 +508,11 @@ main {
 	.main_tabmenu {
 		width: 100%;
 		height: 500px;
-		margin-bottom: 200px;
+		margin-bottom: 350px;
 		position: relative;
 		opacity: 0;
 		transform: translateY(100px);
 		transition: all 1s;
-
 		#main_tab_new {
 			width: 1500px;
 			height: 100%;
@@ -553,7 +562,6 @@ main {
 					display: none;
 					width: 320px;
 					height: 100%;
-
 					a {
 						width: 100%;
 						height: 100%;
@@ -607,7 +615,7 @@ main {
 				}
 				&.active {
 					border: 1px solid #aaa;
-					z-index: 5;
+					z-index: 1;
 					li {
 						display: block;
 					}
@@ -620,31 +628,81 @@ main {
 		}
 	}
 	.main_contact {
+		opacity: 0;
 		width: 100%;
-		height: 100vh;
-		.inner {
+		height: 100%;
+		h3 {
+			text-align: center;
+			font-family: 'Lora';
+			font-weight: 500;
+			font-size: 27px;
+			font-style: italic;
+			color: #000;
+			margin-bottom: 80px;
+		}
+		.main_contact_wrap {
 			width: 100%;
 			height: 100%;
+			display: flex;
 			#contact_left {
-				float: left;
+				width: 100%;
+				position: relative;
 				.contact_left_img {
-					width: 50%;
-					height: 50%;
+					position: absolute;
+					left: 70px;
+					transform: translateX(0px);
+					width: 750px;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.contact_left_text {
+					padding: 90px 0px;
+					position: absolute;
+					right: 180px;
+					bottom: 70px;
+					display: flex;
+					gap: 70px;
+					flex-direction: row-reverse;
+					width: 300%;
+
+					p {
+						text-align: center;
+						font: bold 27px/1.7 'Nanum Gothic';
+						color: #000;
+						a {
+							font: bold 24px/2 'Nanum Gothic';
+							color: #2a3923;
+						}
+						&:nth-of-type(2) {
+							opacity: 0;
+						}
+						&:nth-of-type(3) {
+							opacity: 0;
+						}
+					}
+				}
+			}
+			#contact_right {
+				.contact_right_img {
+					width: 750px;
+					height: 100%;
 					img {
 						width: 100%;
 						height: 100%;
 					}
 				}
 			}
-			#contact_right {
-				float: right;
-				.contact_right_img {
-					width: 50%;
-					height: 80%;
-					img {
-						width: 100%;
-						height: 100%;
-					}
+		}
+		&.on {
+			opacity: 1;
+			.main_contact_wrap {
+				#contact_left {
+					animation: contact 1.5s linear;
+				}
+				#contact_right {
+					animation: contact2 1.5s linear;
 				}
 			}
 		}
@@ -749,6 +807,26 @@ footer {
 	100% {
 		opacity: 1;
 		transform: translateY(0px);
+	}
+}
+@keyframes contact {
+	0% {
+		transform: translateX(-500px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes contact2 {
+	0% {
+		transform: translateX(500px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
 	}
 }
 

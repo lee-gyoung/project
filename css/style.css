@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -473,7 +474,7 @@ main .main_product.on {
 main .main_tabmenu {
   width: 100%;
   height: 500px;
-  margin-bottom: 200px;
+  margin-bottom: 350px;
   position: relative;
   opacity: 0;
   transform: translateY(100px);
@@ -578,7 +579,7 @@ main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
 }
 main .main_tabmenu #main_tab_new > ul.active {
   border: 1px solid #aaa;
-  z-index: 5;
+  z-index: 1;
 }
 main .main_tabmenu #main_tab_new > ul.active li {
   display: block;
@@ -588,34 +589,79 @@ main .main_tabmenu.on {
   transform: translateY(0px);
 }
 main .main_contact {
-  width: 100%;
-  height: 100vh;
-}
-main .main_contact .inner {
+  opacity: 0;
   width: 100%;
   height: 100%;
 }
-main .main_contact .inner #contact_left {
-  float: left;
+main .main_contact h3 {
+  text-align: center;
+  font-family: "Lora";
+  font-weight: 500;
+  font-size: 27px;
+  font-style: italic;
+  color: #000;
+  margin-bottom: 80px;
 }
-main .main_contact .inner #contact_left .contact_left_img {
-  width: 50%;
-  height: 50%;
+main .main_contact .main_contact_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
-main .main_contact .inner #contact_left .contact_left_img img {
+main .main_contact .main_contact_wrap #contact_left {
+  width: 100%;
+  position: relative;
+}
+main .main_contact .main_contact_wrap #contact_left .contact_left_img {
+  position: absolute;
+  left: 70px;
+  transform: translateX(0px);
+  width: 750px;
+}
+main .main_contact .main_contact_wrap #contact_left .contact_left_img img {
   width: 100%;
   height: 100%;
 }
-main .main_contact .inner #contact_right {
-  float: right;
+main .main_contact .main_contact_wrap #contact_left .contact_left_text {
+  padding: 90px 0px;
+  position: absolute;
+  right: 180px;
+  bottom: 70px;
+  display: flex;
+  gap: 70px;
+  flex-direction: row-reverse;
+  width: 300%;
 }
-main .main_contact .inner #contact_right .contact_right_img {
-  width: 50%;
-  height: 80%;
+main .main_contact .main_contact_wrap #contact_left .contact_left_text p {
+  text-align: center;
+  font: bold 27px/1.7 "Nanum Gothic";
+  color: #000;
 }
-main .main_contact .inner #contact_right .contact_right_img img {
+main .main_contact .main_contact_wrap #contact_left .contact_left_text p a {
+  font: bold 24px/2 "Nanum Gothic";
+  color: #2a3923;
+}
+main .main_contact .main_contact_wrap #contact_left .contact_left_text p:nth-of-type(2) {
+  opacity: 0;
+}
+main .main_contact .main_contact_wrap #contact_left .contact_left_text p:nth-of-type(3) {
+  opacity: 0;
+}
+main .main_contact .main_contact_wrap #contact_right .contact_right_img {
+  width: 750px;
+  height: 100%;
+}
+main .main_contact .main_contact_wrap #contact_right .contact_right_img img {
   width: 100%;
   height: 100%;
+}
+main .main_contact.on {
+  opacity: 1;
+}
+main .main_contact.on .main_contact_wrap #contact_left {
+  animation: contact 1.5s linear;
+}
+main .main_contact.on .main_contact_wrap #contact_right {
+  animation: contact2 1.5s linear;
 }
 
 footer {
@@ -708,6 +754,26 @@ footer .inner:after {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+@keyframes contact {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes contact2 {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 @media screen and (max-width: 1000px) {

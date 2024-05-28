@@ -23,7 +23,7 @@ var swiper = new Swiper('#main_slide_left', {
 	centeredSlides: true,
 	loop: true,
 	autoplay: {
-		delay: 3600,
+		delay: 3200,
 		disableOnInteraction: false,
 	},
 });
@@ -38,18 +38,34 @@ for (let el of sections_array) {
 }
 let best_item_active_scrollTop = 1500;
 let new_product_active_scrollTop = 2300;
-
+let contact_active_scrollTop = 2900;
 window.addEventListener('scroll', () => {
 	let scroll =
 		window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
 	sections_array.forEach((el, index) => {
-		if (scroll >= best_item_active_scrollTop && index === 2) {
+		if (index === 2 && scroll >= best_item_active_scrollTop) {
 			sections_array[index].classList.add('on');
-		} else if (scroll >= new_product_active_scrollTop && index === 3) {
+		} else if (index === 3 && scroll >= new_product_active_scrollTop) {
+			sections_array[index].classList.add('on');
+		} else if (index === 4 && scroll >= contact_active_scrollTop) {
 			sections_array[index].classList.add('on');
 		}
 	});
 });
+
+// window.addEventListener('scroll', () => {
+// 	let scroll =
+// 		window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
+// 	sections_array.forEach((el, index) => {
+// 		if (scroll >= best_item_active_scrollTop && index === 2) {
+// 			sections_array[index].classList.add('on');
+// 		} else if (scroll >= new_product_active_scrollTop && index === 3) {
+// 			sections_array[index].classList.add('on');
+// 		}
+// 	});
+// });
 
 // 탭 메뉴 클릭 이벤트
 $(document).ready(function () {
@@ -63,5 +79,3 @@ $(document).ready(function () {
 		$(data).addClass('active');
 	});
 });
-
-// 탭 메뉴 이미지 경로 변경
