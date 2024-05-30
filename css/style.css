@@ -625,14 +625,13 @@ main .main_contact .main_contact_wrap #contact_left .contact_left_text {
   width: 100%;
   padding: 90px 0px;
   position: relative;
-  border: 1px solid #000;
-  transform: translate(125px, 370px);
+  transform: translate(125px, 395px);
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dt {
   width: 35px;
   height: 35px;
   position: absolute;
-  top: 350px;
+  top: 340px;
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dt:nth-of-type(1) {
   right: 300px;
@@ -649,26 +648,34 @@ main .main_contact .main_contact_wrap #contact_left .contact_left_text dt a {
   height: 100%;
   text-align: center;
   font: bold 18px/35px "Nanum Gothic";
-  color: #333;
-  background-color: #eee;
+  color: #4f493f;
+  background-color: #ece7e2;
   border-radius: 50%;
+  transition: all 0.3s;
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dt.on a {
-  background-color: #333;
-  color: #eee;
+  background-color: #4f493f;
+  color: #ece7e2;
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dd {
   text-align: center;
-  font: bold 27px/1.7 "Nanum Gothic";
+  font: bold 24px/1.7 "Nanum Gothic";
   color: #000;
   display: none;
 }
+main .main_contact .main_contact_wrap #contact_left .contact_left_text dd span {
+  font: bold 25px/2;
+}
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dd a {
-  font: bold 24px/2 "Nanum Gothic";
-  color: #2a3923;
+  font: bold 20px/2 "Nanum Gothic";
+  color: #697e50;
+  transition: all 0.2s;
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dd.on {
   display: block;
+}
+main .main_contact .main_contact_wrap #contact_left .contact_left_text dd:hover a {
+  color: #c3ca92;
 }
 main .main_contact .main_contact_wrap #contact_right .contact_right_img {
   width: 750px;
@@ -820,7 +827,10 @@ footer .inner:after {
   header .inner #left_btn_menu {
     display: block;
   }
-  main .inner #main_page::before {
+  main .main_page #main_page_scroll::before {
+    background-image: url(../img/main\ page/mainpage_mo.png);
+  }
+  main .main_page #main_page_scroll::after {
     background-size: contain;
   }
 }

@@ -646,51 +646,61 @@ main {
 					width: 100%;
 					padding: 90px 0px;
 					position: relative;
-					border: 1px solid #000;
-					transform: translate(125px, 370px);
-					dt{
+					transform: translate(125px, 395px);
+					dt {
 						width: 35px;
 						height: 35px;
 						position: absolute;
-						top: 350px;
-						&:nth-of-type(1){
+						top: 340px;
+
+						&:nth-of-type(1) {
 							right: 300px;
 						}
-						&:nth-of-type(2){
+						&:nth-of-type(2) {
 							right: 250px;
 						}
-						&:nth-of-type(3){
+						&:nth-of-type(3) {
 							right: 200px;
 						}
-						a{
+						a {
 							display: block;
 							width: 100%;
 							height: 100%;
 							text-align: center;
 							font: bold 18px/35px 'Nanum Gothic';
-							color: #333;
-							background-color: #eee;
+							color: #4f493f;
+							background-color: #ece7e2;
 							border-radius: 50%;
-
+							transition: all 0.3s;
 						}
-						&.on{
-							a{
-								background-color: #333;
-								color: #eee;
+						&.on {
+							a {
+								background-color: #4f493f;
+								color: #ece7e2;
 							}
 						}
 					}
-					dd{
+					dd {
 						text-align: center;
-						font: bold 27px/1.7 'Nanum Gothic';
+						font: bold 24px/1.7 'Nanum Gothic';
 						color: #000;
 						display: none;
-						a{
-							font: bold 24px/2 'Nanum Gothic';
-							color: #2a3923;
+
+						span {
+							font: bold 25px/2;
 						}
-						&.on{
+						a {
+							font: bold 20px/2 'Nanum Gothic';
+							color: #697e50;
+							transition: all 0.2s;
+						}
+						&.on {
 							display: block;
+						}
+						&:hover {
+							a {
+								color: #c3ca92;
+							}
 						}
 					}
 				}
@@ -872,9 +882,12 @@ footer {
 		}
 	}
 	main {
-		.inner {
-			#main_page {
+		.main_page {
+			#main_page_scroll {
 				&::before {
+					background-image: url(../img/main\ page/mainpage_mo.png);
+				}
+				&::after {
 					background-size: contain;
 				}
 			}

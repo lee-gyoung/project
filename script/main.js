@@ -54,19 +54,6 @@ window.addEventListener('scroll', () => {
 	});
 });
 
-// window.addEventListener('scroll', () => {
-// 	let scroll =
-// 		window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-
-// 	sections_array.forEach((el, index) => {
-// 		if (scroll >= best_item_active_scrollTop && index === 2) {
-// 			sections_array[index].classList.add('on');
-// 		} else if (scroll >= new_product_active_scrollTop && index === 3) {
-// 			sections_array[index].classList.add('on');
-// 		}
-// 	});
-// });
-
 // 탭 메뉴 클릭 이벤트
 $(document).ready(function () {
 	$('#tab_title ul li').click(function () {
@@ -79,3 +66,24 @@ $(document).ready(function () {
 		$(data).addClass('active');
 	});
 });
+
+// contact 영역 탭메뉴 클릭 이벤트
+let dts = document.querySelectorAll('.contact_left_text dt');
+let dds = document.querySelectorAll('.contact_left_text dd');
+
+let dts_a = document.querySelectorAll('.contact_left_text dt>a');
+
+dts_a.forEach((el, index) => {
+	el.addEventListener('click', (e) => {
+		e.preventDefault();
+		active(dts, index);
+		active(dds, index);
+	});
+});
+
+function active(array, index) {
+	for (let el of array) {
+		el.classList.remove('on');
+	}
+	array[index].classList.add('on');
+}
