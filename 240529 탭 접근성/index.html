@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script defer src="./script/main.js"></script>
+	</head>
+	<body>
+		<!-- 키보드 접근성을 구현하기 위한 탭메뉴를 마크업 시
+        dl을 활용해야하는 이유는 기존의 방법으로 마크업 시 키보드 접근성의 논리 상
+        버튼들만 키보드 접근이 가능하고, 버튼과 내용 접근이 어렵기 때문에
+        dl을 사용하면 dt와 dd가 바로 붙어있으므로 키보드 접근성을 구현하기 편리함 -->
+
+		<dl id="tab">
+			<dt class="on"><a href="#">button1</a></dt>
+			<dd class="on"><a href="#">box1</a></dd>
+
+			<dt><a href="#">button2</a></dt>
+			<dd><a href="#">box2</a></dd>
+
+			<dt><a href="#">button3</a></dt>
+			<dd><a href="#">box3</a></dd>
+		</dl>
+	</body>
+</html>
