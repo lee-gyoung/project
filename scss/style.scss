@@ -323,6 +323,7 @@ main {
 				animation: logo 2s ease-out;
 			}
 			.scroll_btn {
+				display: block;
 				width: 67px;
 				height: 95px;
 				position: absolute;
@@ -377,6 +378,7 @@ main {
 			}
 		}
 		#main_slide_right {
+			display: block;
 			width: 50%;
 			height: 100%;
 			position: relative;
@@ -395,7 +397,6 @@ main {
 						img {
 							width: 100%;
 							height: 100%;
-							object-fit: fill;
 						}
 					}
 				}
@@ -528,7 +529,10 @@ main {
 						border: 1px solid #aaa;
 						text-align: center;
 						cursor: pointer;
-						font: 500 16px/50px 'Lato';
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 50px;
+						font-family: 'Lato';
 						color: #000;
 						border-bottom: none;
 						&.active {
@@ -586,12 +590,16 @@ main {
 							height: 50px;
 							text-align: center;
 							p {
-								font: 14px/1 'Noto Sans KR';
+								font-size: 14px;
+								line-height: 1;
+								font-family: 'Noto Sans KR';
 								color: #000;
 								cursor: pointer;
 							}
 							span {
-								font: 13px/35px 'Noto Sans KR';
+								font-size: 13px;
+								line-height: 35px;
+								font-family: 'Noto Sans KR';
 								color: #333;
 								cursor: pointer;
 							}
@@ -886,9 +894,136 @@ footer {
 			#main_page_scroll {
 				&::before {
 					background-image: url(../img/main\ page/mainpage_mo.png);
+					opacity: 0.9;
 				}
 				&::after {
+					top: 7%;
 					background-size: contain;
+				}
+				.scroll_btn {
+					display: none;
+				}
+			}
+		}
+		.main_slide {
+			margin-bottom: 40px;
+			#main_slide_left {
+				width: 100%;
+			}
+			#main_slide_right {
+				display: none;
+			}
+		}
+		.main_product {
+			width: 100%;
+			height: 50%;
+			opacity: 1;
+			margin-bottom: 30px;
+			#main_product_best {
+				padding: 0px;
+				ul {
+					flex-wrap: wrap;
+					li {
+						width: 40%;
+						height: 100%;
+						a {
+							.img_wrap {
+								height: 200px;
+							}
+							.info {
+								margin-bottom: 20px;
+								p {
+									font-size: 13px;
+								}
+								span {
+									font-size: 11px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.main_tabmenu {
+			opacity: 1;
+			height: 65vh;
+			margin-bottom: 250px;
+			#main_tab_new {
+				width: 75%;
+				height: 100%;
+				#tab_title {
+					> ul {
+						width: 70%;
+
+						li {
+							font-size: 12px;
+						}
+					}
+				}
+				> ul {
+					width: 75%;
+					height: 100%;
+					padding: 40px 15px;
+					flex-wrap: wrap;
+					gap: 10px;
+					> li {
+						width: 48%;
+						height: 52%;
+						a {
+							.tab_img {
+								height: 70%;
+							}
+							.tab_text {
+								height: 40px;
+								p {
+									font-size: 12px;
+								}
+								span {
+									font-size: 11px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.main_contact {
+			opacity: 1;
+			.main_contact_wrap {
+				flex-direction: column;
+				#contact_left {
+					.contact_left_img {
+						width: 100%;
+						left: 0px;
+					}
+					.contact_left_text {
+						padding: 0px 30px;
+						transform: translate(0px, 0px);
+						dd {
+							font-size: 20px;
+							span {
+								font-size: 21px;
+							}
+							a {
+								font-size: 15px;
+							}
+						}
+					}
+				}
+				#contact_right {
+					.contact_right_img {
+						width: 100%;
+					}
+				}
+			}
+			&.on {
+				.main_contact_wrap {
+					#contact_left {
+						animation: none;
+					}
+					#contact_right {
+						animation: none;
+					}
 				}
 			}
 		}

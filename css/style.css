@@ -309,6 +309,7 @@ main .main_page #main_page_scroll::after {
   animation: logo 2s ease-out;
 }
 main .main_page #main_page_scroll .scroll_btn {
+  display: block;
   width: 67px;
   height: 95px;
   position: absolute;
@@ -362,6 +363,7 @@ main .main_slide #main_slide_left .swiper-button-prev i {
   font-size: 27px;
 }
 main .main_slide #main_slide_right {
+  display: block;
   width: 50%;
   height: 100%;
   position: relative;
@@ -382,7 +384,6 @@ main .main_slide #main_slide_right #right_slide_wrapper .right_slide_pics li {
 main .main_slide #main_slide_right #right_slide_wrapper .right_slide_pics li img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
 }
 main .main_product {
   width: 100%;
@@ -510,7 +511,10 @@ main .main_tabmenu #main_tab_new #tab_title > ul li {
   border: 1px solid #aaa;
   text-align: center;
   cursor: pointer;
-  font: 500 16px/50px "Lato";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
+  font-family: "Lato";
   color: #000;
   border-bottom: none;
 }
@@ -568,12 +572,16 @@ main .main_tabmenu #main_tab_new > ul > li a .tab_text {
   text-align: center;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_text p {
-  font: 14px/1 "Noto Sans KR";
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans KR";
   color: #000;
   cursor: pointer;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
-  font: 13px/35px "Noto Sans KR";
+  font-size: 13px;
+  line-height: 35px;
+  font-family: "Noto Sans KR";
   color: #333;
   cursor: pointer;
 }
@@ -829,9 +837,121 @@ footer .inner:after {
   }
   main .main_page #main_page_scroll::before {
     background-image: url(../img/main\ page/mainpage_mo.png);
+    opacity: 0.9;
   }
   main .main_page #main_page_scroll::after {
+    top: 7%;
     background-size: contain;
+  }
+  main .main_page #main_page_scroll .scroll_btn {
+    display: none;
+  }
+  main .main_slide {
+    margin-bottom: 40px;
+  }
+  main .main_slide #main_slide_left {
+    width: 100%;
+  }
+  main .main_slide #main_slide_right {
+    display: none;
+  }
+  main .main_product {
+    width: 100%;
+    height: 50%;
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+  main .main_product #main_product_best {
+    padding: 0px;
+  }
+  main .main_product #main_product_best ul {
+    flex-wrap: wrap;
+  }
+  main .main_product #main_product_best ul li {
+    width: 40%;
+    height: 100%;
+  }
+  main .main_product #main_product_best ul li a .img_wrap {
+    height: 200px;
+  }
+  main .main_product #main_product_best ul li a .info {
+    margin-bottom: 20px;
+  }
+  main .main_product #main_product_best ul li a .info p {
+    font-size: 13px;
+  }
+  main .main_product #main_product_best ul li a .info span {
+    font-size: 11px;
+  }
+  main .main_tabmenu {
+    opacity: 1;
+    height: 65vh;
+    margin-bottom: 250px;
+  }
+  main .main_tabmenu #main_tab_new {
+    width: 75%;
+    height: 100%;
+  }
+  main .main_tabmenu #main_tab_new #tab_title > ul {
+    width: 70%;
+  }
+  main .main_tabmenu #main_tab_new #tab_title > ul li {
+    font-size: 12px;
+  }
+  main .main_tabmenu #main_tab_new > ul {
+    width: 75%;
+    height: 100%;
+    padding: 40px 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  main .main_tabmenu #main_tab_new > ul > li {
+    width: 48%;
+    height: 52%;
+  }
+  main .main_tabmenu #main_tab_new > ul > li a .tab_img {
+    height: 70%;
+  }
+  main .main_tabmenu #main_tab_new > ul > li a .tab_text {
+    height: 40px;
+  }
+  main .main_tabmenu #main_tab_new > ul > li a .tab_text p {
+    font-size: 12px;
+  }
+  main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
+    font-size: 11px;
+  }
+  main .main_contact {
+    opacity: 1;
+  }
+  main .main_contact .main_contact_wrap {
+    flex-direction: column;
+  }
+  main .main_contact .main_contact_wrap #contact_left .contact_left_img {
+    width: 100%;
+    left: 0px;
+  }
+  main .main_contact .main_contact_wrap #contact_left .contact_left_text {
+    padding: 0px 30px;
+    transform: translate(0px, 0px);
+  }
+  main .main_contact .main_contact_wrap #contact_left .contact_left_text dd {
+    font-size: 20px;
+  }
+  main .main_contact .main_contact_wrap #contact_left .contact_left_text dd span {
+    font-size: 21px;
+  }
+  main .main_contact .main_contact_wrap #contact_left .contact_left_text dd a {
+    font-size: 15px;
+  }
+  main .main_contact .main_contact_wrap #contact_right .contact_right_img {
+    width: 100%;
+  }
+  main .main_contact.on .main_contact_wrap #contact_left {
+    animation: none;
+  }
+  main .main_contact.on .main_contact_wrap #contact_right {
+    animation: none;
   }
 }
 
