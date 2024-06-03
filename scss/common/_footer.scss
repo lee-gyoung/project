@@ -11,6 +11,7 @@ footer {
 			float: left;
 			.footer_info_logo {
 				a {
+					display: block;
 					position: absolute;
 					top: 40px;
 					img {
@@ -34,14 +35,14 @@ footer {
 			ul {
 				&:nth-of-type(1) {
 					height: 37px;
-					color: #fff;
+					color: #f2e8d5;
 					font: 600 15px/37px 'Lora';
 				}
 				li {
 					a {
 						display: block;
 						height: 23px;
-						color: #fff;
+						color: #f2e8d5;
 						font: normal 14px/23px 'Lora';
 					}
 				}
@@ -54,12 +55,12 @@ footer {
 			ul {
 				li {
 					height: 23px;
-					color: #fff;
+					color: #f2e8d5;
 					font: normal 14px/23px 'Lora', 'Noto Sans KR';
 				}
 				.name {
 					height: 37px;
-					color: #fff;
+					color: #f2e8d5;
 					font: 600 16px/37px 'Lora';
 				}
 			}

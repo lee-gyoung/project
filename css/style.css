@@ -1,7 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+.content .sub_visual {
+  height: 100vh;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -18,7 +21,7 @@ a {
 }
 
 body {
-  font-family: "Lora", "Playfair Display", "Forum", "Lato", "Noto Sans KR";
+  font-family: "Lora", "Lato", "Noto Sans KR";
 }
 
 header {
@@ -61,7 +64,7 @@ header .inner .header_menu > ul li a {
   display: block;
   width: 100%;
   height: 100%;
-  font-family: "Lora", "Forum", "Lato";
+  font-family: "Lora";
   font-weight: 400;
   font-size: 17px;
   color: #000;
@@ -207,7 +210,7 @@ header .inner #left_btn_menu > ul li a {
   font-weight: 500;
   font-size: 20px;
   color: #000;
-  font-family: "Lora", "Playfair Display", "Forum", "Lato";
+  font-family: "Lora";
   transition: all 0.1s;
 }
 header .inner #left_btn_menu > ul li:hover .chevron_btn::before {
@@ -260,6 +263,102 @@ header .inner #left_btn_menu > ul .btn_fold .btn_sub_menu.on {
 }
 header .inner #left_btn_menu.on {
   left: 0;
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header .inner .header_menu {
+    display: none;
+  }
+  header .inner .logo a img {
+    width: 80%;
+  }
+  header .inner .header_sns {
+    right: 35px;
+    gap: 15px;
+  }
+  header .inner .header_sns li a {
+    font-size: 18px;
+  }
+  header .inner #header_left_btn {
+    display: block;
+  }
+  header .inner #left_btn_menu {
+    display: block;
+  }
+}
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: #444929;
+}
+footer .inner {
+  width: 100%;
+  height: 250px;
+  padding: 0px 100px;
+  position: relative;
+}
+footer .inner .footer_info {
+  float: left;
+}
+footer .inner .footer_info .footer_info_logo a {
+  display: block;
+  position: absolute;
+  top: 40px;
+}
+footer .inner .footer_info .footer_info_logo a img {
+  width: 130px;
+  height: 45px;
+}
+footer .inner .footer_info .footer_info_terms {
+  position: absolute;
+  bottom: 40px;
+}
+footer .inner .footer_info .footer_info_terms p {
+  font: 12px/1.4 "Lato", "Noto Sans KR";
+  color: #f2e8d5;
+}
+footer .inner .footer_sns {
+  float: right;
+  margin-top: 40px;
+}
+footer .inner .footer_sns ul:nth-of-type(1) {
+  height: 37px;
+  color: #f2e8d5;
+  font: 600 15px/37px "Lora";
+}
+footer .inner .footer_sns ul li a {
+  display: block;
+  height: 23px;
+  color: #f2e8d5;
+  font: normal 14px/23px "Lora";
+}
+footer .inner .footer_text {
+  float: right;
+  margin-top: 40px;
+  margin-right: 80px;
+}
+footer .inner .footer_text ul li {
+  height: 23px;
+  color: #f2e8d5;
+  font: normal 14px/23px "Lora", "Noto Sans KR";
+}
+footer .inner .footer_text ul .name {
+  height: 37px;
+  color: #f2e8d5;
+  font: 600 16px/37px "Lora";
+}
+footer .inner:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 main {
@@ -348,19 +447,19 @@ main .main_slide #main_slide_left .main_slide_pics .swiper-slide img {
   height: 100%;
   object-fit: contain;
 }
-main .main_slide #main_slide_left .swiper-button-next,
-main .main_slide #main_slide_left .swiper-button-prev {
-  width: auto;
-  height: auto;
-}
 main .main_slide #main_slide_left .swiper-button-next::after,
 main .main_slide #main_slide_left .swiper-button-prev::after {
   display: none;
 }
-main .main_slide #main_slide_left .swiper-button-next i,
-main .main_slide #main_slide_left .swiper-button-prev i {
-  color: #873632;
-  font-size: 27px;
+main .main_slide #main_slide_left .swiper-button-next {
+  background: url(../img/자산8.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+main .main_slide #main_slide_left .swiper-button-prev {
+  background: url(../img/자산9.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 main .main_slide #main_slide_right {
   display: block;
@@ -405,7 +504,7 @@ main .main_product #main_product_best h3 {
   font-weight: 500;
   font-size: 27px;
   font-style: italic;
-  color: #000;
+  color: #444929;
   margin-bottom: 25px;
 }
 main .main_product #main_product_best ul {
@@ -482,7 +581,7 @@ main .main_tabmenu {
   transition: all 1s;
 }
 main .main_tabmenu #main_tab_new {
-  width: 1500px;
+  width: 1460px;
   height: 100%;
   margin: 0 auto;
 }
@@ -492,7 +591,7 @@ main .main_tabmenu #main_tab_new #tab_title h3 {
   font-weight: 500;
   font-size: 27px;
   font-style: italic;
-  color: #000;
+  color: #444929;
   margin-bottom: 40px;
 }
 main .main_tabmenu #main_tab_new #tab_title > ul {
@@ -523,7 +622,7 @@ main .main_tabmenu #main_tab_new #tab_title > ul li.active {
 }
 main .main_tabmenu #main_tab_new > ul {
   position: absolute;
-  width: 1500px;
+  width: 1460px;
   height: 100%;
   padding: 50px 70px;
   display: flex;
@@ -607,7 +706,7 @@ main .main_contact h3 {
   font-weight: 500;
   font-size: 27px;
   font-style: italic;
-  color: #000;
+  color: #444929;
   margin-bottom: 80px;
 }
 main .main_contact .main_contact_wrap {
@@ -637,7 +736,7 @@ main .main_contact .main_contact_wrap #contact_left .contact_left_text {
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dt {
   width: 35px;
-  height: 35px;
+  height: 40px;
   position: absolute;
   top: 340px;
 }
@@ -655,19 +754,18 @@ main .main_contact .main_contact_wrap #contact_left .contact_left_text dt a {
   width: 100%;
   height: 100%;
   text-align: center;
-  font: bold 18px/35px "Nanum Gothic";
-  color: #4f493f;
-  background-color: #ece7e2;
-  border-radius: 50%;
+  font: normal 18px/35px "Noto Sans KR";
+  color: #000;
+  border: 1px solid transparent;
   transition: all 0.3s;
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dt.on a {
-  background-color: #4f493f;
-  color: #ece7e2;
+  color: #000;
+  border: 1px solid #666;
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dd {
   text-align: center;
-  font: bold 24px/1.7 "Nanum Gothic";
+  font: bold 24px/1.7 "Noto Sans KR";
   color: #000;
   display: none;
 }
@@ -675,7 +773,7 @@ main .main_contact .main_contact_wrap #contact_left .contact_left_text dd span {
   font: bold 25px/2;
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dd a {
-  font: bold 20px/2 "Nanum Gothic";
+  font: bold 20px/2 "Noto Sans KR";
   color: #697e50;
   transition: all 0.2s;
 }
@@ -701,72 +799,6 @@ main .main_contact.on .main_contact_wrap #contact_left {
 }
 main .main_contact.on .main_contact_wrap #contact_right {
   animation: contact2 1.5s linear;
-}
-
-footer {
-  width: 100%;
-  height: 100%;
-  background-color: #444929;
-}
-footer .inner {
-  width: 100%;
-  height: 250px;
-  padding: 0px 100px;
-  position: relative;
-}
-footer .inner .footer_info {
-  float: left;
-}
-footer .inner .footer_info .footer_info_logo a {
-  position: absolute;
-  top: 40px;
-}
-footer .inner .footer_info .footer_info_logo a img {
-  width: 130px;
-  height: 45px;
-}
-footer .inner .footer_info .footer_info_terms {
-  position: absolute;
-  bottom: 40px;
-}
-footer .inner .footer_info .footer_info_terms p {
-  font: 12px/1.4 "Lato", "Noto Sans KR";
-  color: #f2e8d5;
-}
-footer .inner .footer_sns {
-  float: right;
-  margin-top: 40px;
-}
-footer .inner .footer_sns ul:nth-of-type(1) {
-  height: 37px;
-  color: #fff;
-  font: 600 15px/37px "Lora";
-}
-footer .inner .footer_sns ul li a {
-  display: block;
-  height: 23px;
-  color: #fff;
-  font: normal 14px/23px "Lora";
-}
-footer .inner .footer_text {
-  float: right;
-  margin-top: 40px;
-  margin-right: 80px;
-}
-footer .inner .footer_text ul li {
-  height: 23px;
-  color: #fff;
-  font: normal 14px/23px "Lora", "Noto Sans KR";
-}
-footer .inner .footer_text ul .name {
-  height: 37px;
-  color: #fff;
-  font: 600 16px/37px "Lora";
-}
-footer .inner:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 @keyframes texture {
@@ -816,25 +848,6 @@ footer .inner:after {
   }
 }
 @media screen and (max-width: 1000px) {
-  header .inner .header_menu {
-    display: none;
-  }
-  header .inner .logo a img {
-    width: 80%;
-  }
-  header .inner .header_sns {
-    right: 35px;
-    gap: 15px;
-  }
-  header .inner .header_sns li a {
-    font-size: 18px;
-  }
-  header .inner #header_left_btn {
-    display: block;
-  }
-  header .inner #left_btn_menu {
-    display: block;
-  }
   main .main_page #main_page_scroll::before {
     background-image: url(../img/main\ page/mainpage_mo.png);
     opacity: 0.9;
@@ -847,7 +860,7 @@ footer .inner:after {
     display: none;
   }
   main .main_slide {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   main .main_slide #main_slide_left {
     width: 100%;
@@ -859,7 +872,7 @@ footer .inner:after {
     width: 100%;
     height: 50%;
     opacity: 1;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   main .main_product #main_product_best {
     padding: 0px;
@@ -889,7 +902,7 @@ footer .inner:after {
     margin-bottom: 250px;
   }
   main .main_tabmenu #main_tab_new {
-    width: 75%;
+    width: 84%;
     height: 100%;
   }
   main .main_tabmenu #main_tab_new #tab_title > ul {
@@ -899,21 +912,36 @@ footer .inner:after {
     font-size: 12px;
   }
   main .main_tabmenu #main_tab_new > ul {
-    width: 75%;
+    width: 84%;
     height: 100%;
     padding: 40px 15px;
     flex-wrap: wrap;
     gap: 10px;
   }
   main .main_tabmenu #main_tab_new > ul > li {
-    width: 48%;
-    height: 52%;
+    width: 100%;
+    height: 25%;
+  }
+  main .main_tabmenu #main_tab_new > ul > li a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
   }
   main .main_tabmenu #main_tab_new > ul > li a .tab_img {
-    height: 70%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .main_tabmenu #main_tab_new > ul > li a .tab_img img {
+    width: 80%;
+    height: 100%;
   }
   main .main_tabmenu #main_tab_new > ul > li a .tab_text {
-    height: 40px;
+    width: 50%;
+    height: 100%;
   }
   main .main_tabmenu #main_tab_new > ul > li a .tab_text p {
     font-size: 12px;
@@ -952,6 +980,23 @@ footer .inner:after {
   }
   main .main_contact.on .main_contact_wrap #contact_right {
     animation: none;
+  }
+  footer .inner {
+    height: 200px;
+    padding: 0px 40px;
+  }
+  footer .inner .footer_info .footer_info_logo a img {
+    width: 20%;
+    height: 20%;
+  }
+  footer .inner .footer_info .footer_info_terms p {
+    font-size: 10px;
+  }
+  footer .inner .footer_sns {
+    display: none;
+  }
+  footer .inner .footer_text {
+    display: none;
   }
 }
 
