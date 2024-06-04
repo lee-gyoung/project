@@ -980,11 +980,17 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   footer .inner {
     height: 200px;
-    padding: 0px 40px;
+    padding: 0px 0px;
+  }
+  footer .inner .footer_info .footer_info_logo a {
+    left: 20px;
   }
   footer .inner .footer_info .footer_info_logo a img {
     width: 20%;
     height: 20%;
+  }
+  footer .inner .footer_info .footer_info_terms {
+    left: 20px;
   }
   footer .inner .footer_info .footer_info_terms p {
     font-size: 10px;
