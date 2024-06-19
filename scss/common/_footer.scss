@@ -25,7 +25,7 @@ footer {
 				bottom: 40px;
 				p {
 					font: 12px/1.4 'Lato', 'Noto Sans KR';
-					color: #f2e8d5;
+					color: #ece7e2;
 				}
 			}
 		}
@@ -35,14 +35,14 @@ footer {
 			ul {
 				&:nth-of-type(1) {
 					height: 37px;
-					color: #f2e8d5;
+					color: #ece7e2;
 					font: 600 15px/37px 'Lora';
 				}
 				li {
 					a {
 						display: block;
 						height: 23px;
-						color: #f2e8d5;
+						color: #ece7e2;
 						font: normal 14px/23px 'Lora';
 					}
 				}
@@ -55,12 +55,12 @@ footer {
 			ul {
 				li {
 					height: 23px;
-					color: #f2e8d5;
+					color: #ece7e2;
 					font: normal 14px/23px 'Lora', 'Noto Sans KR';
 				}
 				.name {
 					height: 37px;
-					color: #f2e8d5;
+					color: #ece7e2;
 					font: 600 16px/37px 'Lora';
 				}
 			}
@@ -69,6 +69,38 @@ footer {
 			content: '';
 			display: block;
 			clear: both;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	footer {
+		.inner {
+			height: 200px;
+			padding: 0px 0px;
+			.footer_info {
+				.footer_info_logo {
+					a {
+						left: 20px;
+						img {
+							width: 20%;
+							height: 20%;
+						}
+					}
+				}
+				.footer_info_terms {
+					left: 20px;
+					p {
+						font-size: 10px;
+					}
+				}
+			}
+			.footer_sns {
+				display: none;
+			}
+			.footer_text {
+				display: none;
+			}
 		}
 	}
 }

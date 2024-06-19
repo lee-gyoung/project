@@ -1,10 +1,5 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
-.content .sub_visual {
-  height: 100vh;
-}
-
 * {
   margin: 0px;
   padding: 0px;
@@ -22,6 +17,12 @@ a {
 
 body {
   font-family: "Lora", "Lato", "Noto Sans KR";
+}
+
+.hidden {
+  opacity: 0;
+  position: absolute;
+  top: -99999999px;
 }
 
 header {
@@ -323,7 +324,7 @@ footer .inner .footer_info .footer_info_terms {
 }
 footer .inner .footer_info .footer_info_terms p {
   font: 12px/1.4 "Lato", "Noto Sans KR";
-  color: #f2e8d5;
+  color: #ece7e2;
 }
 footer .inner .footer_sns {
   float: right;
@@ -331,13 +332,13 @@ footer .inner .footer_sns {
 }
 footer .inner .footer_sns ul:nth-of-type(1) {
   height: 37px;
-  color: #f2e8d5;
+  color: #ece7e2;
   font: 600 15px/37px "Lora";
 }
 footer .inner .footer_sns ul li a {
   display: block;
   height: 23px;
-  color: #f2e8d5;
+  color: #ece7e2;
   font: normal 14px/23px "Lora";
 }
 footer .inner .footer_text {
@@ -347,12 +348,12 @@ footer .inner .footer_text {
 }
 footer .inner .footer_text ul li {
   height: 23px;
-  color: #f2e8d5;
+  color: #ece7e2;
   font: normal 14px/23px "Lora", "Noto Sans KR";
 }
 footer .inner .footer_text ul .name {
   height: 37px;
-  color: #f2e8d5;
+  color: #ece7e2;
   font: 600 16px/37px "Lora";
 }
 footer .inner:after {
@@ -361,6 +362,31 @@ footer .inner:after {
   clear: both;
 }
 
+@media screen and (max-width: 1000px) {
+  footer .inner {
+    height: 200px;
+    padding: 0px 0px;
+  }
+  footer .inner .footer_info .footer_info_logo a {
+    left: 20px;
+  }
+  footer .inner .footer_info .footer_info_logo a img {
+    width: 20%;
+    height: 20%;
+  }
+  footer .inner .footer_info .footer_info_terms {
+    left: 20px;
+  }
+  footer .inner .footer_info .footer_info_terms p {
+    font-size: 10px;
+  }
+  footer .inner .footer_sns {
+    display: none;
+  }
+  footer .inner .footer_text {
+    display: none;
+  }
+}
 main {
   width: 100%;
   position: relative;
@@ -382,7 +408,7 @@ main .main_page #main_page_scroll:before {
   height: 100%;
   content: "";
   display: block;
-  background-image: url(../img/main\ page/mainpage.jpg);
+  background-image: url(../img/main_page/mainpage.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -452,12 +478,12 @@ main .main_slide #main_slide_left .swiper-button-prev::after {
   display: none;
 }
 main .main_slide #main_slide_left .swiper-button-next {
-  background: url(../img/자산8.png) no-repeat;
+  background: url(../img/main_slide/nextBtn.png) no-repeat;
   background-size: 100%;
   background-position: center;
 }
 main .main_slide #main_slide_left .swiper-button-prev {
-  background: url(../img/자산9.png) no-repeat;
+  background: url(../img/main_slide/prevBtn.png) no-repeat;
   background-size: 100%;
   background-position: center;
 }
@@ -785,8 +811,10 @@ main .main_contact .main_contact_wrap #contact_left .contact_left_text dd:hover 
   color: #c3ca92;
 }
 main .main_contact .main_contact_wrap #contact_right .contact_right_img {
+  display: block;
   width: 750px;
   height: 100%;
+  position: relative;
 }
 main .main_contact .main_contact_wrap #contact_right .contact_right_img img {
   width: 100%;
@@ -850,7 +878,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 @media screen and (max-width: 1000px) {
   main .main_page #main_page_scroll::before {
-    background-image: url(../img/main\ page/mainpage_mo.png);
+    background-image: url(../img/main_page/mainpage_mo.png);
     opacity: 0.9;
   }
   main .main_page #main_page_scroll::after {
@@ -955,22 +983,33 @@ main .main_contact.on .main_contact_wrap #contact_right {
   main .main_contact .main_contact_wrap #contact_left .contact_left_img {
     width: 100%;
     left: 0px;
+    position: relative;
   }
   main .main_contact .main_contact_wrap #contact_left .contact_left_text {
-    padding: 0px 30px;
+    padding: 50px 30px 100px 30px;
     transform: translate(0px, 0px);
+    z-index: 10;
+  }
+  main .main_contact .main_contact_wrap #contact_left .contact_left_text dt {
+    top: 200px;
+  }
+  main .main_contact .main_contact_wrap #contact_left .contact_left_text dt:nth-of-type(1) {
+    right: 200px;
+  }
+  main .main_contact .main_contact_wrap #contact_left .contact_left_text dt:nth-of-type(2) {
+    right: 150px;
+  }
+  main .main_contact .main_contact_wrap #contact_left .contact_left_text dt:nth-of-type(3) {
+    right: 100px;
   }
   main .main_contact .main_contact_wrap #contact_left .contact_left_text dd {
-    font-size: 20px;
-  }
-  main .main_contact .main_contact_wrap #contact_left .contact_left_text dd span {
-    font-size: 21px;
+    font-size: 16px;
   }
   main .main_contact .main_contact_wrap #contact_left .contact_left_text dd a {
     font-size: 15px;
   }
   main .main_contact .main_contact_wrap #contact_right .contact_right_img {
-    width: 100%;
+    display: none;
   }
   main .main_contact.on .main_contact_wrap #contact_left {
     animation: none;
@@ -978,29 +1017,45 @@ main .main_contact.on .main_contact_wrap #contact_right {
   main .main_contact.on .main_contact_wrap #contact_right {
     animation: none;
   }
-  footer .inner {
-    height: 200px;
-    padding: 0px 0px;
-  }
-  footer .inner .footer_info .footer_info_logo a {
-    left: 20px;
-  }
-  footer .inner .footer_info .footer_info_logo a img {
-    width: 20%;
-    height: 20%;
-  }
-  footer .inner .footer_info .footer_info_terms {
-    left: 20px;
-  }
-  footer .inner .footer_info .footer_info_terms p {
-    font-size: 10px;
-  }
-  footer .inner .footer_sns {
-    display: none;
-  }
-  footer .inner .footer_text {
-    display: none;
-  }
+}
+.content .sub_visual {
+  height: 100vh;
+}
+
+.brand .inner {
+  width: 100%;
+  padding-top: 105px;
+}
+.brand .inner .brand1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #2a3923;
+}
+.brand .inner .brand1 img {
+  width: 50%;
+  height: 100%;
+}
+.brand .inner .brand1 .text {
+  width: 50%;
+}
+.brand .inner .brand1 .text h4 {
+  padding-top: 180px;
+  padding-bottom: 50px;
+  text-align: center;
+  font: 500 37px/1 "Lora";
+  color: #ece7e2;
+}
+.brand .inner .brand1 .text p {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  font: 16px/2 "Noto Sans KR";
+  color: #ece7e2;
+  text-align: center;
+}
+.brand .inner .brand1 .text p.eng {
+  font: 17px/1.7 "Lato";
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,37 @@
+.brand {
+	.inner {
+		width: 100%;
+		padding-top: 105px;
+		.brand1 {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			background-color: #2a3923;
+			img {
+				width: 50%;
+				height: 100%;
+			}
+			.text {
+				width: 50%;
+				h4 {
+					padding-top: 180px;
+					padding-bottom: 50px;
+					text-align: center;
+					font: 500 37px/1 'Lora';
+					color: #ece7e2;
+				}
+				p {
+					width: 60%;
+					margin: 0 auto;
+					padding-bottom: 50px;
+					font: 16px/2 'Noto Sans KR';
+					color: #ece7e2;
+					text-align: center;
+				}
+				p.eng {
+					font: 17px/1.7 'Lato';
+				}
+			}
+		}
+	}
+}

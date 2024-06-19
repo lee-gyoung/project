@@ -1,4 +1,4 @@
-// 헤더 햄버거 버튼 작동
+// 헤더 햄버거 버튼 클릭 이벤트
 let leftBtn = document.querySelector('#header_left_btn');
 let leftMenu = document.querySelector('#left_btn_menu');
 
@@ -8,7 +8,7 @@ leftBtn.addEventListener('click', (e) => {
 	leftMenu.classList.toggle('on');
 });
 
-// 초기화면 스크롤 버튼 작동
+// 초기화면 스크롤 버튼 클릭 이벤트
 let scrBtn = document.querySelector('#scrBtn');
 scrBtn.addEventListener('click', function () {
 	window.scrollTo({ left: 0, top: 960, behavior: 'smooth' });
