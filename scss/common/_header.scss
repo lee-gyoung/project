@@ -257,17 +257,8 @@ header {
 	}
 }
 
-@keyframes logo {
-	0% {
-		opacity: 0;
-	}
-	90% {
-		opacity: 1;
-	}
-}
-
-@media screen and (max-width: 1000px){
-    header {
+@media screen and (max-width: 1000px) {
+	header {
 		.inner {
 			.header_menu {
 				display: none;

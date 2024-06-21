@@ -23,4 +23,4 @@ setInterval(function () {
 		.fadeIn()
 		.end()
 		.appendTo('.right_slide_pics');
-}, 3500);
+}, 3300);

@@ -1,36 +1,235 @@
-.brand {
+#brand {
 	.inner {
 		width: 100%;
 		padding-top: 105px;
-		.brand1 {
+		div[class*='story'] {
 			width: 100%;
 			height: 100%;
 			display: flex;
-			background-color: #2a3923;
 			img {
 				width: 50%;
 				height: 100%;
 			}
 			.text {
 				width: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 				h4 {
-					padding-top: 180px;
 					padding-bottom: 50px;
-					text-align: center;
-					font: 500 37px/1 'Lora';
-					color: #ece7e2;
+					font-size: 37px;
+					font-family: 'Lora';
 				}
 				p {
 					width: 60%;
-					margin: 0 auto;
 					padding-bottom: 50px;
 					font: 16px/2 'Noto Sans KR';
-					color: #ece7e2;
 					text-align: center;
 				}
 				p.eng {
 					font: 17px/1.7 'Lato';
+					padding-bottom: 0px;
 				}
+			}
+		}
+		.brand_story1 {
+			background-color: #2a3923;
+			animation: bgc 1s;
+			.text {
+				h4 {
+					color: #ece7e2;
+					font-weight: 400;
+				}
+				p {
+					color: #ece7e2;
+				}
+				animation: texture 1s;
+			}
+		}
+		.brand_story2 {
+			background-color: #ece7e2;
+			.text {
+				transform: translateY(0px);
+				opacity: 0;
+				transition: all 1s;
+				h4 {
+					color: #2a3923;
+					font-weight: 500;
+				}
+				p {
+					color: #2a3923;
+				}
+			}
+			img {
+				opacity: 0.8;
+				transition: 1s;
+			}
+			&.on {
+				.text {
+					animation: texture 1s;
+					opacity: 1;
+				}
+				img {
+					opacity: 1;
+				}
+			}
+		}
+		.brand_feature {
+			width: 100%;
+			height: 100%;
+			background-color: #ece7e2;
+			h4 {
+				opacity: 0;
+				padding-top: 100px;
+				padding-bottom: 50px;
+				font: 500 37px/1 'Lora';
+				text-align: center;
+				color: #2a3923;
+				transition: all 0.5s;
+			}
+			ul {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				padding: 0px 50px;
+				li {
+					width: calc(100% / 3);
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 30px;
+					transform: translateY(200px);
+					opacity: 0;
+					transition-duration: 0.7s;
+					img {
+						width: 200px;
+						height: 100%;
+					}
+					h5 {
+						font: bold 22px/1 'Noto Sans KR';
+						color: #2a3923;
+					}
+					p {
+						width: 63%;
+						font: 15px/1.7 'Noto Sans KR';
+						color: #2a3923;
+						padding-bottom: 100px;
+					}
+					@for $i from 0 through 2 {
+						&:nth-of-type(#{$i + 1}) {
+							transition-delay: 0.2s * $i;
+						}
+					}
+				}
+				:nth-of-type(3) {
+					img {
+						width: 200px;
+						height: 220px;
+					}
+				}
+			}
+			&.on {
+				h4 {
+					opacity: 1;
+				}
+				ul {
+					li {
+						transform: translateY(0px);
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.brand_nature {
+			width: 100%;
+			height: 75vh;
+			background-color: #ece7e2;
+			overflow: hidden;
+			transition: background-color 1s;
+			h4 {
+				padding-top: 100px;
+				padding-bottom: 30px;
+				font: 400 37px/1 'Lora';
+				text-align: center;
+				color: #ece7e2;
+			}
+			.swiper {
+				width: 100%;
+				height: calc(100% - 190px);
+				.swiper-wrapper {
+					.swiper-slide {
+						width: 100%;
+						height: 100%;
+						display: flex;
+						.left_text {
+							width: 35%;
+							padding-left: 350px;
+							padding-top: 150px;
+							text-align: center;
+							h5 {
+								font: 400 23px/1 'Lora';
+								color: #ece7e2;
+								padding-bottom: 45px;
+							}
+							.left {
+								font: normal 15px/1.5 'Noto Sans KR';
+								color: #ece7e2;
+								.large {
+									font: normal 17px/1 'Lora';
+								}
+							}
+						}
+						.center {
+							width: 30%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							img {
+								width: 400px;
+							}
+						}
+						.right_text {
+							width: 35%;
+							padding-right: 160px;
+							padding-top: 220px;
+							.right {
+								font: normal 16px/1.8 'Noto Sans KR';
+								color: #ece7e2;
+							}
+						}
+					}
+				}
+			}
+			&.on {
+				background-color: #2a3923;
+				.swiper {
+					.swiper-wrapper {
+						.swiper-slide {
+							.center {
+								img {
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.brand5 {
+			width: 100%;
+			height: 80vh;
+			// background-color: #efe7da;
+			background-color: #ece7e2;
+			display: flex;
+			justify-content: space-between;
+			// align-items: center;
+			// padding-left: 100px;
+			img {
+				width: 32%;
+				height: 100%;
+				object-fit: cover;
 			}
 		}
 	}

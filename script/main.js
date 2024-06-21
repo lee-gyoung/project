@@ -10,9 +10,12 @@ leftBtn.addEventListener('click', (e) => {
 
 // 초기화면 스크롤 버튼 클릭 이벤트
 let scrBtn = document.querySelector('#scrBtn');
-scrBtn.addEventListener('click', function () {
-	window.scrollTo({ left: 0, top: 960, behavior: 'smooth' });
-});
+function scrActive() {
+	scrBtn.addEventListener('click', function () {
+		window.scrollTo({ left: 0, top: 960, behavior: 'smooth' });
+	});
+}
+scrActive();
 
 // 좌측 슬라이드
 var swiper = new Swiper('#main_slide_left', {
@@ -23,12 +26,12 @@ var swiper = new Swiper('#main_slide_left', {
 	centeredSlides: true,
 	loop: true,
 	autoplay: {
-		delay: 3200,
+		delay: 3000,
 		disableOnInteraction: false,
 	},
 });
 
-// 스크롤 페이드 인아웃 이벤트
+// 스크롤 페이드 인 이벤트
 let sections = document.querySelectorAll('main .scroll_event');
 let sections_array = Array.from(sections);
 let position_array = [];
