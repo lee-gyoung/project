@@ -574,9 +574,8 @@ main .main_product #main_product_best h3 {
   text-align: center;
   font-family: "Lora";
   font-weight: 500;
-  font-size: 27px;
-  font-style: italic;
-  color: #444929;
+  font-size: 37px;
+  color: #2a3923;
   margin-bottom: 25px;
 }
 main .main_product #main_product_best ul {
@@ -631,12 +630,12 @@ main .main_product #main_product_best ul li a .info {
 }
 main .main_product #main_product_best ul li a .info p {
   pointer-events: auto;
-  font: 15px/1 "Noto Sans KR";
+  font: 16px/1 "Noto Sans KR";
   color: #000;
 }
 main .main_product #main_product_best ul li a .info span {
   pointer-events: auto;
-  font: 13px/35px "Noto Sans KR";
+  font: 14px/35px "Noto Sans KR";
   color: #333;
 }
 main .main_product.on {
@@ -661,9 +660,8 @@ main .main_tabmenu #main_tab_new #tab_title h3 {
   text-align: center;
   font-family: "Lora";
   font-weight: 500;
-  font-size: 27px;
-  font-style: italic;
-  color: #444929;
+  font-size: 37px;
+  color: #2a3923;
   margin-bottom: 40px;
 }
 main .main_tabmenu #main_tab_new #tab_title > ul {
@@ -744,14 +742,14 @@ main .main_tabmenu #main_tab_new > ul > li a .tab_text {
   display: block;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_text p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1;
   font-family: "Noto Sans KR";
   color: #000;
   cursor: pointer;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 35px;
   font-family: "Noto Sans KR";
   color: #333;
@@ -763,6 +761,20 @@ main .main_tabmenu #main_tab_new > ul.active {
 }
 main .main_tabmenu #main_tab_new > ul.active li {
   display: block;
+}
+main .main_tabmenu #main_tab_new #tab_fragrance li a .tab_img .products {
+  z-index: 2;
+}
+main .main_tabmenu #main_tab_new #tab_fragrance li a .tab_img .colors {
+  opacity: 0.5;
+}
+main .main_tabmenu #main_tab_new #tab_fragrance li a .tab_img:hover .colors {
+  opacity: 1;
+  z-index: 2;
+}
+main .main_tabmenu #main_tab_new #tab_fragrance li a .tab_img:hover .products {
+  opacity: 0.5;
+  z-index: 1;
 }
 main .main_tabmenu.on {
   opacity: 1;
@@ -777,9 +789,8 @@ main .main_contact h3 {
   text-align: center;
   font-family: "Lora";
   font-weight: 500;
-  font-size: 27px;
-  font-style: italic;
-  color: #444929;
+  font-size: 37px;
+  color: #2a3923;
   margin-bottom: 80px;
 }
 main .main_contact .main_contact_wrap {
@@ -838,7 +849,7 @@ main .main_contact .main_contact_wrap #contact_left .contact_left_text dt.on a {
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dd {
   text-align: center;
-  font: bold 24px/1.7 "Noto Sans KR";
+  font: 500 22px/1.7 "Noto Sans KR";
   color: #000;
   display: none;
 }
@@ -1182,8 +1193,8 @@ main .main_contact.on .main_contact_wrap #contact_right {
   display: flex;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text {
-  width: 35%;
-  padding-left: 350px;
+  width: 34%;
+  padding-left: 340px;
   padding-top: 150px;
   text-align: center;
 }
@@ -1200,7 +1211,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   font: normal 17px/1 "Lora";
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .center {
-  width: 30%;
+  width: 32%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1209,9 +1220,9 @@ main .main_contact.on .main_contact_wrap #contact_right {
   width: 400px;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text {
-  width: 35%;
-  padding-right: 160px;
-  padding-top: 220px;
+  width: 34%;
+  padding-right: 130px;
+  padding-top: 200px;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text .right {
   font: normal 16px/1.8 "Noto Sans KR";
@@ -1223,17 +1234,71 @@ main .main_contact.on .main_contact_wrap #contact_right {
 #brand .inner .brand_nature.on .swiper .swiper-wrapper .swiper-slide .center img {
   opacity: 1;
 }
-#brand .inner .brand5 {
+#brand .inner .brand_join {
   width: 100%;
   height: 80vh;
   background-color: #ece7e2;
-  display: flex;
-  justify-content: space-between;
 }
-#brand .inner .brand5 img {
-  width: 32%;
+#brand .inner .brand_join ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#brand .inner .brand_join ul li {
+  flex: 1;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(200px);
+  transition-duration: 0.7s;
+}
+#brand .inner .brand_join ul li .join_left,
+#brand .inner .brand_join ul li .join_right {
+  overflow: hidden;
+}
+#brand .inner .brand_join ul li .join_left img,
+#brand .inner .brand_join ul li .join_right img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+#brand .inner .brand_join ul li .join_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#brand .inner .brand_join ul li .join_center h4 {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  font: 600 30px/1 "Lora";
+  color: #2a3923;
+}
+#brand .inner .brand_join ul li .join_center p {
+  padding-bottom: 120px;
+  font: bold 16px/1 "Noto Sans KR";
+}
+#brand .inner .brand_join ul li .join_center img {
+  width: 400px;
+  height: 285px;
+  transition: all 0.2s;
+}
+#brand .inner .brand_join ul li:nth-of-type(1) {
+  transition-delay: 0s;
+}
+#brand .inner .brand_join ul li:nth-of-type(2) {
+  transition-delay: 0.2s;
+}
+#brand .inner .brand_join ul li:nth-of-type(3) {
+  transition-delay: 0.4s;
+}
+#brand .inner .brand_join ul li div[class*=join] img:hover {
+  transform: scale(1.1);
+}
+#brand .inner .brand_join.on ul li {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

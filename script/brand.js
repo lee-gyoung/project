@@ -1,11 +1,12 @@
 // 스크롤 페이드 인 이벤트
-// window.addEventListener('scroll', function () {
-// 	console.log(window.scrollY);
-// });
+window.addEventListener('scroll', function () {
+	console.log(window.scrollY);
+});
 
 let section1 = document.querySelector('.brand_story2');
 let section2 = document.querySelector('.brand_feature');
-let brandSlide = document.querySelector('.brand_nature');
+let section3 = document.querySelector('.brand_nature');
+let section4 = document.querySelector('.brand_join');
 let swiperInitialized = false;
 
 function checkScroll() {
@@ -18,11 +19,14 @@ function checkScroll() {
 		section2.classList.add('on');
 	}
 	if (scrollY >= 2600) {
-		brandSlide.classList.add('on');
+		section3.classList.add('on');
 		if (!swiperInitialized) {
 			initializeSwiper();
 			swiperInitialized = true;
 		}
+	}
+	if (scrollY >= 3200) {
+		section4.classList.add('on');
 	}
 }
 
