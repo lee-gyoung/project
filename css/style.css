@@ -1276,7 +1276,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   color: #2a3923;
 }
 #brand .inner .brand_join ul li .join_center p {
-  padding-bottom: 120px;
+  padding-bottom: 140px;
   font: bold 16px/1 "Noto Sans KR";
 }
 #brand .inner .brand_join ul li .join_center img {
@@ -1299,6 +1299,24 @@ main .main_contact.on .main_contact_wrap #contact_right {
 #brand .inner .brand_join.on ul li {
   transform: translateY(0px);
   opacity: 1;
+}
+
+#contact {
+  width: 100%;
+  height: 80vh;
+  padding-top: 105px;
+}
+#contact .inner {
+  background-color: #ece7e2;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+}
+#contact .inner #map {
+  margin: 0 auto;
+  width: 700px;
+  height: 500px;
+  border: 1px solid #ddd;
 }
 
 /*# sourceMappingURL=style.css.map */
