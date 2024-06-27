@@ -157,7 +157,6 @@ main {
 					width: 350px;
 					height: 100%;
 					margin: 10px;
-
 					a {
 						width: 100%;
 						height: 100%;
@@ -477,10 +476,10 @@ main {
 			opacity: 1;
 			.main_contact_wrap {
 				#contact_left {
-					animation: contact 1.2s linear;
+					animation: contact 1s linear;
 				}
 				#contact_right {
-					animation: contact2 1.2s linear;
+					animation: contact2 1s linear;
 				}
 			}
 		}
