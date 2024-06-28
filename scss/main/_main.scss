@@ -445,15 +445,15 @@ main {
 						}
 						a {
 							font: bold 20px/2 'Noto Sans KR';
-							color: #697e50;
-							transition: all 0.2s;
+							color: #2a3923;
+							transition: all 0.1s;
 						}
 						&.on {
 							display: block;
 						}
 						&:hover {
 							a {
-								color: #c3ca92;
+								color: #6f7863;
 							}
 						}
 					}

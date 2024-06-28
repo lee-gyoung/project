@@ -28,7 +28,7 @@ body {
 header {
   width: 100%;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   position: fixed;
   z-index: 10;
   animation: logo 2s ease-out;
@@ -43,61 +43,54 @@ header .inner {
 header .inner .header_menu {
   width: 440px;
   height: 100%;
-  position: relative;
 }
 header .inner .header_menu > ul {
   height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
   display: flex;
   align-items: center;
 }
 header .inner .header_menu > ul li {
-  position: relative;
-  width: 110px;
-  text-align: center;
-  height: 50px;
-  line-height: 50px;
-}
-header .inner .header_menu > ul li a {
-  display: block;
   width: 100%;
   height: 100%;
-  font-family: "Lora";
-  font-weight: 400;
-  font-size: 17px;
+  position: relative;
+}
+header .inner .header_menu > ul li > a {
+  text-align: center;
+  display: block;
+  width: 110px;
+  height: 100px;
+  font: 500 17px/100px "Lora";
   color: #000;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 header .inner .header_menu > ul li .sub_menu {
-  width: 100%;
   position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
+  top: 90px;
+  left: 0px;
+  width: 100%;
+  background-color: #f8f8f8;
   display: none;
 }
 header .inner .header_menu > ul li .sub_menu li {
-  line-height: 50px;
-  text-align: center;
+  width: 100%;
+  height: 50px;
   transition: all 0.1s;
 }
 header .inner .header_menu > ul li .sub_menu li a {
-  font-size: 14px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 50px;
   color: #000;
-  font-family: "Lora";
+  font: 14px/50px "Lora";
 }
 header .inner .header_menu > ul li .sub_menu li:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #444929;
 }
 header .inner .header_menu > ul li .sub_menu li:hover a {
-  color: #ccc;
+  color: #ece7e2;
 }
 header .inner .header_menu > ul li:hover a {
-  color: #666;
+  color: #444929;
 }
 header .inner .logo {
   position: absolute;
@@ -127,7 +120,7 @@ header .inner .header_sns li a {
   transition: all 0.1s;
 }
 header .inner .header_sns li:hover a {
-  color: #666;
+  color: #444929;
 }
 header .inner #header_left_btn {
   position: absolute;
@@ -858,14 +851,14 @@ main .main_contact .main_contact_wrap #contact_left .contact_left_text dd span {
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dd a {
   font: bold 20px/2 "Noto Sans KR";
-  color: #697e50;
-  transition: all 0.2s;
+  color: #2a3923;
+  transition: all 0.1s;
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dd.on {
   display: block;
 }
 main .main_contact .main_contact_wrap #contact_left .contact_left_text dd:hover a {
-  color: #c3ca92;
+  color: #6f7863;
 }
 main .main_contact .main_contact_wrap #contact_right .contact_right_img {
   display: block;
@@ -1221,7 +1214,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text {
   width: 34%;
-  padding-right: 130px;
+  padding-right: 150px;
   padding-top: 200px;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text .right {
@@ -1369,7 +1362,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #shop .inner #shop_tag {
   padding-bottom: 60px;
-  font: 400 37px/1 "Lora";
+  font: 500 37px/1 "Lora";
   text-align: center;
   color: #2a3923;
 }
@@ -1421,7 +1414,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 #shop .inner .shop_product .shop_product_wrap ul li {
   width: 350px;
   height: 420px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 #shop .inner .shop_product .shop_product_wrap ul li a {
   display: block;
@@ -1487,6 +1480,185 @@ main .main_contact.on .main_contact_wrap #contact_right {
 #shop .inner .shop_product .shop_product_wrap #fragrance li a .img_wrap:hover .products {
   opacity: 0.5;
   z-index: 1;
+}
+
+#notice {
+  width: 100%;
+  height: 100%;
+}
+#notice #popup {
+  display: none;
+  width: 1000px;
+  min-height: 300px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8f8f8;
+  padding: 30px;
+  z-index: 5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+#notice #popup h4 {
+  font: bold 20px/1 "Noto Sans KR";
+  text-align: center;
+  padding-bottom: 30px;
+  color: #000;
+}
+#notice #popup p {
+  text-align: center;
+  font: normal 16px/1.5 "Noto Sans KR";
+}
+#notice #popup #close {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 35px;
+  border: 1px solid #ddd;
+  background-color: #ece7e2;
+  border-radius: 5px;
+  font: bold 15px/35px "Lato";
+  color: #2a3923;
+}
+#notice .inner {
+  width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 150px 0px 200px;
+}
+#notice .inner h3 {
+  padding-bottom: 60px;
+  font: 500 37px/1 "Lora";
+  text-align: center;
+  color: #2a3923;
+}
+#notice .inner .notice_board {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+#notice .inner .notice_board thead tr {
+  background-color: #ece7e2;
+  border-bottom: 1px solid #ddd;
+}
+#notice .inner .notice_board thead tr th {
+  text-align: center;
+  padding: 15px 0px;
+  color: #000;
+  font: bold 16px/1 "Noto Sans KR";
+}
+#notice .inner .notice_board thead tr #num {
+  width: 8%;
+}
+#notice .inner .notice_board thead tr #title {
+  width: 80%;
+}
+#notice .inner .notice_board thead tr #date {
+  width: 12%;
+}
+#notice .inner .notice_board tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+#notice .inner .notice_board tbody tr td {
+  text-align: center;
+  padding: 15px 0px;
+  color: #000;
+  font: normal 15px/1 "Noto Sans KR";
+  cursor: pointer;
+}
+#notice .inner .notice_board tbody tr td a {
+  color: #000;
+  font: normal 15px/1 "Noto Sans KR";
+  display: block;
+  width: 100%;
+}
+#notice .inner .notice_board tbody tr:hover td {
+  background-color: #f8f8f8;
+}
+
+#review {
+  width: 100%;
+  height: 100%;
+}
+#review .inner {
+  width: 100%;
+  height: 100%;
+  padding-top: 150px;
+}
+#review .inner h3 {
+  padding-bottom: 60px;
+  font: 400 37px/1 "Lora";
+  text-align: center;
+  color: #2a3923;
+}
+#review .inner .review_list {
+  width: 1460px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+#review .inner .review_list > div {
+  width: 350px;
+  height: 350px;
+  border: 1px solid #ddd;
+}
+#review .inner .review_list > div a {
+  display: block;
+  width: 100%;
+  height: 60%;
+}
+#review .inner .review_list > div a img {
+  width: 100%;
+  height: 100%;
+}
+#review .inner .review_list > div .con {
+  width: 100%;
+  height: 40%;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+}
+#review .inner .review_list > div .con h4 {
+  font: bold 15px/1.2 "Noto Sans KR";
+  color: #000;
+  padding-bottom: 10px;
+}
+#review .inner .review_list > div .con p {
+  font: 13px/1.5 "Noto Sans KR";
+  color: #333;
+  padding-bottom: 10px;
+}
+#review .inner .review_list > div .con span {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font: 12px/1 "Noto Sans KR";
+  color: #333;
+}
+#review .inner .review_list .review_pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 15vh 20vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+}
+#review .inner .review_list .review_pop .btnClose {
+  position: absolute;
+  top: 70px;
+  right: 70px;
+  color: #f8f8f8;
+  font: 500 20px/1 "Lora";
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,12 +1,10 @@
 // 헤더 서브 메뉴 슬라이드
-$('.header_slide').hover(
-	function () {
-		$(this).children('li > .sub_menu').stop().slideDown();
-	},
-	function () {
-		$(this).children('li > .sub_menu').stop().slideUp();
-	}
-);
+$('.header_slide').on('mouseenter', function () {
+	$(this).children('.sub_menu').stop().slideDown();
+});
+$('.header_slide').on('mouseleave', function () {
+	$(this).children('.sub_menu').stop().slideUp();
+});
 
 // 모바일 버전 서브 메뉴 클릭 이벤트
 $('.btn_fold').click(function () {
