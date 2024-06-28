@@ -1489,9 +1489,9 @@ main .main_contact.on .main_contact_wrap #contact_right {
 #notice #popup {
   display: none;
   width: 1000px;
-  min-height: 300px;
+  min-height: 350px;
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f8f8f8;
