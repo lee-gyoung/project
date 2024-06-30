@@ -73,6 +73,7 @@ $(document).ready(function () {
 // contact 영역 탭메뉴 클릭 이벤트
 let dts = document.querySelectorAll('.contact_left_text dt');
 let dds = document.querySelectorAll('.contact_left_text dd');
+let rightImgs = document.querySelectorAll('.contact_right_img img, video');
 
 let dts_a = document.querySelectorAll('.contact_left_text dt>a');
 
@@ -81,6 +82,7 @@ dts_a.forEach((el, index) => {
 		e.preventDefault();
 		active(dts, index);
 		active(dds, index);
+		active(rightImgs, index);
 	});
 });
 

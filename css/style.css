@@ -687,7 +687,7 @@ main .main_tabmenu #main_tab_new > ul {
   position: absolute;
   width: 1460px;
   height: 100%;
-  padding: 50px 70px;
+  padding: 50px;
   display: flex;
   gap: 20px;
 }
@@ -861,14 +861,32 @@ main .main_contact .main_contact_wrap #contact_left .contact_left_text dd:hover 
   color: #6f7863;
 }
 main .main_contact .main_contact_wrap #contact_right .contact_right_img {
-  display: block;
   width: 750px;
-  height: 100%;
+  height: 850px;
   position: relative;
 }
 main .main_contact .main_contact_wrap #contact_right .contact_right_img img {
   width: 100%;
   height: 100%;
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+main .main_contact .main_contact_wrap #contact_right .contact_right_img img.on {
+  display: block;
+  z-index: 3;
+}
+main .main_contact .main_contact_wrap #contact_right .contact_right_img video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  z-index: 1;
+}
+main .main_contact .main_contact_wrap #contact_right .contact_right_img video.on {
+  display: block;
+  z-index: 3;
 }
 main .main_contact.on {
   opacity: 1;
