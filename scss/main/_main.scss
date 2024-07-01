@@ -66,7 +66,7 @@ main {
 		width: 100%;
 		height: auto;
 		display: flex;
-		margin-bottom: 200px;
+		padding-bottom: 200px;
 		#main_slide_left {
 			width: 50%;
 			height: 100%;
@@ -145,7 +145,7 @@ main {
 				font-weight: 500;
 				font-size: 37px;
 				color: #2a3923;
-				margin-bottom: 25px;
+				padding-bottom: 50px;
 			}
 			ul {
 				width: 100%;
@@ -235,7 +235,7 @@ main {
 					font-weight: 500;
 					font-size: 37px;
 					color: #2a3923;
-					margin-bottom: 40px;
+					padding-bottom: 50px;
 				}
 				> ul {
 					width: 30%;
@@ -378,90 +378,90 @@ main {
 			font-weight: 500;
 			font-size: 37px;
 			color: #2a3923;
-			margin-bottom: 80px;
+			padding-bottom: 50px;
 		}
 		.main_contact_wrap {
 			width: 100%;
 			height: 100%;
 			display: flex;
+			position: relative;
 			#contact_left {
-				width: 100%;
+				width: 60%;
 				position: relative;
 				.contact_left_img {
 					position: absolute;
-					left: 70px;
+					top: 50px;
+					left: 10%;
 					transform: translateX(0px);
-					width: 750px;
+					width: 60%;
 					img {
 						width: 100%;
 						height: 100%;
 					}
 				}
-				.contact_left_text {
-					width: 100%;
-					padding: 90px 0px;
-					position: relative;
-					transform: translate(125px, 395px);
-					dt {
-						width: 35px;
-						height: 40px;
-						position: absolute;
-						top: 340px;
-
-						&:nth-of-type(1) {
-							right: 300px;
-						}
-						&:nth-of-type(2) {
-							right: 250px;
-						}
-						&:nth-of-type(3) {
-							right: 200px;
-						}
+			}
+			.contact_left_text {
+				width: 50%;
+				position: absolute;
+				transform: translate(0%, 170%);
+				dd {
+					height: 30vh;
+					text-align: center;
+					font: 500 22px/1.7 'Noto Sans KR';
+					color: #000;
+					display: none;
+					a {
+						font: bold 20px/2 'Noto Sans KR';
+						color: #2a3923;
+						transition: all 0.1s;
+					}
+					&.on {
+						display: block;
+					}
+					&:hover {
 						a {
-							display: block;
-							width: 100%;
-							height: 100%;
-							text-align: center;
-							font: normal 18px/35px 'Noto Sans KR';
-							color: #000;
-							border: 1px solid transparent;
-							transition: all 0.3s;
-						}
-						&.on {
-							a {
-								color: #000;
-								border: 1px solid #666;
-							}
+							color: #6f7863;
 						}
 					}
-					dd {
+				}
+				dt {
+					width: 35px;
+					height: 40px;
+					position: absolute;
+					bottom: 0px;
+					z-index: 3;
+					&:nth-of-type(1) {
+						right: 0px;
+					}
+					&:nth-of-type(2) {
+						right: -50px;
+					}
+					&:nth-of-type(3) {
+						right: -100px;
+					}
+					a {
+						display: block;
+						width: 100%;
+						height: 100%;
 						text-align: center;
-						font: 500 22px/1.7 'Noto Sans KR';
+						font: normal 18px/35px 'Noto Sans KR';
 						color: #000;
-						display: none;
-						span {
-							font: bold 25px/2;
-						}
+						border: 1px solid transparent;
+						transition: all 0.3s;
+					}
+					&.on {
 						a {
-							font: bold 20px/2 'Noto Sans KR';
-							color: #2a3923;
-							transition: all 0.1s;
-						}
-						&.on {
-							display: block;
-						}
-						&:hover {
-							a {
-								color: #6f7863;
-							}
+							color: #000;
+							border: 1px solid #666;
 						}
 					}
 				}
 			}
 			#contact_right {
+				width: 40%;
 				.contact_right_img {
-					width: 750px;
-					height: 850px;
+					width: 100%;
+					height: 85vh;
 					position: relative;
 					img {
 						width: 100%;
@@ -521,7 +521,7 @@ main {
 			}
 		}
 		.main_slide {
-			margin-bottom: 50px;
+			padding-bottom: 50px;
 			#main_slide_left {
 				width: 100%;
 			}
@@ -615,31 +615,34 @@ main {
 			.main_contact_wrap {
 				flex-direction: column;
 				#contact_left {
+					width: 100%;
 					.contact_left_img {
 						width: 100%;
 						left: 0px;
 						position: relative;
 					}
-					.contact_left_text {
-						padding: 50px 30px 100px 30px;
-						transform: translate(0px, 0px);
-						dt {
-							top: 200px;
-							&:nth-of-type(1) {
-								right: 200px;
-							}
-							&:nth-of-type(2) {
-								right: 150px;
-							}
-							&:nth-of-type(3) {
-								right: 100px;
-							}
+				}
+				.contact_left_text {
+					width: 100%;
+					padding-top: 100px;
+					position: relative;
+					transform: translate(0px, 0px);
+					dd {
+						font-size: 16px;
+						a {
+							font-size: 15px;
 						}
-						dd {
-							font-size: 16px;
-							a {
-								font-size: 15px;
-							}
+					}
+					dt {
+						bottom: 5vh;
+						&:nth-of-type(1) {
+							right: 200px;
+						}
+						&:nth-of-type(2) {
+							right: 150px;
+						}
+						&:nth-of-type(3) {
+							right: 100px;
 						}
 					}
 				}
