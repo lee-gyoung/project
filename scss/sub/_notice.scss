@@ -4,7 +4,7 @@
 	#popup {
 		display: none;
 		width: 1000px;
-		min-height: 350px;
+		min-height: 400px;
 		position: absolute;
 		top: 45%;
 		left: 50%;
@@ -54,7 +54,6 @@
 		.notice_board {
 			border-collapse: collapse;
 			width: 100%;
-
 			border: 1px solid #ddd;
 			thead {
 				tr {
@@ -96,6 +95,61 @@
 					&:hover {
 						td {
 							background-color: #f8f8f8;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#notice {
+		#popup {
+			width: 80%;
+			min-height: 320px;
+			padding: 20px;
+			top: 40%;
+			h4 {
+				font-size: 18px;
+			}
+			p {
+				font: normal 14px/1.8 'Noto Sans KR';
+			}
+		}
+		.inner {
+			width: 80%;
+			padding: 150px 0px;
+			h3 {
+				padding-bottom: 50px;
+				font-size: 30px;
+			}
+			.notice_board {
+				thead {
+					tr {
+						th {
+							padding: 15px 10px;
+							font-size: 12px;
+						}
+						#num {
+							width: 15%;
+						}
+						#title {
+							width: 65%;
+						}
+						#date {
+							width: 20%;
+						}
+					}
+				}
+				tbody {
+					tr {
+						td {
+							padding: 15px 10px;
+							font-size: 11px;
+							a {
+								font-size: 11px;
+							}
 						}
 					}
 				}

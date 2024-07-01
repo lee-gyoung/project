@@ -21,3 +21,10 @@ $selectedTitle.on('click', function () {
 	let dataTitle = $(this).find('div').attr('data-title');
 	$(dataTitle).addClass('on');
 });
+
+$(document).ready(function () {
+	let urlParams = new URLSearchParams(window.location.search);
+	let toParam = urlParams.get('to');
+	let result = '#' + toParam.toLowerCase();
+	$("div[data-title='" + result + "']").click();
+});

@@ -62,9 +62,9 @@
 				position: fixed;
 				top: 0px;
 				left: 0px;
-				padding: 15vh 20vh;
+				padding: 15vh 15vw;
 				background-color: rgba(0, 0, 0, 0.7);
-				z-index: 20;
+				z-index: 11;
 				.btnClose {
 					position: absolute;
 					top: 70px;
@@ -72,6 +72,30 @@
 					color: #f8f8f8;
 					font: 500 20px/1 'Lora';
 					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#review {
+		.inner {
+			h3 {
+				padding-bottom: 50px;
+				font-size: 30px;
+			}
+			.review_list {
+				width: 80%;
+				gap: 40px;
+				> div {
+					width: 100%;
+				}
+				.review_pop {
+					padding: 30vh 10vw;
+					.btnClose {
+						font-size: 17px;
+					}
 				}
 			}
 		}

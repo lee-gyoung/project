@@ -1,7 +1,7 @@
 // 스크롤 페이드 인 이벤트
-window.addEventListener('scroll', function () {
-	console.log(window.scrollY);
-});
+// window.addEventListener('scroll', function () {
+// 	console.log(window.scrollY);
+// });
 
 let section1 = document.querySelector('.brand_story2');
 let section2 = document.querySelector('.brand_feature');

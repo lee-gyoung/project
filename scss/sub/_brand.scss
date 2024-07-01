@@ -227,7 +227,7 @@
 				height: 100%;
 				overflow: hidden;
 				li {
-					flex: 1;
+					width: calc(100% / 3);
 					height: 100%;
 					opacity: 0;
 					transform: translateY(200px);
@@ -282,6 +282,144 @@
 					li {
 						transform: translateY(0px);
 						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#brand {
+		.inner {
+			div[class*='story'] {
+				img {
+					width: 100%;
+					height: 35vh;
+					object-fit: cover;
+				}
+				.text {
+					width: 100%;
+					h4 {
+						padding-top: 50px;
+						padding-bottom: 30px;
+						font-size: 30px;
+					}
+					p {
+						width: 70%;
+						font-size: 14px;
+						padding-bottom: 30px;
+					}
+					p.eng {
+						font-size: 15px;
+						padding-bottom: 50px;
+					}
+				}
+			}
+			.brand_story1 {
+				flex-direction: column;
+			}
+			.brand_story2 {
+				flex-wrap: wrap-reverse;
+				.text {
+					opacity: 1;
+				}
+				img {
+					opacity: 1;
+				}
+				&.on {
+					.text {
+						animation: none;
+					}
+				}
+			}
+			.brand_feature {
+				h4 {
+					opacity: 1;
+					padding-top: 50px;
+					font-size: 30px;
+				}
+				ul {
+					flex-direction: column;
+					li {
+						width: 90%;
+						opacity: 1;
+						transform: translateY(0px);
+						h5 {
+							font-size: 20px;
+						}
+						p {
+							width: 100%;
+							font-size: 14px;
+							padding-bottom: 50px;
+						}
+					}
+				}
+			}
+			.brand_nature {
+				height: 70vh;
+				h4 {
+					padding-top: 50px;
+					padding-bottom: 50px;
+					font-size: 26px;
+				}
+				.swiper {
+					height: 100%;
+					.swiper-wrapper {
+						.swiper-slide {
+							flex-direction: column;
+							.left_text {
+								width: 100%;
+								padding: 0px 30px 50px;
+								h5 {
+									padding-bottom: 30px;
+									font-size: 20px;
+								}
+								.left {
+									font-size: 14px;
+									.large {
+										font-size: 15px;
+									}
+								}
+							}
+							.center {
+								width: 100%;
+								img {
+									width: 50%;
+								}
+							}
+							.right_text {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			.brand_join {
+				height: 65vh;
+				ul {
+					li {
+						width: 100%;
+						.join_left,
+						.join_right {
+							display: none;
+						}
+						.join_center {
+							width: 100%;
+							h4 {
+								padding-top: 50px;
+								padding-bottom: 50px;
+								font-size: 27px;
+							}
+							p {
+								padding-bottom: 70px;
+								font: bold 12px/1.7 'Noto Sans KR';
+								text-align: center;
+							}
+							img {
+								width: 350px;
+							}
+						}
 					}
 				}
 			}
