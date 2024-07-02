@@ -12,6 +12,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #ece7e2;
 }
 
 body {
@@ -1409,7 +1410,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     width: 100%;
   }
   #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .center img {
-    width: 40%;
+    width: 50%;
   }
   #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text {
     display: none;
@@ -1434,7 +1435,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     font-size: 25px;
   }
   #brand .inner .brand_join ul .join_mo .join_center p {
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     font: bold 12px/1.7 "Noto Sans KR";
     text-align: center;
   }
@@ -1695,7 +1696,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     margin-bottom: 10px;
   }
   #shop .inner .shop_product .shop_product_wrap ul li a .img_wrap {
-    height: 180px;
+    height: 165px;
   }
   #shop .inner .shop_product .shop_product_wrap ul li a .info p {
     font-size: 13px;
