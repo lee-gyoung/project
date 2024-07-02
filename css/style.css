@@ -952,21 +952,22 @@ main .main_contact.on .main_contact_wrap #contact_right {
     font-size: 11px;
   }
   main .main_tabmenu {
-    min-height: 70vh;
+    min-height: 80vh;
     margin-bottom: 250px;
     opacity: 1;
     transform: translateY(0px);
   }
   main .main_tabmenu #main_tab_new {
     width: 84%;
+    height: 100%;
   }
   main .main_tabmenu #main_tab_new #tab_title > ul {
     width: 80%;
-    height: 40px;
+    height: 45px;
   }
   main .main_tabmenu #main_tab_new #tab_title > ul li {
     font-size: 13px;
-    line-height: 40px;
+    line-height: 45px;
   }
   main .main_tabmenu #main_tab_new > ul {
     width: 84%;
@@ -994,10 +995,10 @@ main .main_contact.on .main_contact_wrap #contact_right {
     justify-content: center;
   }
   main .main_tabmenu #main_tab_new > ul > li a .tab_text p {
-    font-size: 13px;
+    font-size: 12px;
   }
   main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
-    font-size: 12px;
+    font-size: 11px;
   }
   main .main_contact {
     opacity: 1;
@@ -1675,11 +1676,11 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   #shop .inner #shop_title ul li {
     width: 90px;
-    height: 40px;
+    height: 45px;
   }
   #shop .inner #shop_title ul li div {
     font-size: 13px;
-    line-height: 40px;
+    line-height: 45px;
   }
   #shop .inner .shop_product {
     height: 200vh;
