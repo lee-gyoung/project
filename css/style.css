@@ -259,7 +259,7 @@ header .inner #left_btn_menu.on {
   left: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   header .inner .header_menu {
     display: none;
   }
@@ -347,7 +347,7 @@ footer .inner:after {
   clear: both;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   footer .inner {
     height: 200px;
     padding: 0px 0px;
@@ -901,7 +901,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   animation: contact2 1s linear;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   main .main_page #main_page_scroll::before {
     background-image: url(../img/main_page/mainpage_mo.png);
     opacity: 0.9;
@@ -1020,10 +1020,10 @@ main .main_contact.on .main_contact_wrap #contact_right {
     transform: translate(0px, 0px);
   }
   main .main_contact .main_contact_wrap .contact_left_text dd {
-    font-size: 16px;
+    font-size: 14px;
   }
   main .main_contact .main_contact_wrap .contact_left_text dd a {
-    font-size: 15px;
+    font-size: 13px;
   }
   main .main_contact .main_contact_wrap .contact_left_text dt {
     bottom: 5vh;
@@ -1319,7 +1319,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   opacity: 1;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   #brand .inner div[class*=story] img {
     width: 100%;
     height: 35vh;
@@ -1379,12 +1379,12 @@ main .main_contact.on .main_contact_wrap #contact_right {
     padding-bottom: 50px;
   }
   #brand .inner .brand_nature {
-    height: 70vh;
+    height: 75vh;
   }
   #brand .inner .brand_nature h4 {
     padding-top: 50px;
-    padding-bottom: 50px;
-    font-size: 26px;
+    padding-bottom: 40px;
+    font-size: 23px;
   }
   #brand .inner .brand_nature .swiper {
     height: 100%;
@@ -1394,11 +1394,11 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text {
     width: 100%;
-    padding: 0px 30px 50px;
+    padding: 0px 30px 30px;
   }
   #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text h5 {
     padding-bottom: 30px;
-    font-size: 20px;
+    font-size: 19px;
   }
   #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text .left {
     font-size: 14px;
@@ -1410,7 +1410,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     width: 100%;
   }
   #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .center img {
-    width: 50%;
+    width: 40%;
   }
   #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text {
     display: none;
@@ -1419,27 +1419,29 @@ main .main_contact.on .main_contact_wrap #contact_right {
     height: 65vh;
   }
   #brand .inner .brand_join ul li {
-    width: 100%;
-  }
-  #brand .inner .brand_join ul li .join_left,
-  #brand .inner .brand_join ul li .join_right {
     display: none;
   }
-  #brand .inner .brand_join ul li .join_center {
+  #brand .inner .brand_join ul .join_mo {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #brand .inner .brand_join ul .join_mo .join_center {
     width: 100%;
   }
-  #brand .inner .brand_join ul li .join_center h4 {
+  #brand .inner .brand_join ul .join_mo .join_center h4 {
     padding-top: 50px;
-    padding-bottom: 50px;
-    font-size: 27px;
+    padding-bottom: 20px;
+    font-size: 25px;
   }
-  #brand .inner .brand_join ul li .join_center p {
-    padding-bottom: 70px;
+  #brand .inner .brand_join ul .join_mo .join_center p {
+    padding-bottom: 50px;
     font: bold 12px/1.7 "Noto Sans KR";
     text-align: center;
   }
-  #brand .inner .brand_join ul li .join_center img {
-    width: 350px;
+  #brand .inner .brand_join ul .join_mo .join_center img {
+    width: 80%;
+    height: 80%;
   }
 }
 #contact {
@@ -1499,7 +1501,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   border: 1px solid #ddd;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   #contact .inner h3 {
     font-size: 30px;
     padding-bottom: 50px;
@@ -1518,10 +1520,10 @@ main .main_contact.on .main_contact_wrap #contact_right {
     font-size: 17px;
   }
   #contact .inner .contact_txt .normal {
-    font-size: 14px;
+    font-size: 12px;
   }
   #contact .inner .contact_txt .light {
-    font-size: 13px;
+    font-size: 11px;
     padding-bottom: 50px;
   }
   #contact .inner .contact_map {
@@ -1663,7 +1665,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   z-index: 1;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   #shop .inner #shop_tag {
     padding-bottom: 50px;
     font-size: 30px;
@@ -1672,7 +1674,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     padding-bottom: 100px;
   }
   #shop .inner #shop_title ul li {
-    width: 100px;
+    width: 90px;
     height: 40px;
   }
   #shop .inner #shop_title ul li div {
@@ -1680,7 +1682,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     line-height: 40px;
   }
   #shop .inner .shop_product {
-    height: 140vh;
+    height: 200vh;
   }
   #shop .inner .shop_product .shop_product_wrap {
     width: 100%;
@@ -1694,7 +1696,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     margin-bottom: 10px;
   }
   #shop .inner .shop_product .shop_product_wrap ul li a .img_wrap {
-    height: 200px;
+    height: 180px;
   }
   #shop .inner .shop_product .shop_product_wrap ul li a .info p {
     font-size: 13px;
@@ -1802,18 +1804,18 @@ main .main_contact.on .main_contact_wrap #contact_right {
   background-color: #f8f8f8;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   #notice #popup {
-    width: 80%;
-    min-height: 320px;
+    width: 85%;
+    min-height: 350px;
     padding: 20px;
-    top: 40%;
+    top: 57%;
   }
   #notice #popup h4 {
     font-size: 18px;
   }
   #notice #popup p {
-    font: normal 14px/1.8 "Noto Sans KR";
+    font: normal 13px/1.8 "Noto Sans KR";
   }
   #notice .inner {
     width: 80%;
@@ -1838,10 +1840,10 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   #notice .inner .notice_board tbody tr td {
     padding: 15px 10px;
-    font-size: 11px;
+    font-size: 12px;
   }
   #notice .inner .notice_board tbody tr td a {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 #review {
@@ -1924,7 +1926,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   #review .inner h3 {
     padding-bottom: 50px;
     font-size: 30px;

@@ -289,7 +289,7 @@
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
 	#brand {
 		.inner {
 			div[class*='story'] {
@@ -357,11 +357,11 @@
 				}
 			}
 			.brand_nature {
-				height: 70vh;
+				height: 75vh;
 				h4 {
 					padding-top: 50px;
-					padding-bottom: 50px;
-					font-size: 26px;
+					padding-bottom: 40px;
+					font-size: 23px;
 				}
 				.swiper {
 					height: 100%;
@@ -370,10 +370,10 @@
 							flex-direction: column;
 							.left_text {
 								width: 100%;
-								padding: 0px 30px 50px;
+								padding: 0px 30px 30px;
 								h5 {
 									padding-bottom: 30px;
-									font-size: 20px;
+									font-size: 19px;
 								}
 								.left {
 									font-size: 14px;
@@ -385,7 +385,7 @@
 							.center {
 								width: 100%;
 								img {
-									width: 50%;
+									width: 40%;
 								}
 							}
 							.right_text {
@@ -399,25 +399,27 @@
 				height: 65vh;
 				ul {
 					li {
-						width: 100%;
-						.join_left,
-						.join_right {
-							display: none;
-						}
+						display: none;
+					}
+					.join_mo {
+						display: block;
+						width: 90%;
+						margin: 0 auto;
 						.join_center {
 							width: 100%;
 							h4 {
 								padding-top: 50px;
-								padding-bottom: 50px;
-								font-size: 27px;
+								padding-bottom: 20px;
+								font-size: 25px;
 							}
 							p {
-								padding-bottom: 70px;
+								padding-bottom: 50px;
 								font: bold 12px/1.7 'Noto Sans KR';
 								text-align: center;
 							}
 							img {
-								width: 350px;
+								width: 80%;
+								height: 80%;
 							}
 						}
 					}
