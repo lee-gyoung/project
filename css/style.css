@@ -1222,8 +1222,12 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text {
   width: 34%;
-  padding-left: 340px;
-  padding-top: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 300px;
   text-align: center;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text h5 {
@@ -1249,8 +1253,11 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text {
   width: 34%;
+  height: 100%;
   padding-right: 150px;
-  padding-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text .right {
   font: normal 16px/1.8 "Noto Sans KR";
@@ -1692,7 +1699,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     line-height: 45px;
   }
   #shop .inner .shop_product {
-    height: 200vh;
+    height: 180vh;
   }
   #shop .inner .shop_product .shop_product_wrap {
     width: 100%;

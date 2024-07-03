@@ -25,6 +25,9 @@ $selectedTitle.on('click', function () {
 $(document).ready(function () {
 	let urlParams = new URLSearchParams(window.location.search);
 	let toParam = urlParams.get('to');
+	if (toParam == '' || toParam == null) {
+		toParam = 'Nail';
+	}
 	let result = '#' + toParam.toLowerCase();
 	$("div[data-title='" + result + "']").click();
 });

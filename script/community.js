@@ -43,7 +43,7 @@ fetch(url)
                 </div>
             </div>
             `;
-			reviewList.innerHTML = result;
+			if (reviewList != null) reviewList.innerHTML = result;
 		});
 	});
 
@@ -67,11 +67,13 @@ if (reviewList != null) {
 }
 
 let close = document.querySelector('.btnClose');
-reviewList.addEventListener('click', (e) => {
-	let pop = reviewList.querySelector('.review_pop');
+if (reviewList != null) {
+	reviewList.addEventListener('click', (e) => {
+		let pop = reviewList.querySelector('.review_pop');
 
-	if (pop) {
-		let close = pop.querySelector('.btnClose');
-		if (e.target == close) pop.remove();
-	}
-});
+		if (pop) {
+			let close = pop.querySelector('.btnClose');
+			if (e.target == close) pop.remove();
+		}
+	});
+}

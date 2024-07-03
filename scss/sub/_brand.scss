@@ -165,8 +165,12 @@
 						display: flex;
 						.left_text {
 							width: 34%;
-							padding-left: 340px;
-							padding-top: 150px;
+							height: 100%;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							padding-left: 300px;
 							text-align: center;
 							h5 {
 								font: 400 23px/1 'Lora';
@@ -176,6 +180,7 @@
 							.left {
 								font: normal 15px/1.5 'Noto Sans KR';
 								color: #ece7e2;
+
 								.large {
 									font: normal 17px/1 'Lora';
 								}
@@ -192,8 +197,11 @@
 						}
 						.right_text {
 							width: 34%;
+							height: 100%;
 							padding-right: 150px;
-							padding-top: 200px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
 							.right {
 								font: normal 16px/1.8 'Noto Sans KR';
 								color: #ece7e2;
