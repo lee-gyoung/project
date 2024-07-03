@@ -1724,7 +1724,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #notice {
   width: 100%;
-  height: 100%;
+  height: 90vh;
 }
 #notice #popup {
   display: none;
