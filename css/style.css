@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@font-face {
+  font-family: "SunBatang-Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GowunBatang-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -815,7 +827,7 @@ main .main_contact .main_contact_wrap .contact_left_text {
 main .main_contact .main_contact_wrap .contact_left_text dd {
   height: 30vh;
   text-align: center;
-  font: 500 22px/1.7 "Noto Sans KR";
+  font: 700 22px/1.7 "GowunBatang-Regular";
   color: #000;
   display: none;
 }
