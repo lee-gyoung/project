@@ -47,22 +47,24 @@ fetch(url)
 		});
 	});
 
-reviewList.addEventListener('click', (e) => {
-	e.preventDefault();
+if (reviewList != null) {
+	reviewList.addEventListener('click', (e) => {
+		e.preventDefault();
 
-	if (!e.target.closest('a')) return;
+		if (!e.target.closest('a')) return;
 
-	let vidId = e.target.closest('a').getAttribute('href');
+		let vidId = e.target.closest('a').getAttribute('href');
 
-	let pop = document.createElement('figure');
-	pop.classList.add('review_pop');
-	pop.innerHTML = `
-		<iframe src="https://www.youtube.com/embed/${vidId}"
-			frameborder="0" width="100%" height="100%"></iframe>
-		<span class="btnClose">close</span>
-		`;
-	reviewList.append(pop);
-});
+		let pop = document.createElement('figure');
+		pop.classList.add('review_pop');
+		pop.innerHTML = `
+			<iframe src="https://www.youtube.com/embed/${vidId}"
+				frameborder="0" width="100%" height="100%"></iframe>
+			<span class="btnClose">close</span>
+			`;
+		reviewList.append(pop);
+	});
+}
 
 let close = document.querySelector('.btnClose');
 reviewList.addEventListener('click', (e) => {

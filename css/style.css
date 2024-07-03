@@ -932,6 +932,9 @@ main .main_contact.on .main_contact_wrap #contact_right {
   main .main_product #main_product_best {
     padding: 0px;
   }
+  main .main_product #main_product_best h3 {
+    font-size: 30px;
+  }
   main .main_product #main_product_best ul {
     flex-wrap: wrap;
   }
@@ -960,6 +963,9 @@ main .main_contact.on .main_contact_wrap #contact_right {
   main .main_tabmenu #main_tab_new {
     width: 84%;
     height: 100%;
+  }
+  main .main_tabmenu #main_tab_new #tab_title h3 {
+    font-size: 30px;
   }
   main .main_tabmenu #main_tab_new #tab_title > ul {
     width: 80%;
@@ -1002,6 +1008,9 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   main .main_contact {
     opacity: 1;
+  }
+  main .main_contact h3 {
+    font-size: 30px;
   }
   main .main_contact .main_contact_wrap {
     flex-direction: column;

@@ -10,12 +10,15 @@ leftBtn.addEventListener('click', (e) => {
 
 // 초기화면 스크롤 버튼 클릭 이벤트
 let scrBtn = document.querySelector('#scrBtn');
+
 function scrActive() {
-	scrBtn.addEventListener('click', function () {
-		window.scrollTo({ left: 0, top: 960, behavior: 'smooth' });
-	});
+	if (scrBtn != null) {
+		let topPoint = $('.main_slide.scroll_event').offset().top;
+		scrBtn.addEventListener('click', function () {
+			window.scrollTo({ left: 0, top: topPoint, behavior: 'smooth' });
+		});
+	}
 }
-scrActive();
 
 // 좌측 슬라이드
 var swiper = new Swiper('#main_slide_left', {
@@ -59,6 +62,7 @@ window.addEventListener('scroll', () => {
 
 // 탭 메뉴 클릭 이벤트
 $(document).ready(function () {
+	scrActive();
 	$('#tab_title ul li').click(function () {
 		$('#tab_title ul li').removeClass('active');
 
