@@ -69,7 +69,7 @@ main {
 		padding-bottom: 200px;
 		#main_slide_left {
 			width: 50%;
-			height: 100%;
+			height: 100vh;
 			position: relative;
 			overflow: hidden;
 			.main_slide_pics {
@@ -79,7 +79,7 @@ main {
 					img {
 						width: 100%;
 						height: 100%;
-						object-fit: contain;
+						object-fit: cover;
 					}
 				}
 			}
@@ -524,6 +524,7 @@ main {
 			padding-bottom: 50px;
 			#main_slide_left {
 				width: 100%;
+				height: 70vh;
 			}
 			#main_slide_right {
 				display: none;

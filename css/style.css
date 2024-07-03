@@ -499,7 +499,7 @@ main .main_slide {
 }
 main .main_slide #main_slide_left {
   width: 50%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -510,7 +510,7 @@ main .main_slide #main_slide_left .main_slide_pics .swiper-slide {
 main .main_slide #main_slide_left .main_slide_pics .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 main .main_slide #main_slide_left .swiper-button-next::after,
 main .main_slide #main_slide_left .swiper-button-prev::after {
@@ -918,6 +918,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   main .main_slide #main_slide_left {
     width: 100%;
+    height: 70vh;
   }
   main .main_slide #main_slide_right {
     display: none;
@@ -1411,7 +1412,8 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text {
     width: 100%;
-    padding: 0px 30px 30px;
+    height: 40%;
+    padding-left: 0px;
   }
   #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text h5 {
     padding-bottom: 30px;
@@ -1699,7 +1701,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     line-height: 45px;
   }
   #shop .inner .shop_product {
-    height: 180vh;
+    height: 160vh;
   }
   #shop .inner .shop_product .shop_product_wrap {
     width: 100%;
