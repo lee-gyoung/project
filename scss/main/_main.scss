@@ -16,7 +16,7 @@ main {
 				height: 100%;
 				content: '';
 				display: block;
-				background-image: url(../img/main_page/mainpage.jpg);
+				background-image: url(../img/main_page/mainpage1.jpg);
 				background-size: cover;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -198,12 +198,12 @@ main {
 							text-align: center;
 							p {
 								pointer-events: auto;
-								font: normal 16px/1 'Pretendard';
+								font: normal 15px/1 'Pretendard', 'Noto Sans KR';
 								color: #000;
 							}
 							span {
 								pointer-events: auto;
-								font: normal 14px/35px 'Pretendard';
+								font: normal 14px/35px 'Pretendard', 'Noto Sans KR';
 								color: #333;
 							}
 						}
@@ -316,14 +316,14 @@ main {
 							p {
 								font-size: 15px;
 								line-height: 1;
-								font-family: 'Pretendard';
+								font-family: 'Pretendard', 'Noto Sans KR';
 								color: #000;
 								cursor: pointer;
 							}
 							span {
 								font-size: 14px;
 								line-height: 35px;
-								font-family: 'Pretendard';
+								font-family: 'Pretendard', 'Noto Sans KR';
 								color: #333;
 								cursor: pointer;
 							}
@@ -411,7 +411,7 @@ main {
 					font-weight: 500;
 					font-size: 23px;
 					line-height: 1.8;
-					font-family: 'Pretendard';
+					font-family: 'Pretendard', 'Noto Sans KR';
 					color: #000;
 					display: none;
 					a {
