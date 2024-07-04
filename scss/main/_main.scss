@@ -407,7 +407,11 @@ main {
 				dd {
 					height: 30vh;
 					text-align: center;
-					font: 500 23px/1.8 'Pretendard';
+					// font: 500 23px/1.8 'Pretendard';
+					font-weight: 500;
+					font-size: 23px;
+					line-height: 1.8;
+					font-family: 'Pretendard';
 					color: #000;
 					display: none;
 					a {
@@ -640,7 +644,8 @@ main {
 					position: relative;
 					transform: translate(0px, 0px);
 					dd {
-						font-size: 14px;
+						// font-size: 14px;
+						font-size: 3vw;
 						a {
 							font-size: 13px;
 						}
