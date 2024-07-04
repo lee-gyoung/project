@@ -198,12 +198,12 @@ main {
 							text-align: center;
 							p {
 								pointer-events: auto;
-								font: 16px/1 'Noto Sans KR';
+								font: normal 16px/1 'Pretendard';
 								color: #000;
 							}
 							span {
 								pointer-events: auto;
-								font: 14px/35px 'Noto Sans KR';
+								font: normal 14px/35px 'Pretendard';
 								color: #333;
 							}
 						}
@@ -316,14 +316,14 @@ main {
 							p {
 								font-size: 15px;
 								line-height: 1;
-								font-family: 'Noto Sans KR';
+								font-family: 'Pretendard';
 								color: #000;
 								cursor: pointer;
 							}
 							span {
 								font-size: 14px;
 								line-height: 35px;
-								font-family: 'Noto Sans KR';
+								font-family: 'Pretendard';
 								color: #333;
 								cursor: pointer;
 							}
@@ -407,21 +407,20 @@ main {
 				dd {
 					height: 30vh;
 					text-align: center;
-					font: 700 22px/1.7 'GowunBatang-Regular';
+					font: 500 23px/1.8 'Pretendard';
 					color: #000;
 					display: none;
 					a {
-						font: bold 20px/2 'Noto Sans KR';
+						font: 600 18px/2 'Pretendard';
 						color: #2a3923;
 						transition: all 0.1s;
+						&:hover {
+							color: #6f7863;
+						}
 					}
 					&.on {
 						display: block;
-					}
-					&:hover {
-						a {
-							color: #6f7863;
-						}
+						animation: logo 0.5s;
 					}
 				}
 				dt {
@@ -444,14 +443,13 @@ main {
 						width: 100%;
 						height: 100%;
 						text-align: center;
-						font: normal 18px/35px 'Noto Sans KR';
+						font: normal 17px/35px 'Lato';
 						color: #000;
 						border: 1px solid transparent;
 						transition: all 0.3s;
 					}
 					&.on {
 						a {
-							color: #000;
 							border: 1px solid #666;
 						}
 					}
@@ -472,6 +470,7 @@ main {
 						&.on {
 							display: block;
 							z-index: 3;
+							animation: bgc 0.5s;
 						}
 					}
 					video {
@@ -484,6 +483,7 @@ main {
 						&.on {
 							display: block;
 							z-index: 3;
+							animation: bgc 0.5s;
 						}
 					}
 				}

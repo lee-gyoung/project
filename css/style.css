@@ -1,17 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
-@font-face {
-  font-family: "SunBatang-Light";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GowunBatang-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 * {
   margin: 0px;
   padding: 0px;
@@ -28,7 +16,7 @@ a {
 }
 
 body {
-  font-family: "Lora", "Lato", "Noto Sans KR";
+  font-family: "Lora", "Lato", "Pretendard";
 }
 
 .hidden {
@@ -320,7 +308,7 @@ footer .inner .footer_info .footer_info_terms {
   bottom: 40px;
 }
 footer .inner .footer_info .footer_info_terms p {
-  font: 12px/1.4 "Lato", "Noto Sans KR";
+  font: 12px/1.4 "Lato", "Pretendard";
   color: #ece7e2;
 }
 footer .inner .footer_sns {
@@ -346,7 +334,7 @@ footer .inner .footer_text {
 footer .inner .footer_text ul li {
   height: 23px;
   color: #ece7e2;
-  font: normal 14px/23px "Lora", "Noto Sans KR";
+  font: normal 14px/23px "Lora", "Pretendard";
 }
 footer .inner .footer_text ul .name {
   height: 37px;
@@ -635,12 +623,12 @@ main .main_product #main_product_best ul li a .info {
 }
 main .main_product #main_product_best ul li a .info p {
   pointer-events: auto;
-  font: 16px/1 "Noto Sans KR";
+  font: normal 16px/1 "Pretendard";
   color: #000;
 }
 main .main_product #main_product_best ul li a .info span {
   pointer-events: auto;
-  font: 14px/35px "Noto Sans KR";
+  font: normal 14px/35px "Pretendard";
   color: #333;
 }
 main .main_product.on {
@@ -749,14 +737,14 @@ main .main_tabmenu #main_tab_new > ul > li a .tab_text {
 main .main_tabmenu #main_tab_new > ul > li a .tab_text p {
   font-size: 15px;
   line-height: 1;
-  font-family: "Noto Sans KR";
+  font-family: "Pretendard";
   color: #000;
   cursor: pointer;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
   font-size: 14px;
   line-height: 35px;
-  font-family: "Noto Sans KR";
+  font-family: "Pretendard";
   color: #333;
   cursor: pointer;
 }
@@ -827,20 +815,21 @@ main .main_contact .main_contact_wrap .contact_left_text {
 main .main_contact .main_contact_wrap .contact_left_text dd {
   height: 30vh;
   text-align: center;
-  font: 700 22px/1.7 "GowunBatang-Regular";
+  font: 500 23px/1.8 "Pretendard";
   color: #000;
   display: none;
 }
 main .main_contact .main_contact_wrap .contact_left_text dd a {
-  font: bold 20px/2 "Noto Sans KR";
+  font: 600 18px/2 "Pretendard";
   color: #2a3923;
   transition: all 0.1s;
 }
+main .main_contact .main_contact_wrap .contact_left_text dd a:hover {
+  color: #6f7863;
+}
 main .main_contact .main_contact_wrap .contact_left_text dd.on {
   display: block;
-}
-main .main_contact .main_contact_wrap .contact_left_text dd:hover a {
-  color: #6f7863;
+  animation: logo 0.5s;
 }
 main .main_contact .main_contact_wrap .contact_left_text dt {
   width: 35px;
@@ -863,13 +852,12 @@ main .main_contact .main_contact_wrap .contact_left_text dt a {
   width: 100%;
   height: 100%;
   text-align: center;
-  font: normal 18px/35px "Noto Sans KR";
+  font: normal 17px/35px "Lato";
   color: #000;
   border: 1px solid transparent;
   transition: all 0.3s;
 }
 main .main_contact .main_contact_wrap .contact_left_text dt.on a {
-  color: #000;
   border: 1px solid #666;
 }
 main .main_contact .main_contact_wrap #contact_right {
@@ -890,6 +878,7 @@ main .main_contact .main_contact_wrap #contact_right .contact_right_img img {
 main .main_contact .main_contact_wrap #contact_right .contact_right_img img.on {
   display: block;
   z-index: 3;
+  animation: bgc 0.5s;
 }
 main .main_contact .main_contact_wrap #contact_right .contact_right_img video {
   position: absolute;
@@ -902,6 +891,7 @@ main .main_contact .main_contact_wrap #contact_right .contact_right_img video {
 main .main_contact .main_contact_wrap #contact_right .contact_right_img video.on {
   display: block;
   z-index: 3;
+  animation: bgc 0.5s;
 }
 main .main_contact.on {
   opacity: 1;
@@ -1098,7 +1088,9 @@ main .main_contact.on .main_contact_wrap #contact_right {
 #brand .inner div[class*=story] .text p {
   width: 60%;
   padding-bottom: 50px;
-  font: 16px/2 "Noto Sans KR";
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Pretendard";
   text-align: center;
 }
 #brand .inner div[class*=story] .text p.eng {
@@ -1117,6 +1109,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   font-weight: 400;
 }
 #brand .inner .brand_story1 .text p {
+  font-weight: 400;
   color: #ece7e2;
 }
 #brand .inner .brand_story2 {
@@ -1133,6 +1126,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #brand .inner .brand_story2 .text p {
   color: #2a3923;
+  font-weight: 500;
 }
 #brand .inner .brand_story2 img {
   opacity: 0.8;
@@ -1181,12 +1175,12 @@ main .main_contact.on .main_contact_wrap #contact_right {
   height: 100%;
 }
 #brand .inner .brand_feature ul li h5 {
-  font: bold 22px/1 "Noto Sans KR";
+  font: 700 22px/1 "Pretendard";
   color: #2a3923;
 }
 #brand .inner .brand_feature ul li p {
   width: 63%;
-  font: 15px/1.7 "Noto Sans KR";
+  font: 500 16px/1.7 "Pretendard";
   color: #2a3923;
   padding-bottom: 100px;
 }
@@ -1249,11 +1243,11 @@ main .main_contact.on .main_contact_wrap #contact_right {
   padding-bottom: 45px;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text .left {
-  font: normal 15px/1.5 "Noto Sans KR";
+  font: normal 15px/1.5 "Pretendard";
   color: #ece7e2;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text .left .large {
-  font: normal 17px/1 "Lora";
+  font: normal 16px/1 "Lato";
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .center {
   width: 32%;
@@ -1273,7 +1267,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   align-items: center;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text .right {
-  font: normal 16px/1.8 "Noto Sans KR";
+  font: 400 16px/1.8 "Pretendard";
   color: #ece7e2;
 }
 #brand .inner .brand_nature.on {
@@ -1325,7 +1319,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #brand .inner .brand_join ul li .join_center p {
   padding-bottom: 140px;
-  font: bold 16px/1 "Noto Sans KR";
+  font: 600 16px/1 "Pretendard";
 }
 #brand .inner .brand_join ul li .join_center img {
   width: 400px;
@@ -1467,7 +1461,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   #brand .inner .brand_join ul .join_mo .join_center p {
     padding-bottom: 70px;
-    font: bold 12px/1.7 "Noto Sans KR";
+    font: bold 12px/1.7 "Pretendard";
     text-align: center;
   }
   #brand .inner .brand_join ul .join_mo .join_center img {
@@ -1509,15 +1503,15 @@ main .main_contact.on .main_contact_wrap #contact_right {
   color: #ece7e2;
 }
 #contact .inner .contact_txt .bold {
-  font: bold 20px/1 "Noto Sans KR";
+  font: bold 20px/1 "Pretendard";
   padding-bottom: 20px;
 }
 #contact .inner .contact_txt .normal {
-  font: normal 16px/1 "Lora";
+  font: normal 16px/1 "Lato";
   padding-bottom: 20px;
 }
 #contact .inner .contact_txt .light {
-  font: normal 15px/1 "Noto Sans KR";
+  font: normal 15px/1 "Pretendard";
   padding-bottom: 80px;
 }
 #contact .inner .contact_map {
@@ -1669,12 +1663,12 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #shop .inner .shop_product .shop_product_wrap ul li a .info p {
   pointer-events: auto;
-  font: 16px/1 "Noto Sans KR";
+  font: normal 16px/1 "Pretendard";
   color: #000;
 }
 #shop .inner .shop_product .shop_product_wrap ul li a .info span {
   pointer-events: auto;
-  font: 14px/35px "Noto Sans KR";
+  font: normal 14px/35px "Pretendard";
   color: #333;
 }
 #shop .inner .shop_product .shop_product_wrap ul.on {
@@ -1755,14 +1749,14 @@ main .main_contact.on .main_contact_wrap #contact_right {
   border-radius: 5px;
 }
 #notice #popup h4 {
-  font: bold 20px/1 "Noto Sans KR";
+  font: bold 20px/1 "Pretendard";
   text-align: center;
   padding-bottom: 30px;
   color: #000;
 }
 #notice #popup p {
   text-align: center;
-  font: normal 16px/1.5 "Noto Sans KR";
+  font: normal 16px/1.5 "Pretendard";
 }
 #notice #popup #close {
   display: block;
@@ -1804,7 +1798,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   text-align: center;
   padding: 15px 0px;
   color: #000;
-  font: bold 16px/1 "Noto Sans KR";
+  font: bold 16px/1 "Pretendard";
 }
 #notice .inner .notice_board thead tr #num {
   width: 8%;
@@ -1822,12 +1816,12 @@ main .main_contact.on .main_contact_wrap #contact_right {
   text-align: center;
   padding: 15px 0px;
   color: #000;
-  font: normal 15px/1 "Noto Sans KR";
+  font: normal 15px/1 "Lato";
   cursor: pointer;
 }
 #notice .inner .notice_board tbody tr td a {
   color: #000;
-  font: normal 15px/1 "Noto Sans KR";
+  font: normal 15px/1 "Pretendard";
   display: block;
   width: 100%;
 }
@@ -1846,7 +1840,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     font-size: 18px;
   }
   #notice #popup p {
-    font: normal 13px/1.8 "Noto Sans KR";
+    font: normal 13px/1.8 "Pretendard";
   }
   #notice .inner {
     width: 80%;
@@ -1922,12 +1916,12 @@ main .main_contact.on .main_contact_wrap #contact_right {
   overflow: hidden;
 }
 #review .inner .review_list > div .con h4 {
-  font: bold 15px/1.2 "Noto Sans KR";
+  font: bold 15px/1.2 "Pretendard";
   color: #000;
   padding-bottom: 10px;
 }
 #review .inner .review_list > div .con p {
-  font: 13px/1.5 "Noto Sans KR";
+  font: 13px/1.5 "Pretendard";
   color: #333;
   padding-bottom: 10px;
 }
@@ -1935,7 +1929,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   position: absolute;
   left: 15px;
   bottom: 15px;
-  font: 12px/1 "Noto Sans KR";
+  font: 12px/1 "Lato";
   color: #333;
 }
 #review .inner .review_list .review_pop {

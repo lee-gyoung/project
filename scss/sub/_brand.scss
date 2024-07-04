@@ -24,7 +24,9 @@
 				p {
 					width: 60%;
 					padding-bottom: 50px;
-					font: 16px/2 'Noto Sans KR';
+					font-size: 16px;
+					line-height: 2;
+					font-family: 'Pretendard';
 					text-align: center;
 				}
 				p.eng {
@@ -42,6 +44,7 @@
 					font-weight: 400;
 				}
 				p {
+					font-weight: 400;
 					color: #ece7e2;
 				}
 				animation: texture 1s;
@@ -59,6 +62,7 @@
 				}
 				p {
 					color: #2a3923;
+					font-weight: 500;
 				}
 			}
 			img {
@@ -108,12 +112,12 @@
 						height: 100%;
 					}
 					h5 {
-						font: bold 22px/1 'Noto Sans KR';
+						font: 700 22px/1 'Pretendard';
 						color: #2a3923;
 					}
 					p {
 						width: 63%;
-						font: 15px/1.7 'Noto Sans KR';
+						font: 500 16px/1.7 'Pretendard';
 						color: #2a3923;
 						padding-bottom: 100px;
 					}
@@ -178,11 +182,11 @@
 								padding-bottom: 45px;
 							}
 							.left {
-								font: normal 15px/1.5 'Noto Sans KR';
+								font: normal 15px/1.5 'Pretendard';
 								color: #ece7e2;
 
 								.large {
-									font: normal 17px/1 'Lora';
+									font: normal 16px/1 'Lato';
 								}
 							}
 						}
@@ -203,7 +207,7 @@
 							justify-content: center;
 							align-items: center;
 							.right {
-								font: normal 16px/1.8 'Noto Sans KR';
+								font: 400 16px/1.8 'Pretendard';
 								color: #ece7e2;
 							}
 						}
@@ -263,7 +267,7 @@
 						}
 						p {
 							padding-bottom: 140px;
-							font: bold 16px/1 'Noto Sans KR';
+							font: 600 16px/1 'Pretendard';
 						}
 						img {
 							width: 400px;
@@ -423,7 +427,7 @@
 							}
 							p {
 								padding-bottom: 70px;
-								font: bold 12px/1.7 'Noto Sans KR';
+								font: bold 12px/1.7 'Pretendard';
 								text-align: center;
 							}
 							img {
