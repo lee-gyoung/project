@@ -852,7 +852,7 @@ main .main_contact .main_contact_wrap .contact_left_text dt a {
   width: 100%;
   height: 100%;
   text-align: center;
-  font: normal 17px/35px "Lato";
+  font: normal 17px/40px "Lato";
   color: #000;
   border: 1px solid transparent;
   transition: all 0.3s;
@@ -1039,6 +1039,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     font-size: 13px;
   }
   main .main_contact .main_contact_wrap .contact_left_text dt {
+    height: 35px;
     bottom: 5vh;
   }
   main .main_contact .main_contact_wrap .contact_left_text dt:nth-of-type(1) {
@@ -1049,6 +1050,10 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   main .main_contact .main_contact_wrap .contact_left_text dt:nth-of-type(3) {
     right: 100px;
+  }
+  main .main_contact .main_contact_wrap .contact_left_text dt a {
+    font-size: 15px;
+    line-height: 35px;
   }
   main .main_contact .main_contact_wrap #contact_right .contact_right_img {
     display: none;
@@ -1088,8 +1093,8 @@ main .main_contact.on .main_contact_wrap #contact_right {
 #brand .inner div[class*=story] .text p {
   width: 60%;
   padding-bottom: 50px;
-  font-size: 16px;
-  line-height: 2;
+  font-size: 17px;
+  line-height: 1.8;
   font-family: "Pretendard";
   text-align: center;
 }
@@ -1175,7 +1180,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   height: 100%;
 }
 #brand .inner .brand_feature ul li h5 {
-  font: 700 22px/1 "Pretendard";
+  font: 700 23px/1 "Pretendard";
   color: #2a3923;
 }
 #brand .inner .brand_feature ul li p {
@@ -1243,11 +1248,11 @@ main .main_contact.on .main_contact_wrap #contact_right {
   padding-bottom: 45px;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text .left {
-  font: normal 15px/1.5 "Pretendard";
+  font: normal 16px/1.5 "Pretendard";
   color: #ece7e2;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text .left .large {
-  font: normal 16px/1 "Lato";
+  font: normal 17px/1 "Lato";
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .center {
   width: 32%;
