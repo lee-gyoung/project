@@ -55,7 +55,7 @@
 			.text {
 				transform: translateY(0px);
 				opacity: 0;
-				transition: all 1s;
+				transition: all 0.2s;
 				h4 {
 					color: #2a3923;
 					font-weight: 500;
@@ -67,11 +67,11 @@
 			}
 			img {
 				opacity: 0.8;
-				transition: 1s;
+				transition: 0.2s;
 			}
 			&.on {
 				.text {
-					animation: texture 1s;
+					animation: texture 0.2s;
 					opacity: 1;
 				}
 				img {

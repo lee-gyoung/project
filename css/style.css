@@ -1130,7 +1130,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 #brand .inner .brand_story2 .text {
   transform: translateY(0px);
   opacity: 0;
-  transition: all 1s;
+  transition: all 0.2s;
 }
 #brand .inner .brand_story2 .text h4 {
   color: #2a3923;
@@ -1142,10 +1142,10 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #brand .inner .brand_story2 img {
   opacity: 0.8;
-  transition: 1s;
+  transition: 0.2s;
 }
 #brand .inner .brand_story2.on .text {
-  animation: texture 1s;
+  animation: texture 0.2s;
   opacity: 1;
 }
 #brand .inner .brand_story2.on img {
