@@ -104,7 +104,7 @@ main {
 		#main_slide_right {
 			display: block;
 			width: 50%;
-			height: 100%;
+			height: 100vh;
 			position: relative;
 			#right_slide_wrapper {
 				width: 500px;
@@ -112,8 +112,9 @@ main {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transform: translate(-50%, 50%);
+				transform: translate(-50%, -50%);
 				.right_slide_pics {
+					height: 100%;
 					li {
 						position: absolute;
 						width: 100%;
@@ -407,7 +408,6 @@ main {
 				dd {
 					height: 30vh;
 					text-align: center;
-					// font: 500 23px/1.8 'Pretendard';
 					font-weight: 500;
 					font-size: 23px;
 					line-height: 1.8;
@@ -644,7 +644,6 @@ main {
 					position: relative;
 					transform: translate(0px, 0px);
 					dd {
-						// font-size: 14px;
 						font-size: 3vw;
 						a {
 							font-size: 13px;

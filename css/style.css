@@ -530,7 +530,7 @@ main .main_slide #main_slide_left .swiper-button-prev {
 main .main_slide #main_slide_right {
   display: block;
   width: 50%;
-  height: 100%;
+  height: 100vh;
   position: relative;
 }
 main .main_slide #main_slide_right #right_slide_wrapper {
@@ -539,7 +539,10 @@ main .main_slide #main_slide_right #right_slide_wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
+}
+main .main_slide #main_slide_right #right_slide_wrapper .right_slide_pics {
+  height: 100%;
 }
 main .main_slide #main_slide_right #right_slide_wrapper .right_slide_pics li {
   position: absolute;

@@ -28,7 +28,7 @@ fetch(url)
 			let title = el.snippet.title;
 			if (title.length > 30) title = title.substr(0, 27) + '...';
 			let des = el.snippet.description;
-			if (des.length > 60) des = des.substr(0, 60) + '...';
+			if (des.length > 50) des = des.substr(0, 50) + '...';
 			let date = el.snippet.publishedAt;
 			date = date.split('T')[0];
 			result += `
