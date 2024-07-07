@@ -827,7 +827,7 @@ main .main_contact .main_contact_wrap .contact_left_text dd {
   display: none;
 }
 main .main_contact .main_contact_wrap .contact_left_text dd a {
-  font: 600 18px/2 "Pretendard";
+  font: 600 18px/2 "Pretendard", "Noto Sans KR";
   color: #2a3923;
   transition: all 0.1s;
 }
@@ -944,6 +944,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   main .main_product #main_product_best h3 {
     font-size: 30px;
+    padding-bottom: 30px;
   }
   main .main_product #main_product_best ul {
     flex-wrap: wrap;
@@ -976,6 +977,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   main .main_tabmenu #main_tab_new #tab_title h3 {
     font-size: 30px;
+    padding-bottom: 30px;
   }
   main .main_tabmenu #main_tab_new #tab_title > ul {
     width: 80%;
@@ -1021,6 +1023,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   main .main_contact h3 {
     font-size: 30px;
+    padding-bottom: 0px;
   }
   main .main_contact .main_contact_wrap {
     flex-direction: column;
@@ -1046,7 +1049,8 @@ main .main_contact.on .main_contact_wrap #contact_right {
     font-size: 13px;
   }
   main .main_contact .main_contact_wrap .contact_left_text dt {
-    height: 35px;
+    width: 30px;
+    height: 30px;
     bottom: 5vh;
   }
   main .main_contact .main_contact_wrap .contact_left_text dt:nth-of-type(1) {
@@ -1059,8 +1063,8 @@ main .main_contact.on .main_contact_wrap #contact_right {
     right: 100px;
   }
   main .main_contact .main_contact_wrap .contact_left_text dt a {
-    font-size: 15px;
-    line-height: 35px;
+    font-size: 14px;
+    line-height: 30px;
   }
   main .main_contact .main_contact_wrap #contact_right .contact_right_img {
     display: none;
@@ -1240,7 +1244,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   display: flex;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text {
-  width: 34%;
+  width: 33%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1262,7 +1266,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   font: normal 17px/1 "Lato";
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .center {
-  width: 32%;
+  width: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1271,8 +1275,9 @@ main .main_contact.on .main_contact_wrap #contact_right {
   width: 400px;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text {
-  width: 34%;
+  width: 33%;
   height: 100%;
+  padding-left: 30px;
   padding-right: 150px;
   display: flex;
   justify-content: center;
@@ -1366,13 +1371,13 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   #brand .inner div[class*=story] .text h4 {
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     font-size: 30px;
   }
   #brand .inner div[class*=story] .text p {
     width: 70%;
     font-size: 14px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
   #brand .inner div[class*=story] .text p.eng {
     font-size: 15px;
@@ -1405,9 +1410,16 @@ main .main_contact.on .main_contact_wrap #contact_right {
     width: 90%;
     opacity: 1;
     transform: translateY(0px);
+    gap: 0px;
+  }
+  #brand .inner .brand_feature ul li img {
+    width: 50%;
+    height: 50%;
+    padding-bottom: 30px;
   }
   #brand .inner .brand_feature ul li h5 {
-    font-size: 20px;
+    font-size: 22px;
+    padding-bottom: 15px;
   }
   #brand .inner .brand_feature ul li p {
     width: 100%;
