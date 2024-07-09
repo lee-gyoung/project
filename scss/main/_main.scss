@@ -199,12 +199,12 @@ main {
 							text-align: center;
 							p {
 								pointer-events: auto;
-								font: normal 15px/1 'Pretendard', 'Noto Sans KR';
+								font: normal 15px/1 'Pretendard';
 								color: #000;
 							}
 							span {
 								pointer-events: auto;
-								font: normal 14px/35px 'Pretendard', 'Noto Sans KR';
+								font: normal 14px/35px 'Pretendard';
 								color: #333;
 							}
 						}
@@ -317,14 +317,14 @@ main {
 							p {
 								font-size: 15px;
 								line-height: 1;
-								font-family: 'Pretendard', 'Noto Sans KR';
+								font-family: 'Pretendard';
 								color: #000;
 								cursor: pointer;
 							}
 							span {
 								font-size: 14px;
 								line-height: 35px;
-								font-family: 'Pretendard', 'Noto Sans KR';
+								font-family: 'Pretendard';
 								color: #333;
 								cursor: pointer;
 							}
@@ -411,11 +411,11 @@ main {
 					font-weight: 500;
 					font-size: 23px;
 					line-height: 1.8;
-					font-family: 'Pretendard', 'Noto Sans KR';
+					font-family: 'Pretendard';
 					color: #000;
 					display: none;
 					a {
-						font: 600 18px/2 'Pretendard', 'Noto Sans KR';
+						font: 600 18px/2 'Pretendard';
 						color: #2a3923;
 						transition: all 0.1s;
 						&:hover {

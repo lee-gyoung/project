@@ -14,6 +14,7 @@ ul {
 a {
   text-decoration: none;
   color: #ece7e2;
+  font-family: "Lora", "Lato", "Pretendard", "Noto Sans KR";
 }
 
 body {
@@ -627,12 +628,12 @@ main .main_product #main_product_best ul li a .info {
 }
 main .main_product #main_product_best ul li a .info p {
   pointer-events: auto;
-  font: normal 15px/1 "Pretendard", "Noto Sans KR";
+  font: normal 15px/1 "Pretendard";
   color: #000;
 }
 main .main_product #main_product_best ul li a .info span {
   pointer-events: auto;
-  font: normal 14px/35px "Pretendard", "Noto Sans KR";
+  font: normal 14px/35px "Pretendard";
   color: #333;
 }
 main .main_product.on {
@@ -741,14 +742,14 @@ main .main_tabmenu #main_tab_new > ul > li a .tab_text {
 main .main_tabmenu #main_tab_new > ul > li a .tab_text p {
   font-size: 15px;
   line-height: 1;
-  font-family: "Pretendard", "Noto Sans KR";
+  font-family: "Pretendard";
   color: #000;
   cursor: pointer;
 }
 main .main_tabmenu #main_tab_new > ul > li a .tab_text span {
   font-size: 14px;
   line-height: 35px;
-  font-family: "Pretendard", "Noto Sans KR";
+  font-family: "Pretendard";
   color: #333;
   cursor: pointer;
 }
@@ -822,12 +823,12 @@ main .main_contact .main_contact_wrap .contact_left_text dd {
   font-weight: 500;
   font-size: 23px;
   line-height: 1.8;
-  font-family: "Pretendard", "Noto Sans KR";
+  font-family: "Pretendard";
   color: #000;
   display: none;
 }
 main .main_contact .main_contact_wrap .contact_left_text dd a {
-  font: 600 18px/2 "Pretendard", "Noto Sans KR";
+  font: 600 18px/2 "Pretendard";
   color: #2a3923;
   transition: all 0.1s;
 }
