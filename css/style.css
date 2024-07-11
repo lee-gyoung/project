@@ -1107,7 +1107,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   padding-bottom: 50px;
   font-size: 17px;
   line-height: 1.8;
-  font-family: "Pretendard", "Noto Sans KR";
+  font-family: "Pretendard";
   text-align: center;
 }
 #brand .inner div[class*=story] .text p.eng {
@@ -1135,7 +1135,6 @@ main .main_contact.on .main_contact_wrap #contact_right {
 #brand .inner .brand_story2 .text {
   transform: translateY(0px);
   opacity: 0;
-  transition: all 0.2s;
 }
 #brand .inner .brand_story2 .text h4 {
   color: #2a3923;
@@ -1147,10 +1146,10 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #brand .inner .brand_story2 img {
   opacity: 0.8;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 #brand .inner .brand_story2.on .text {
-  animation: texture 0.2s;
+  animation: texture 0.7s;
   opacity: 1;
 }
 #brand .inner .brand_story2.on img {
@@ -1192,12 +1191,12 @@ main .main_contact.on .main_contact_wrap #contact_right {
   height: 100%;
 }
 #brand .inner .brand_feature ul li h5 {
-  font: 700 23px/1 "Pretendard", "Noto Sans KR";
+  font: 700 23px/1 "Pretendard";
   color: #2a3923;
 }
 #brand .inner .brand_feature ul li p {
   width: 63%;
-  font: 500 16px/1.7 "Pretendard", "Noto Sans KR";
+  font: 500 16px/1.7 "Pretendard";
   color: #2a3923;
   padding-bottom: 100px;
 }
@@ -1260,7 +1259,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   padding-bottom: 45px;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text .left {
-  font: normal 16px/1.5 "Pretendard", "Noto Sans KR";
+  font: normal 16px/1.5 "Pretendard";
   color: #ece7e2;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .left_text .left .large {
@@ -1285,7 +1284,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   align-items: center;
 }
 #brand .inner .brand_nature .swiper .swiper-wrapper .swiper-slide .right_text .right {
-  font: 400 16px/1.8 "Pretendard", "Noto Sans KR";
+  font: normal 16px/1.8 "Pretendard";
   color: #ece7e2;
 }
 #brand .inner .brand_nature.on {
@@ -1337,7 +1336,8 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #brand .inner .brand_join ul li .join_center p {
   padding-bottom: 140px;
-  font: 600 16px/1 "Pretendard", "Noto Sans KR";
+  font: 500 16px/1 "Pretendard";
+  color: #2a3923;
 }
 #brand .inner .brand_join ul li .join_center img {
   width: 400px;
@@ -1486,7 +1486,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   }
   #brand .inner .brand_join ul .join_mo .join_center p {
     padding-bottom: 70px;
-    font: bold 12px/1.7 "Pretendard", "Noto Sans KR";
+    font: bold 12px/1.7 "Pretendard";
     text-align: center;
   }
   #brand .inner .brand_join ul .join_mo .join_center img {
@@ -1527,8 +1527,8 @@ main .main_contact.on .main_contact_wrap #contact_right {
   text-align: center;
   color: #ece7e2;
 }
-#contact .inner .contact_txt .bold {
-  font: bold 20px/1 "Pretendard", "Noto Sans KR";
+#contact .inner .contact_txt h5 {
+  font: 700 20px/1 "Pretendard";
   padding-bottom: 20px;
 }
 #contact .inner .contact_txt .normal {
@@ -1536,7 +1536,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   padding-bottom: 20px;
 }
 #contact .inner .contact_txt .light {
-  font: normal 15px/1 "Pretendard", "Noto Sans KR";
+  font: normal 15px/1 "Pretendard";
   padding-bottom: 80px;
 }
 #contact .inner .contact_map {
@@ -1688,12 +1688,12 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #shop .inner .shop_product .shop_product_wrap ul li a .info p {
   pointer-events: auto;
-  font: normal 16px/1 "Pretendard", "Noto Sans KR";
+  font: normal 16px/1 "Pretendard";
   color: #000;
 }
 #shop .inner .shop_product .shop_product_wrap ul li a .info span {
   pointer-events: auto;
-  font: normal 14px/35px "Pretendard", "Noto Sans KR";
+  font: normal 14px/35px "Pretendard";
   color: #333;
 }
 #shop .inner .shop_product .shop_product_wrap ul.on {
@@ -1774,14 +1774,14 @@ main .main_contact.on .main_contact_wrap #contact_right {
   border-radius: 5px;
 }
 #notice #popup h4 {
-  font: bold 20px/1 "Pretendard", "Noto Sans KR";
+  font: bold 20px/1 "Pretendard";
   text-align: center;
   padding-bottom: 30px;
   color: #000;
 }
 #notice #popup p {
   text-align: center;
-  font: normal 16px/1.5 "Pretendard", "Noto Sans KR";
+  font: normal 16px/1.5 "Pretendard";
 }
 #notice #popup #close {
   display: block;
@@ -1823,7 +1823,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
   text-align: center;
   padding: 15px 0px;
   color: #000;
-  font: bold 16px/1 "Pretendard", "Noto Sans KR";
+  font: bold 16px/1 "Pretendard";
 }
 #notice .inner .notice_board thead tr #num {
   width: 8%;
@@ -1846,7 +1846,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 }
 #notice .inner .notice_board tbody tr td a {
   color: #000;
-  font: normal 15px/1 "Pretendard", "Noto Sans KR";
+  font: normal 15px/1 "Pretendard";
   display: block;
   width: 100%;
 }
@@ -1865,7 +1865,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
     font-size: 18px;
   }
   #notice #popup p {
-    font: normal 13px/1.8 "Pretendard", "Noto Sans KR";
+    font: normal 13px/1.8 "Pretendard";
   }
   #notice .inner {
     width: 80%;
@@ -1941,12 +1941,12 @@ main .main_contact.on .main_contact_wrap #contact_right {
   overflow: hidden;
 }
 #review .inner .review_list > div .con h4 {
-  font: bold 15px/1.2 "Pretendard", "Noto Sans KR";
+  font: bold 15px/1.2 "Pretendard";
   color: #000;
   padding-bottom: 10px;
 }
 #review .inner .review_list > div .con p {
-  font: 13px/1.5 "Pretendard", "Noto Sans KR";
+  font: 13px/1.5 "Pretendard";
   color: #333;
   padding-bottom: 10px;
 }

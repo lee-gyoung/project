@@ -26,7 +26,7 @@
 					padding-bottom: 50px;
 					font-size: 17px;
 					line-height: 1.8;
-					font-family: 'Pretendard', 'Noto Sans KR';
+					font-family: 'Pretendard';
 					text-align: center;
 				}
 				p.eng {
@@ -55,7 +55,6 @@
 			.text {
 				transform: translateY(0px);
 				opacity: 0;
-				transition: all 0.2s;
 				h4 {
 					color: #2a3923;
 					font-weight: 500;
@@ -67,11 +66,11 @@
 			}
 			img {
 				opacity: 0.8;
-				transition: 0.2s;
+				transition: 0.5s;
 			}
 			&.on {
 				.text {
-					animation: texture 0.2s;
+					animation: texture 0.7s;
 					opacity: 1;
 				}
 				img {
@@ -112,12 +111,12 @@
 						height: 100%;
 					}
 					h5 {
-						font: 700 23px/1 'Pretendard', 'Noto Sans KR';
+						font: 700 23px/1 'Pretendard';
 						color: #2a3923;
 					}
 					p {
 						width: 63%;
-						font: 500 16px/1.7 'Pretendard', 'Noto Sans KR';
+						font: 500 16px/1.7 'Pretendard';
 						color: #2a3923;
 						padding-bottom: 100px;
 					}
@@ -182,7 +181,7 @@
 								padding-bottom: 45px;
 							}
 							.left {
-								font: normal 16px/1.5 'Pretendard', 'Noto Sans KR';
+								font: normal 16px/1.5 'Pretendard';
 								color: #ece7e2;
 
 								.large {
@@ -208,7 +207,7 @@
 							justify-content: center;
 							align-items: center;
 							.right {
-								font: 400 16px/1.8 'Pretendard', 'Noto Sans KR';
+								font: normal 16px/1.8 'Pretendard';
 								color: #ece7e2;
 							}
 						}
@@ -268,7 +267,8 @@
 						}
 						p {
 							padding-bottom: 140px;
-							font: 600 16px/1 'Pretendard', 'Noto Sans KR';
+							font: 500 16px/1 'Pretendard';
+							color: #2a3923;
 						}
 						img {
 							width: 400px;
@@ -435,7 +435,7 @@
 							}
 							p {
 								padding-bottom: 70px;
-								font: bold 12px/1.7 'Pretendard', 'Noto Sans KR';
+								font: bold 12px/1.7 'Pretendard';
 								text-align: center;
 							}
 							img {
