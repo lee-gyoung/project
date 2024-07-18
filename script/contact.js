@@ -1,3 +1,5 @@
+// 카카오맵 api
+
 var container = document.getElementById('map');
 var options = {
 	center: new kakao.maps.LatLng(37.5482585, 126.9189736),

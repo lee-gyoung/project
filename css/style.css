@@ -449,7 +449,7 @@ main .main_page #main_page_scroll:before {
   height: 100%;
   content: "";
   display: block;
-  background-image: url(../img/main_page/mainpage1.jpg);
+  background-image: url(../img/main_page/mainpage.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
