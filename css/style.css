@@ -913,7 +913,7 @@ main .main_contact.on .main_contact_wrap #contact_right {
 
 @media screen and (max-width: 1050px) {
   main .main_page #main_page_scroll::before {
-    background-image: url(../img/main_page/mainpage_mo.png);
+    background-image: url(../img/main_page/mainpage_mo.jpg);
     opacity: 0.9;
   }
   main .main_page #main_page_scroll::after {
